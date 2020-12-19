@@ -16,9 +16,15 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.shortcuts import render
 from django.urls import path
 
+
+def serve_home(request):
+    return render(request, 'layouts/public.html')
+
 urlpatterns = [
+    path('', serve_home),
     path('admin/', admin.site.urls),
 ] + static(
     settings.STATIC_URL, document_root=settings.STATIC_ROOT

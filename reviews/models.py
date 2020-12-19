@@ -4,7 +4,7 @@ from base.models import BaseModel
 from college.models import College
 
 
-class Reviews(BaseModel):
+class Review(BaseModel):
 
     class ReviewSources(models.IntegerChoices):
         GOOGLE = 1
@@ -16,7 +16,7 @@ class Reviews(BaseModel):
 
     college = models.ForeignKey(College, on_delete=models.CASCADE)
     comment = models.TextField()
-    name = models.CharField(null=True, blank=True)
+    name = models.CharField(max_length=200, null=True, blank=True)
     source = models.IntegerField(choices=ReviewSources.choices)
     batch = models.IntegerField(null=True)
 
