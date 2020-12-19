@@ -2,8 +2,10 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from base.models import BaseModel
 
-class Profile(models.Model):
+
+class Profile(BaseModel):
     """Profile class based on top of user."""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -13,7 +15,7 @@ class Profile(models.Model):
     full_name = models.CharField(max_length=100)
 
 
-class OTPVerification(models.Model):
+class OTPVerification(BaseModel):
     """OTP Verification stack trace."""
 
     class VerifierTag(models.IntegerChoices):

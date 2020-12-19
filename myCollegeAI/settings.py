@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'college.apps.CollegeConfig',
+
+    'social_django',
+
+    'college',
+    'profiles',
+    'reviews',
+    'tracker',
 ]
 
 MIDDLEWARE = [

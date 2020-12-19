@@ -2,8 +2,10 @@ from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
+from base.models import BaseModel
 
-class College(models.Model):
+
+class College(BaseModel):
     """Model for college."""
 
     class OwnershipChoices(models.IntegerChoices):
@@ -36,12 +38,12 @@ class College(models.Model):
     is_top = models.BooleanField(null=True, default=False)
     admission_process = models.TextField(null=True)
     placements = models.TextField(null=True)
-    degrees = models.JSONField(null=True) #CSV field
-    stream_degree = models.JSONField(null=True) #CSV field
-    streams = models.JSONField(null=True) #CSV field
-    entrance_exams = models.JSONField(null=True) #CSV field
-    contacts = models.JSONField(null=True) #CSV field
-    images = models.JSONField(null=True) #CSV field
+    degrees = models.JSONField(null=True)
+    stream_degree = models.JSONField(null=True)
+    streams = models.JSONField(null=True)
+    entrance_exams = models.JSONField(null=True)
+    contacts = models.JSONField(null=True)
+    images = models.JSONField(null=True)
 
     def __str__(self):
         return '{}, {}'.format(self.abbreviated_name, self.city)
