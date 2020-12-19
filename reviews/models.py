@@ -1,4 +1,7 @@
+from django.db import models
+
 from base.models import BaseModel
+from college.models import College
 
 
 class Reviews(BaseModel):
@@ -33,7 +36,3 @@ class Rating(BaseModel):
 
     def __str__(self):
         return self.college.full_name
-
-from django.db import models
-
-# Create your models here.
