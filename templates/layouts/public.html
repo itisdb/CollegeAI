@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <meta charset="utf-8" />
@@ -23,6 +24,7 @@
     <link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" type="text/css" media="screen" />
     <link class="main-stylesheet" href="{% static 'pages/css/themes/modern.css' %}" rel="stylesheet" type="text/css" />
   </head>
+
   <body class="fixed-header horizontal-menu horizontal-app-menu ">
     <!-- START PAGE-CONTAINER -->
     <div class="header p-r-0 bg-primary">
@@ -377,8 +379,8 @@
           <div class="bg-white">
             <div class="container">
               <ol class="breadcrumb breadcrumb-alt">
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item active">Blank template</li>
+                <li class="breadcrumb-item"><a href="#">MyCollegeAI</a></li>
+                <li class="breadcrumb-item active">{% block page_name %} {% endblock %}</li>
               </ol>
             </div>
           </div>
