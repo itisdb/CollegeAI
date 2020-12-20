@@ -12,7 +12,6 @@ class Profile(BaseModel):
     dob = models.DateField()
     display_pic = models.ImageField(upload_to='user/dp/')
     mobile_number = models.CharField(max_length=20)
-    full_name = models.CharField(max_length=100)
 
 
 class OTPVerification(BaseModel):
