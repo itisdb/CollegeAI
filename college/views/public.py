@@ -9,12 +9,12 @@ from college.models import College
 from reviews.models import Review
 
 
-class CollegeView(View):
+class IndividualCollegeView(View):
 
-    def get(self, request, *args, **kwargs):
+    def get(self, request, college_slug, *args, **kwargs):
         """Display single college."""
         college = College.objects.get(
-            slug=kwargs.get('college_slug')
+            slug=college_slug
         )
         return render(
             request,
@@ -22,10 +22,10 @@ class CollegeView(View):
             {'college': college}
         )
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request, college_slug, *args, **kwargs):
         """Add reviews to a college."""
         college = College.objects.get(
-            slug=kwargs.get('college_slug')
+            slug=college_slug
         )
         profile = request.user.profile
         Review.objects.create(
