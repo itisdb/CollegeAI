@@ -1,6 +1,7 @@
 """Public views for colleges."""
 from django.shortcuts import render
 from django.views import View
+from django.views.generic import ListView
 
 from base.constants import SUCCESS_ALERT_KEY
 
@@ -40,3 +41,9 @@ class IndividualCollegeView(View):
             'pages/public/college.html',
             {SUCCESS_ALERT_KEY: 'Your review is being reviewed by AI.'}
         )
+
+
+class CollegesView(ListView):
+
+    def get(self, request, *args, **kwargs):
+        pass
