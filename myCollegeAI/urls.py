@@ -10,10 +10,13 @@ def serve_home(request):
 
 
 urlpatterns = [
-    path('', serve_home),
-    path('admin/', admin.site.urls),
-] + static(
-    settings.STATIC_URL, document_root=settings.STATIC_ROOT
-) + static(
-    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
-)
+  path('admin/', admin.site.urls),
+  path('', serve_home),
+]
+
+if settings.DEBUG:
+    urlpatterns + static(
+        settings.STATIC_URL, document_root=settings.STATIC_ROOT
+    ) + static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )
