@@ -4,6 +4,10 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.urls import path
 
+admin.site.site_header = 'My College AI'
+admin.site.site_title = 'My College AI'
+admin.site.index_title = 'AI Aggregator Repository'
+
 
 def serve_home(request):
     return render(request, 'pages/public/home.html')
