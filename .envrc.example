@@ -1,5 +1,4 @@
 export DJANGO_SETTINGS_MODULE=settings.local
-export IS_DEVELOPMENT=True
 
 export DB_USER=
 export DB_PASSWORD=
