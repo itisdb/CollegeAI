@@ -44,6 +44,7 @@ class College(BaseModel):
     entrance_exams = models.JSONField(null=True)
     contacts = models.JSONField(null=True)
     images = models.JSONField(null=True)
+    scraping_urls = models.JSONField(null=True, blank=True)
 
     def __str__(self):
         return '{}, {}'.format(self.abbreviated_name, self.city)
