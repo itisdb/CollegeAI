@@ -45,5 +45,7 @@ class IndividualCollegeView(View):
 
 class CollegesView(ListView):
 
-    def get(self, request, *args, **kwargs):
-        pass
+    model = College
+    template_name = 'pages/public/colleges.html'
+    context_object_name = "colleges"
+    paginate_by = 20
