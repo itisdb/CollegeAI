@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import render
-from django.urls import path
+from django.urls import path, include
 
 admin.site.site_header = 'My College AI'
 admin.site.site_title = 'My College AI'
@@ -15,6 +15,7 @@ def serve_home(request):
 
 urlpatterns = [
   path('admin/', admin.site.urls),
+  path('college/', include('college.urls'), name='college'),
   path('', serve_home),
 ]
 

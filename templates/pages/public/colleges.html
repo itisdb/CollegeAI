@@ -1,10 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'layouts/public.html' %}
+{% load static %}
+{% block title %} Colleges {% endblock %}
+{% block page_name %} Colleges {% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
+          <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
+          <div class="card-content">
+            <img alt="Quote" src="https://i0.wp.com/uemgroup.s3.amazonaws.com/uploads/sites/2/2015/06/Cover-Pictures.jpg?fit=3288%2C1919&ssl=1" height="350px" width="250px">
+          </div>
+          <div class="card-header clearfix last">
+            <h5>IEM, Kolkata</h5>
+            <h6>West Bengal</h6>
+          </div>
+        </div>
+        <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
+      <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
+      <div class="card-content">
+        <img alt="Quote" src="https://i0.wp.com/uemgroup.s3.amazonaws.com/uploads/sites/2/2015/06/Cover-Pictures.jpg?fit=3288%2C1919&ssl=1" height="350px" width="250px">
+      </div>
+      <div class="card-header clearfix last">
+        <h5>IEM, Kolkata</h5>
+        <h6>West Bengal</h6>
+      </div>
+    </div>
+        <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
+      <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
+      <div class="card-content">
+        <img alt="Quote" src="https://i0.wp.com/uemgroup.s3.amazonaws.com/uploads/sites/2/2015/06/Cover-Pictures.jpg?fit=3288%2C1919&ssl=1" height="350px" width="250px">
+      </div>
+      <div class="card-header clearfix last">
+        <h5>IEM, Kolkata</h5>
+        <h6>West Bengal</h6>
+      </div>
+    </div>
+    </div>
 
-</body>
-</html>
+    <div class="card-body">
+    <br>
+    <div class="btn-group btn-toolbar" style="margin: 5px">
+      <button aria-label="" type="button" class="btn btn-default">
+        <div class="p-t-5 p-b-5">
+          <i class="pg-icon">chevron_left</i>
+          <div class="fs-11 font-montserrat text-uppercase">Previous</div>
+        </div>
+      </button>
+      <button aria-label="" type="button" class="btn btn-default">
+        <div class="p-t-5 p-b-5">
+          <i class="pg-icon">time</i>
+          <div class="fs-11 font-montserrat text-uppercase">Current</div>
+        </div>
+      </button>
+      <button aria-label="" type="button" class="btn btn-default">
+        <div class="p-t-5 p-b-5">
+          <i class="pg-icon">chevron_right</i>
+          <div class="fs-11 font-montserrat text-uppercase">Next</div>
+        </div>
+      </button>
+    </div>
+  </div>
+
+{% endblock%}
