@@ -13,6 +13,9 @@ class Profile(BaseModel):
     display_pic = models.ImageField(upload_to='user/dp/')
     mobile_number = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.user.get_full_name()
+
 
 class OTPVerification(BaseModel):
     """OTP Verification stack trace."""

@@ -13,9 +13,19 @@ def serve_home(request):
     return render(request, 'pages/public/home.html')
 
 
+def serve_login(request):
+    return render(request, 'pages/auth/login.html')
+
+
+def serve_register(request):
+    return render(request, 'pages/auth/register.html')
+
+
 urlpatterns = [
   path('admin/', admin.site.urls),
   path('college/', include('college.urls'), name='college'),
+  path('login/', serve_login),
+  path('register/', serve_register),
   path('', serve_home),
 ]
 
