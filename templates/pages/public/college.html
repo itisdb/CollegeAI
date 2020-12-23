@@ -2,3 +2,27 @@
 {% load static %}
 {% block title %} {{ college.abbreviated_name }} {% endblock %}
 {% block page_name %} {{ college.full_name }} {% endblock %}
+{% block content %}
+    <div class="social-wrapper">
+    <div class="social " data-pages="social">
+      <!-- START JUMBOTRON -->
+        <div class="jumbotron" data-social="cover" data-pages="parallax" data-scroll-element=".page-container">
+        <div class="cover-photo">
+          <img alt="Cover photo" src="{{ college.image.url }}" />
+        </div>
+        <div class=" container    container-fixed-lg sm-p-l-0 sm-p-r-0">
+          <div class="inner">
+            <div class="pull-bottom bottom-left m-b-40 sm-p-l-15">
+                <h1 class="text-white no-margin"><span class="semi-bold">{{ college.full_name }}</span></h1>
+                <h5 class="text-white no-margin">{{ college.city }}, {{ college.state }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- END JUMBOTRON -->
+    </div>
+    <!-- /container -->
+  </div>
+
+{% endblock %}
