@@ -31,12 +31,12 @@ class College(BaseModel):
     ownership = models.IntegerField(null=True, choices=OwnershipChoices.choices)
     approval = models.CharField(null=True, max_length=100)
     college_type = models.IntegerField(null=True, choices=InstitutionType.choices)
-    slug = models.SlugField(null=True, max_length=50)
+    slug = models.SlugField(null=True, blank=True, max_length=50)
     is_top = models.BooleanField(null=True, default=False)
     stream_degree = models.JSONField(null=True)
     entrance_exams = models.JSONField(null=True)
     contacts = models.JSONField(null=True)
-    images = models.JSONField(null=True)
+    images = models.JSONField(null=True, blank=True)
     scraping_urls = models.JSONField(null=True, blank=True)
 
     def __str__(self):

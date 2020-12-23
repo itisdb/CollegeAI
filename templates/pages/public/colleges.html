@@ -4,36 +4,18 @@
 {% block page_name %} Colleges {% endblock %}
 {% block content %}
     <div class="row">
+    {% for college in colleges %}
         <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
           <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
           <div class="card-content">
-            <img alt="Quote" src="https://i0.wp.com/uemgroup.s3.amazonaws.com/uploads/sites/2/2015/06/Cover-Pictures.jpg?fit=3288%2C1919&ssl=1" height="350px" width="250px">
+            <a href="/college/{{ college.slug }}"><img alt="Quote" src="{{ college.image.url }}" height="350px" width="250px"></a>
           </div>
           <div class="card-header clearfix last">
-            <h5>IEM, Kolkata</h5>
-            <h6>West Bengal</h6>
+            <h5>{{ college.abbreviated_name }}, {{ college.city }}</h5>
+            <h6>{{ college.state }}</h6>
           </div>
         </div>
-        <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
-      <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
-      <div class="card-content">
-        <img alt="Quote" src="https://i0.wp.com/uemgroup.s3.amazonaws.com/uploads/sites/2/2015/06/Cover-Pictures.jpg?fit=3288%2C1919&ssl=1" height="350px" width="250px">
-      </div>
-      <div class="card-header clearfix last">
-        <h5>IEM, Kolkata</h5>
-        <h6>West Bengal</h6>
-      </div>
-    </div>
-        <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
-      <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
-      <div class="card-content">
-        <img alt="Quote" src="https://i0.wp.com/uemgroup.s3.amazonaws.com/uploads/sites/2/2015/06/Cover-Pictures.jpg?fit=3288%2C1919&ssl=1" height="350px" width="250px">
-      </div>
-      <div class="card-header clearfix last">
-        <h5>IEM, Kolkata</h5>
-        <h6>West Bengal</h6>
-      </div>
-    </div>
+    {% endfor %}
     </div>
 
     <div class="card-body">
