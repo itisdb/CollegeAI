@@ -33,7 +33,10 @@ class RegisterView(View):
             email = request.POST['email']
         except (AttributeError, KeyError):
             return render(request, 'pages/auth/register.html', {'error': 'All fields are mandatory.'})
-        user_obj = User.objects.create_user(username, email, password)
+        try:
+            user_obj = User.objects.create_user(username, email, password)
+        except BaseException:
+            return render(request, 'pages/auth/login.html', {'error': 'Username already exists.'})
         user_obj.first_name = first_name
         user_obj.last_name = last_name
         user_obj.save()
