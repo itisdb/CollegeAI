@@ -49,3 +49,7 @@ class RegisterView(View):
 
     def get(self, request):
         return render(request, 'pages/auth/register.html')
+
+
+class ResetPasswordView(View):
+    pass
