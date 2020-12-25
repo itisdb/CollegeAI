@@ -20,28 +20,34 @@
     {% endfor %}
     </div>
 
-    <div class="card-body">
-    <br>
-    <div class="btn-group btn-toolbar" style="margin: 5px">
-      <button aria-label="" type="button" class="btn btn-default">
-        <div class="p-t-5 p-b-5">
-          <i class="pg-icon">chevron_left</i>
-          <div class="fs-11 font-montserrat text-uppercase">Previous</div>
+    {% if is_paginated %}
+        <div class="card-body">
+        <br>
+        <div class="btn-group btn-toolbar" style="margin: 5px">
+            {% if page_obj.has_previous %}
+              <button aria-label="" type="button" class="btn btn-default">
+                <div class="p-t-5 p-b-5">
+                  <i class="pg-icon">chevron_left</i>
+                  <div class="fs-11 font-montserrat text-uppercase">Previous</div>
+                </div>
+              </button>
+            {% endif %}
+          <button aria-label="" type="button" class="btn btn-default">
+            <div class="p-t-5 p-b-5">
+              <i class="pg-icon">time</i>
+              <div class="fs-11 font-montserrat text-uppercase">Current</div>
+            </div>
+          </button>
+            {% if page_obj.has_next %}
+              <button aria-label="" type="button" class="btn btn-default">
+                <div class="p-t-5 p-b-5">
+                  <i class="pg-icon">chevron_right</i>
+                  <div class="fs-11 font-montserrat text-uppercase">Next</div>
+                </div>
+              </button>
+            {% endif %}
         </div>
-      </button>
-      <button aria-label="" type="button" class="btn btn-default">
-        <div class="p-t-5 p-b-5">
-          <i class="pg-icon">time</i>
-          <div class="fs-11 font-montserrat text-uppercase">Current</div>
-        </div>
-      </button>
-      <button aria-label="" type="button" class="btn btn-default">
-        <div class="p-t-5 p-b-5">
-          <i class="pg-icon">chevron_right</i>
-          <div class="fs-11 font-montserrat text-uppercase">Next</div>
-        </div>
-      </button>
-    </div>
-  </div>
+      </div>
+    {% endif %}
 
 {% endblock%}
