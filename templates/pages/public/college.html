@@ -27,21 +27,27 @@
     </div>
     <!-- /container -->
   </div>
-    <div class="container-fluid p-t-30 p-b-30 ">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="container-xs-height">
-                  <div class="row-xs-height">
-                    <div class="col-xs-height p-l-20">
-                      <h3 class="no-margin p-b-5">{{ college.full_name }}</h3>
-                      <p class="no-margin fs-16">{{ college.get_ownership_display }}</p>
-                      <p class="hint-text m-t-5 small">{{ college.approval }} | {{ college.get_college_type_display }}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="row b-t b-grey m-t-40 p-t-40 p-b-40 m-b-30">
+        <div class="col-md-4">
+          <!-- START card -->
+          <div class="card card-transparent">
+            <div class="card-body">
+              <h2>{{ college.full_name }}</h2>
+              <p>{{ college.get_ownership_display }} | {{ college.get_college_type_display }}</p>
+            </div>
+          </div>
+          <!-- END card -->
+        </div>
+        <div class="col-md-6" style="margin: 10px">
+          <div class="b-b b-grey m-t-20">
+            <h5 class="m-b-20">Forsaking monastic tradition, twelve jovial friars gave up their
+                                    vocation for a questionable existence on the flying trapeze. Bawds jog, flick quartz,
+                                    vex nymph.</h5>
+            <div class="d-flex justify-content-between m-b-5" style="margin: 10px">
+              <p>h5</p>
+              <p>18px/26px Letter-spacing: -0.00630069em</p>
+            </div>
+          </div>
         </div>
     </div>
-
 {% endblock %}
