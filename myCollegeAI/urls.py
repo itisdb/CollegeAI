@@ -4,6 +4,8 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.urls import path, include
 
+from profiles.views.authentication import LoginView, RegisterView
+
 admin.site.site_header = 'My College AI'
 admin.site.site_title = 'My College AI'
 admin.site.index_title = 'AI Aggregator Repository'
@@ -13,19 +15,11 @@ def serve_home(request):
     return render(request, 'pages/public/home.html')
 
 
-def serve_login(request):
-    return render(request, 'pages/auth/login.html')
-
-
-def serve_register(request):
-    return render(request, 'pages/auth/register.html')
-
-
 urlpatterns = [
   path('admin/', admin.site.urls),
   path('college/', include('college.urls'), name='college'),
-  path('login/', serve_login),
-  path('register/', serve_register),
+  path('login/', LoginView.as_view(), name='login'),
+  path('register/', RegisterView.as_view(), name='register'),
   path('', serve_home),
 ]
 
