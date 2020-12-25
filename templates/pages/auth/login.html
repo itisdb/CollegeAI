@@ -2,6 +2,13 @@
 {% block title %}Login{% endblock %}
 {% block page_message %}Sign in to your account{% endblock %}
 {% block content %}
+    {% if error %}
+        <div class="alert alert-danger" style="margin: 5px" role="alert">
+          <button aria-label="" class="close" data-dismiss="alert"></button>
+          <strong>{{ error }}</strong>
+        </div>
+    {% endif %}
+
     <!-- START Login Form -->
       <form id="form-login" class="p-t-15" role="form" action="#">
         <!-- START Form Control-->

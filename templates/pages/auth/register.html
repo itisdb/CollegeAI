@@ -2,6 +2,12 @@
 {% block title %}Register{% endblock %}
 {% block page_message %}Get started with your account{% endblock %}
 {% block content %}
+    {% if error %}
+        <div class="alert alert-danger" style="margin: 5px" role="alert">
+          <button aria-label="" class="close" data-dismiss="alert"></button>
+          <strong>{{ error }}</strong>
+        </div>
+    {% endif %}
     <form id="form-register" class="p-t-15" role="form" action="index.html">
           <div class="row">
             <div class="col-md-6">
