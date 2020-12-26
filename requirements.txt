@@ -1,9 +1,16 @@
+amqp==5.0.2
 appnope==0.1.2
 asgiref==3.3.1
 backcall==0.2.0
+billiard==3.6.3.0
+celery==5.0.5
 certifi==2020.12.5
 cffi==1.14.4
 chardet==4.0.0
+click==7.1.2
+click-didyoumean==0.0.3
+click-plugins==1.1.1
+click-repl==0.1.6
 cryptography==3.3.1
 decorator==4.4.2
 defusedxml==0.7.0rc1
@@ -13,10 +20,12 @@ ipdb==0.13.4
 ipython==7.19.0
 ipython-genutils==0.2.0
 jedi==0.17.2
+kombu==5.0.2
 oauthlib==3.1.0
 parso==0.7.1
 pexpect==4.8.0
 pickleshare==0.7.5
+Pillow==8.0.1
 prompt-toolkit==3.0.8
 ptyprocess==0.6.0
 pycparser==2.20
@@ -32,4 +41,5 @@ social-auth-core==3.3.3
 sqlparse==0.4.1
 traitlets==5.0.5
 urllib3==1.26.2
+vine==5.0.0
 wcwidth==0.2.5
