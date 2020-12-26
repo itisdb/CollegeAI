@@ -6,11 +6,13 @@
           <i class="pg-icon">close</i>
         </a>
         <ul>
-          <li>
-            <a href="/dashboard">Dashboard</a>
-          </li>
+          {% if user.is_authenticated %}
             <li>
-            <a href="/college/list">Colleges</a>
+                <a href="/profile/dashboard">Dashboard</a>
+            </li>
+            {% endif %}
+            <li>
+            <a href="{% url 'college:list' %}">Colleges</a>
           </li>
             <li>
             <a href="/consult">Consult</a>

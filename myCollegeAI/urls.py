@@ -17,7 +17,7 @@ def serve_home(request):
 
 urlpatterns = [
   path('admin/', admin.site.urls),
-  path('college/', include('college.urls'), name='college'),
+  path('college/', include(('college.urls', 'college'), namespace='college')),
   path('login/', LoginView.as_view(), name='login'),
   path('register/', RegisterView.as_view(), name='register'),
   path('', serve_home),

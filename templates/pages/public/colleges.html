@@ -14,7 +14,7 @@
           </div>
           <div class="card-header clearfix last">
             <h5>{{ college.abbreviated_name }}, {{ college.city }}</h5>
-            <h6>{{ college.state }}</h6>
+            <h6>{{ college.get_ownership_display }} | {{ college.state }}</h6>
           </div>
         </div>
     {% endfor %}
