@@ -4,7 +4,11 @@ from django.contrib import admin
 from django.shortcuts import render
 from django.urls import path, include
 
-from profiles.views.authentication import LoginView, RegisterView
+from profiles.views.authentication import (
+    LoginView,
+    LogoutView,
+    RegisterView
+)
 
 admin.site.site_header = 'My College AI'
 admin.site.site_title = 'My College AI'
@@ -19,8 +23,9 @@ urlpatterns = [
   path('admin/', admin.site.urls),
   path('college/', include(('college.urls', 'college'), namespace='college')),
   path('login/', LoginView.as_view(), name='login'),
+  path('logout/', LogoutView.as_view(), name='logout'),
   path('register/', RegisterView.as_view(), name='register'),
-  path('', serve_home),
+  path('', serve_home, name='home'),
 ]
 
 if settings.DEBUG:

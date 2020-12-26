@@ -146,6 +146,17 @@
              <!-- START User Info-->
              {% include 'components/user-information.html' %}
               <!-- END User Info-->
+         {% else %}
+             <a href="{% url 'login' %}">
+                  <div class="pull-left p-r-10 fs-14 d-lg-inline-block d-none text-white">
+                    <span class="semi-bold">Login</span>
+                </div>
+             </a>
+              <a href="{% url 'register' %}">
+                  <div class="pull-left p-r-10 fs-14 d-lg-inline-block d-none text-white">
+                    <span class="semi-bold">Register</span>
+                </div>
+             </a>
          {% endif %}
         </div>
       </div>

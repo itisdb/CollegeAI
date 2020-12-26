@@ -2,6 +2,18 @@
 
 {% block title %} Home {% endblock %}
 {% block content %}
+    {% if error %}
+        <div class="alert alert-danger" style="margin: 5px" role="alert">
+          <button aria-label="" class="close" data-dismiss="alert"></button>
+          <strong>{{ error }}</strong>
+        </div>
+    {% endif %}
+    {% if message %}
+        <div class="alert alert-success" style="margin: 5px" role="alert">
+          <button aria-label="" class="close" data-dismiss="alert"></button>
+          <strong>{{ message }}</strong>
+        </div>
+    {% endif %}
     <div class="card card-bordered" style="margin: 3px">
       <ul class="nav nav-tabs nav-tabs-simple" role="tablist" data-init-reponsive-tabs="dropdownfx">
         <li class="nav-item">

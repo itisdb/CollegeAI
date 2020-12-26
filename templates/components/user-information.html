@@ -12,14 +12,12 @@
     <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
       <a href="#" class="dropdown-item"><span>Signed in as <br /><b>{{ user.username }}</b></span></a>
       <div class="dropdown-divider"></div>
-      <a href="#" class="dropdown-item">Your Profile</a>
-      <a href="#" class="dropdown-item">Your Activity</a>
-      <a href="#" class="dropdown-item">Your Archive</a>
+      <a href="{% url 'home' %}" class="dropdown-item">Your Profile</a>
       <div class="dropdown-divider"></div>
       <a href="#" class="dropdown-item">Features</a>
       <a href="#" class="dropdown-item">Help</a>
       <a href="#" class="dropdown-item">Settings</a>
-      <a href="#" class="dropdown-item">Logout</a>
+      <a href="{% url 'logout' %}" class="dropdown-item">Logout</a>
       <div class="dropdown-divider"></div>
       <span class="dropdown-item fs-12 hint-text">Last edited by {{ user.username }}<br />at Friday, 5:27PM</span>
     </div>

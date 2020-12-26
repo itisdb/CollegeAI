@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
 
@@ -49,6 +49,13 @@ class RegisterView(View):
 
     def get(self, request):
         return render(request, 'pages/auth/register.html')
+
+
+class LogoutView(View):
+
+    def get(self, request, *args, **kwargs):
+        logout(request)
+        return render(request, 'pages/public/home.html', {'message': 'You have been logged out !'})
 
 
 class ResetPasswordView(View):
