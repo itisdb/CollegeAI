@@ -13,7 +13,8 @@ class RegistrationHandler:
         otp_object = OTPVerification.objects.get_or_create(
             profile=profile,
             otp=str(random.randint(100000, 999999)),
-            verifier_tag=OTPVerification.VerifierTag.MAIL_VERIFICATION.value
+            verifier_tag=OTPVerification.VerifierTag.MAIL_VERIFICATION.value,
+            is_verified=False
         )
         send_mail(
             'Complete your Registration - MyCollegeAI',
@@ -29,11 +30,14 @@ class RegistrationHandler:
     def validate_mail_otp(user, otp):
         profile = user.profile
         try:
-            OTPVerification.objects.get(
+            otp_object = OTPVerification.objects.get(
                 profile=profile,
                 otp=otp,
-                verifier_tag=OTPVerification.VerifierTag.MAIL_VERIFICATION.value
+                verifier_tag=OTPVerification.VerifierTag.MAIL_VERIFICATION.value,
+                is_verified=False
             )
+            otp_object.is_verified = True
+            otp_object.save()
             return True
         except BaseException:
             return False
