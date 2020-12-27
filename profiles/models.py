@@ -30,7 +30,7 @@ class OTPVerification(BaseModel):
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     otp = models.CharField(max_length=6)
     verifier_tag = models.IntegerField(choices=VerifierTag.choices)
-    is_verified = models.SmallIntegerField(default=0)
+    is_verified = models.BooleanField(default=False)
 
     def __str__(self):
         return self.profile.user.get_full_name()

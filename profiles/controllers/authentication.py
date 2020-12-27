@@ -1,4 +1,8 @@
-from profiles.models import Profile
+import random
+
+from django.core.mail import send_mail
+
+from profiles.models import OTPVerification, Profile
 
 
 class RegistrationHandler:
@@ -6,10 +10,30 @@ class RegistrationHandler:
     @staticmethod
     def send_registration_mail(profile_uuid):
         profile = Profile.objects.get(profile_uuid)
+        otp_object = OTPVerification.objects.get_or_create(
+            profile=profile,
+            otp=str(random.randint(100000, 999999)),
+            verifier_tag=OTPVerification.VerifierTag.MAIL_VERIFICATION.value
+        )
         send_mail(
-            'Subject here',
-            'Here is the message.',
-            'from@example.com',
-            ['to@example.com'],
+            'Complete your Registration - MyCollegeAI',
+            'Thank you for registering. Please complete the registration by using this OTP: {}'.format(
+                otp_object.otp
+            ),
+            'admin@mycollegeai.com',
+            [profile.user.email],
             fail_silently=False,
         )
+
+    @staticmethod
+    def validate_mail_otp(user, otp):
+        profile = user.profile
+        try:
+            OTPVerification.objects.get(
+                profile=profile,
+                otp=otp,
+                verifier_tag=OTPVerification.VerifierTag.MAIL_VERIFICATION.value
+            )
+            return True
+        except BaseException:
+            return False
