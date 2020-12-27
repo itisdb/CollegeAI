@@ -27,7 +27,7 @@ class OTPVerification(BaseModel):
         PASSWORD_RESET = 3, _('PASSWORD RESET')
         OTHER = 0, _('Other')
 
-    profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     otp = models.CharField(max_length=6)
     verifier_tag = models.IntegerField(choices=VerifierTag.choices)
     is_verified = models.BooleanField(default=False)
