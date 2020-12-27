@@ -40,7 +40,9 @@ INSTALLED_APPS = [
 
     'social_django',
 
+    'base',
     'college',
+    'obito',
     'profiles',
     'reviews',
     'tracker',
