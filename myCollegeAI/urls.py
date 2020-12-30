@@ -10,9 +10,10 @@ from profiles.views.authentication import (
     RegisterView
 )
 
-admin.site.site_header = 'My College AI'
-admin.site.site_title = 'My College AI'
-admin.site.index_title = 'AI Aggregator Repository'
+handler404 = 'base.views.custom_not_found_error'
+handler500 = 'base.views.custom_internal_error'
+handler403 = 'base.views.custom_not_found_error'
+handler400 = 'base.views.custom_not_found_error'
 
 
 def serve_home(request):
