@@ -1,6 +1,6 @@
 import random
 
-from django.core.mail import send_mail, EmailMessage
+from django.core.mail import EmailMessage
 
 from profiles.models import OTPVerification, Profile
 

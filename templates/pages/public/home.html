@@ -2,6 +2,29 @@
 
 {% block title %} Home {% endblock %}
 {% block content %}
+    <div class="social-wrapper">
+    <div class="social " data-pages="social">
+      <!-- START JUMBOTRON -->
+        <div class="jumbotron" data-social="cover" data-pages="parallax" data-scroll-element=".page-container">
+        <div class="cover-photo">
+          <img alt="Cover photo" src="https://source.unsplash.com/random" />
+        </div>
+        <div class=" container    container-fixed-lg sm-p-l-0 sm-p-r-0">
+          <div class="inner">
+            <div class="pull-bottom bottom-left m-b-40 sm-p-l-15">
+                <h1 class="text-white no-margin"><span class="semi-bold">Welcome to MyCollegeAI</span></h1>
+                <h5 class="text-white no-margin">AI supported college suggester for you specially.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- END JUMBOTRON -->
+    </div>
+    <!-- /container -->
+  </div>
+
+
     {% if error %}
         <div class="alert alert-danger" style="margin: 5px" role="alert">
           <button aria-label="" class="close" data-dismiss="alert"></button>
@@ -14,6 +37,8 @@
           <strong>{{ message }}</strong>
         </div>
     {% endif %}
+
+
     <div class="card card-bordered" style="margin: 3px">
       <ul class="nav nav-tabs nav-tabs-simple" role="tablist" data-init-reponsive-tabs="dropdownfx">
         <li class="nav-item">
@@ -69,5 +94,27 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="row" style="margin: 3px">
+    {% for college in colleges %}
+        <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
+          <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
+          <div class="card-content">
+            <a href="/college/{{ college.slug }}"><img alt="Quote" src="{{ college.image.url }}" height="350px" width="250px"></a>
+          </div>
+          <div class="card-header clearfix last">
+            <h5>{{ college.abbreviated_name }}, {{ college.city }}</h5>
+            <h6>{{ college.get_ownership_display }} | {{ college.state }}</h6>
+          </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="btn-group btn-toolbar" style="margin: 5px">
+      <button aria-label="" type="button" class="btn btn-default">
+        <div class="p-t-5 p-b-5">
+          <i class="pg-icon">time</i>
+          <div class="fs-11 font-montserrat text-uppercase">See More</div>
+        </div>
+      </button>
     </div>
 {% endblock %}
