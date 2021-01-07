@@ -19,7 +19,7 @@ handler400 = 'base.views.custom_not_found_error'
 urlpatterns = [
   path('admin/', admin.site.urls),
   path('college/', include(('college.urls', 'college'), namespace='college')),
-  path('profile/', include(('profile.urls', 'profile'), namespace='profile')),
+  path('profile/', include(('profiles.urls', 'profile'), namespace='profile')),
   path('login/', LoginView.as_view(), name='login'),
   path('logout/', LogoutView.as_view(), name='logout'),
   path('register/', RegisterView.as_view(), name='register'),
