@@ -3,6 +3,26 @@ from reviews.models import Review
 
 
 class IngestionEngine:
+    """
+    Ingest a list of reviews.
+
+    Note:
+        1. Refer Review.ReviewSources for `source`
+        2. name is non-mandatory field
+
+    example: {
+        "college_uuid": "128gf18-48sft2-a72cv17",
+        "source": 1,
+        "reviews": [{
+            "review": "Well maintained technical university with lush of greenery and better than 2nd tier IITs",
+            "name": "Balaka Biswas"
+        },{
+            "review": "Well maintained and clean lush green campus. \nHave bank, post office and all what needed.",
+            "name": ""
+        }
+         ..]
+    }
+    """
 
     def __init__(self):
         self.college = None
@@ -18,7 +38,7 @@ class IngestionEngine:
         self.declare_college(college_json['college_uuid'])
         self.declare_scraping_source(college_json['source'])
         review_objs = []
-        for _, review in college_json['reviews'].items():
+        for review in college_json['reviews']:
             review_obj = self.create_review_object(review)
             if review_obj:
                 review_objs.append(
