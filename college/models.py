@@ -20,6 +20,13 @@ class College(BaseModel):
         DIPLOMA_COLLEGE = 1,
         VOCATIONAL_TRAINING = 2
 
+    class AssociatedMetrics(models.TextChoices):
+        """Choices of metrics of each college."""
+        OTHER = 'other'
+        ACADEMIC = 'academic'
+        INFRASTRUCTURE = 'infra'
+        PLACEMENT = 'placement'
+
     full_name = models.CharField(null=True, max_length=255)
     abbreviated_name = models.CharField(null=True, max_length=50)
     meta = models.TextField(null=True)

@@ -1,0 +1,74 @@
+[{
+  "question": "Which one is your main focus while choosing your college ?",
+  "options": [{
+    "answer": "Placement",
+    "weights": {
+      "academic": 0,
+      "placement": 1,
+      "infrastructure": 0
+    }
+  },
+  {
+    "answer": "Academic",
+    "weights": {
+      "academic": 1,
+      "placement": 0,
+      "infrastructure": 0
+    }
+  },
+  {
+    "answer": "Infrastructure",
+    "weights": {
+      "academic": 0,
+      "placement": 0,
+      "infrastructure": 1
+    }
+  }]
+},
+{
+  "question": "Would you like to participate in Entrepreneurship activities in college ?",
+  "options": [{
+    "answer": "Yes",
+    "weights": {
+      "academic": 0.25,
+      "placement": 0.25,
+      "infrastructure": 0.5
+    }
+  },
+  {
+    "answer": "No",
+    "weights": {
+      "academic": 0.334,
+      "placement": 0.33,
+      "infrastructure": 0.33
+    }
+  }]
+},
+{
+  "question": "What is your dream college hostel be like ?",
+  "options": [{
+    "answer": "Clean rooms with proper food is a must.",
+    "weights": {
+      "academic": 0.125,
+      "placement": 0.125,
+      "infrastructure": 0.75
+    }
+  },
+  {
+    "answer": "Does not matter that much as long as academics are good.",
+    "weights": {
+      "academic": 0.75,
+      "placement": 0.125,
+      "infrastructure": 0.125
+    }
+  },
+  {
+    "answer": "Well, my motivation is totally on placement. So, I will adjust to anything.",
+    "weights": {
+      "academic": 0.125,
+      "placement": 0.75,
+      "infrastructure": 0.75
+    }
+  }]
+}
+]
