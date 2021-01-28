@@ -23,20 +23,6 @@
     <link href="{% static 'assets/plugins/jquery-scrollbar/jquery.scrollbar.css' %}" rel="stylesheet" type="text/css" media="screen" />
     <link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet" type="text/css" media="screen" />
     <link class="main-stylesheet" href="{% static 'pages/css/themes/modern.css' %}" rel="stylesheet" type="text/css" />
-    <!-- style css -->
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-    <!-- Responsive-->
-    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
-    <!-- fevicon -->
-    <link rel="icon" href="{% static 'assets/img/fevicon.png' %}" type="image/gif" />
-    <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/jquery.mCustomScrollbar.min.css' %}">
-    <!-- Tweaks for older IEs-->
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <!-- owl stylesheets --> 
-    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
   </head>
 
   <body class="fixed-header horizontal-menu horizontal-app-menu ">
@@ -94,7 +80,7 @@
         <!-- BEGIN Overlay Header !-->
         <div class="container-fluid">
           <!-- BEGIN Overlay Logo !-->
-          <img class="overlay-brand" src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+          <img class="overlay-brand" src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="{% static 'assets/img/logo_2x.png' %}" width="78" height="22">
           <!-- END Overlay Logo !-->
           <!-- BEGIN Overlay Close !-->
           <a href="#" class="close-icon-light btn-link btn-rounded  overlay-close text-black">
