@@ -17,6 +17,7 @@ class ContactUs(View):
         phone_number = request.data.get('phone_number')
         email = request.data.get('email')
         text = request.data.get('text')
-        extras = request.data
 
-        is_done = DirectLeadHandler().store_from_contact_us()
+        is_done = DirectLeadHandler().store_from_contact_us(
+            name, phone_number, email, text
+        )
