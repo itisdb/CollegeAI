@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'base',
     'college',
+    'leads',
     'obito',
     'profiles',
     'reviews',
