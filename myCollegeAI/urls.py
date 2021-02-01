@@ -5,6 +5,8 @@ from django.urls import path, include
 
 from base import views as base_views
 
+from leads.views.public import ContactUs
+
 from profiles.views.authentication import (
     LoginView,
     LogoutView,
@@ -23,6 +25,7 @@ urlpatterns = [
   path('login/', LoginView.as_view(), name='login'),
   path('logout/', LogoutView.as_view(), name='logout'),
   path('register/', RegisterView.as_view(), name='register'),
+  path('contact/', ContactUs.as_view(), name='contact'),
   path('', base_views.home, name='home'),
 ]
 
