@@ -1,7 +1,9 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
-
+from django.core.mail import send_mail
+from django.core.mail import EmailMessage
+from django.conf import settings
 from profiles.models import Profile, User
 
 
@@ -40,6 +42,14 @@ class RegisterView(View):
         user_obj.first_name = first_name
         user_obj.last_name = last_name
         user_obj.save()
+        email_subject = 'Email Activation'
+        email = EmailMessage(
+            email_subject,
+            'Body goes here',
+            settings.EMAIL_HOST_USER,
+            [email],
+        )
+        email.send(fail_silently=False)
         Profile.objects.create(user=user_obj)
         user = authenticate(username=username, password=password)
         if not user:
