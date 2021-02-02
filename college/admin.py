@@ -1,5 +1,14 @@
 from django.contrib import admin
 
-from college.models import College
+from college.models import College, CollegeImages
 
-admin.site.register(College)
+
+class CollegeImageInline(admin.StackedInline):
+    model = CollegeImages
+
+
+class CollegeAdmin(admin.ModelAdmin):
+    inlines = [CollegeImageInline]
+    model = College
+
+admin.site.register(College, CollegeAdmin)
