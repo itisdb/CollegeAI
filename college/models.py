@@ -30,8 +30,8 @@ class College(BaseModel):
     full_name = models.CharField(null=True, max_length=255)
     abbreviated_name = models.CharField(null=True, max_length=50)
     meta_title = models.CharField(null=True, blank=True, max_length=500)
-    meta = models.TextField(null=True)
-    keywords = models.TextField(null=True)
+    meta = models.CharField(null=True, blank=True, max_length=500)
+    keywords = models.CharField(null=True, blank=True, max_length=500)
     established_year = models.CharField(max_length=4, null=True, blank=True)
     city = models.CharField(null=True, max_length=50)
     state = models.CharField(null=True, max_length=50)
@@ -56,3 +56,12 @@ class College(BaseModel):
         if not self.slug:
             self.slug = slugify(self.full_name)
         super(College, self).save(*args, **kwargs)
+
+
+class CollegeImages(BaseModel):
+
+    image = models.ImageField(upload_to='college/gallery/')
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.college.full_name
