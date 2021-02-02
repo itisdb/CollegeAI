@@ -47,7 +47,6 @@ class College(BaseModel):
     website = models.CharField(max_length=400, null=True, blank=True)
     phone = models.CharField(max_length=200, null=True, blank=True)
     address = models.CharField(max_length=300, null=True, blank=True)
-    images = models.JSONField(null=True, blank=True)
     scraping_urls = models.JSONField(null=True, blank=True)
 
     def __str__(self):
