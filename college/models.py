@@ -29,8 +29,10 @@ class College(BaseModel):
 
     full_name = models.CharField(null=True, max_length=255)
     abbreviated_name = models.CharField(null=True, max_length=50)
+    meta_title = models.CharField(null=True, blank=True, max_length=500)
     meta = models.TextField(null=True)
     keywords = models.TextField(null=True)
+    established_year = models.CharField(max_length=4, null=True, blank=True)
     city = models.CharField(null=True, max_length=50)
     state = models.CharField(null=True, max_length=50)
     image = models.ImageField(null=True, upload_to='college/image/')
@@ -42,7 +44,9 @@ class College(BaseModel):
     is_top = models.BooleanField(null=True, default=False)
     stream_degree = models.JSONField(null=True)
     entrance_exams = models.JSONField(null=True)
-    contacts = models.JSONField(null=True)
+    website = models.CharField(max_length=400, null=True, blank=True)
+    phone = models.CharField(max_length=200, null=True, blank=True)
+    address = models.CharField(max_length=300, null=True, blank=True)
     images = models.JSONField(null=True, blank=True)
     scraping_urls = models.JSONField(null=True, blank=True)
 
