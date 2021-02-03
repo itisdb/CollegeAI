@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'social_django',
     'celery',
     'crispy_forms',
+    'templated_email'
 
     'base',
     'college',
@@ -162,6 +163,7 @@ CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 
 # Email Configuration Options
+TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'

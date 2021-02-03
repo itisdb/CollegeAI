@@ -39,6 +39,9 @@ urlpatterns = [
         auth_views.PasswordResetConfirmView.as_view(template_name='pages/auth/reset-password-confirm.html'),
         name ='password_reset_confirm'),
   path('activate/<uidb64>/<token>',VerificationView.as_view(),name='activate')
+
+  path('/email', include('templated_email.urls', namespace='templated_email')),
+
   path('contact/', ContactUs.as_view(), name='contact'),
   path('', base_views.home, name='home'),
 ]
