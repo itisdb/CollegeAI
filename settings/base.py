@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'social_django',
     'celery',
     'crispy_forms',
-    'templated_email'
+    'templated_email',
 
     'base',
     'college',
@@ -163,10 +163,15 @@ CELERY_TASK_TRACK_STARTED = True
 CELERY_TASK_TIME_LIMIT = 30 * 60
 
 # Email Configuration Options
-TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
+from templated_email.backends.vanilla_django import TemplateBackend
+TEMPLATED_EMAIL_BACKEND = TemplateBackend
+# TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.getenv('EMAIL_ID')
-EMAIL_HOST_PASSWORD = os.getenv('#')
+EMAIL_HOST_USER = 'bhardwaj.ud99@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+SMTP_EMAIL = 'udit@gmail.com'
+TEMPLATED_EMAIL_TEMPLATE_DIR = 'pages/auth/' #Use '' for top level template dir
+TEMPLATED_EMAIL_FILE_EXTENSION = 'html'

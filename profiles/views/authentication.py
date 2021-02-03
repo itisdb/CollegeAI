@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.conf import settings
 from profiles.models import Profile, User
-from templated_email import send_templated_mail
+
 
 class LoginView(View):
 
@@ -42,14 +42,6 @@ class RegisterView(View):
         user_obj.first_name = first_name
         user_obj.last_name = last_name
         user_obj.save()
-        email_subject = 'Email Activation'
-        email = EmailMessage(
-            email_subject,
-            'Body goes here',
-            settings.EMAIL_HOST_USER,
-            [email],
-        )
-        email.send(fail_silently=False)
         Profile.objects.create(user=user_obj)
         user = authenticate(username=username, password=password)
         if not user:
@@ -71,14 +63,4 @@ class LogoutView(View):
 class ResetPasswordView(View):
     pass
 
-def welcome_mail(request):
-    send_templated_mail(
-        template_name='pages/auth/welcome',
-        from_email='from@example.com',
-        recipient_list=['to@example.com'],
-        context={
-            'username':request.user.username,
-            'full_name':request.user.get_full_name(),
-            'signup_date':request.user.date_joined
-        },create_link=True
-        
+
