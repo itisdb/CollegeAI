@@ -11,4 +11,5 @@ class CollegeAdmin(admin.ModelAdmin):
     inlines = [CollegeImageInline]
     model = College
 
+
 admin.site.register(College, CollegeAdmin)

@@ -1,0 +1,51 @@
+{% extends 'layouts/auth.html' %}
+{% block title %}Login{% endblock %}
+{% block page_message %}Sign in to your account{% endblock %}
+{% block content %}
+    {% if error %}
+        <div class="alert alert-danger" style="margin: 5px" role="alert">
+          <button aria-label="" class="close" data-dismiss="alert"></button>
+          <strong>{{ error }}</strong>
+        </div>
+    {% endif %}
+
+    <!-- START Login Form -->
+      <form id="form-login" class="p-t-15" method="POST" role="form" action="">
+        <!-- START Form Control-->
+        <div class="form-group form-group-default">
+          <label>Login</label>
+          <div class="controls">
+            <input type="text" name="username" placeholder="User Name" class="form-control" required>
+          </div>
+        </div>
+          {% csrf_token %}
+        <!-- END Form Control-->
+        <!-- START Form Control-->
+        <div class="form-group form-group-default">
+          <label>Password</label>
+          <div class="controls">
+            <input type="password" class="form-control" name="password" placeholder="Credentials" required>
+          </div>
+        </div>
+        <!-- START Form Control-->
+        <div class="row">
+          <div class="col-md-6 no-padding sm-p-l-10">
+            <div class="form-check">
+              <input type="checkbox" value="1" id="checkbox1">
+              <label for="checkbox1">Remember me</label>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-end">
+            <button aria-label="" class="btn btn-primary btn-lg m-t-10" type="submit">Sign in</button>
+          </div>
+        </div>
+        <div class="m-b-5 m-t-30">
+          <a href="#" class="normal">Lost your password?</a>
+        </div>
+        <div>
+          <a href="/register" class="normal">Not a member yet? Signup now.</a>
+        </div>
+        <!-- END Form Control-->
+      </form>
+      <!--END Login Form-->
+{% endblock %}
