@@ -16,6 +16,7 @@
     <meta name="theme-color" content="#1a3348">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
     <link rel="stylesheet" href="{% static 'css/pages/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <link rel="icon" href="{% static 'images/logo_favicon.png' %}" type="image/x-icon">
   </head>
 </html>
@@ -24,7 +25,7 @@
     <div class="register-modal_login">
       <div class="modal-left">
         <div class="container">
-          <div class="modal-left-header"><a class="modal-left-header__brand" href="index.html"><img src="{% static 'images/logo_background.png' %}" alt="MyCollegeAI Main Logo"></a>
+          <div class="modal-left-header"><a class="modal-left-header__brand" href="{% url 'home' %}"><img src="{% static 'images/logo_background.png' %}" alt="MyCollegeAI Main Logo"></a>
             <h4 class="sub-header-01">Welcome Back</h4>
             <h6 class="sub-header-03">Log In</h6>
           </div>
@@ -307,7 +308,7 @@
     <div class="container">
       <div class="subscribe-content">
         <h4 class="sub-header-01">Get Exclusive Updates</h4>
-        <p>Register now with MyCollegeAI.com</p>
+        <p>Register now with mycollegeai.com</p>
       </div>
       {% include 'v2/components/forms/subscribe.html' %}
     </div>
@@ -336,7 +337,7 @@
       </div>
       <div class="footer-brand"><img class="footer-brand_img" src="{% static 'images/logo1.png' %}" alt="MyCollegeAI Logo White">
         <div class="footer-brand_social-icons">
-          <!-- <a class="social-icon" href="https://www.youtube.com/channel/UC4Kc7m9reV-1qxAUFap8-Zw/featured" target="_blank">
+          <a class="social-icon" href="https://www.youtube.com/channel/UC8od0bvxeRBYA61pb_st_Mg" target="_blank">
             <svg class="icon" id="youtube" width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M19.8108 3.3905H4.18927C1.87927 3.3905 0 5.2972 0 7.64078V16.7023C0 19.0459 1.87927 20.9525 4.18927 20.9525H19.811C22.1208 20.9525 24.0001 19.0459 24.0001 16.7023V7.64078C24 5.2972 22.1207 3.3905 19.8108 3.3905ZM22.283 16.7022C22.283 18.0855 21.174 19.2109 19.8108 19.2109H4.18927C2.826 19.2109 1.71696 18.0855 1.71696 16.7022V7.64066C1.71696 6.25734 2.826 5.13199 4.18927 5.13199H19.811C21.1741 5.13199 22.2831 6.25734 22.2831 7.64066V16.7022H22.283Z"></path>
@@ -347,7 +348,7 @@
                   <path d="M0 0H24V24.3429H0V0Z"></path>
                 </clippath>
               </defs>
-            </svg></a> -->
+            </svg></a>
             <a class="social-icon" href="https://www.instagram.com/mycollegeai/" target="_blank">
             <svg class="icon" id="insta" width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
@@ -372,7 +373,7 @@
                 </clippath>
               </defs>
             </svg></a>
-            <!-- <a class="social-icon" href="https://www.linkedin.com/company/MyCollegeAI" target="_blank">
+            <a class="social-icon" href="https://www.linkedin.com/company/mycollegeai/" target="_blank">
             <svg class="icon" id="linkedin" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M2.57608 5.75806C1.92301 5.75806 1.39355 6.2979 1.39355 6.96377V23.2649C1.39355 23.9308 1.92301 24.4706 2.57608 24.4706C3.22916 24.4706 3.75861 23.9308 3.75861 23.2649V6.96377C3.75861 6.29774 3.22916 5.75806 2.57608 5.75806Z"></path>
@@ -384,7 +385,7 @@
                   <path d="M0.295898 0H24.2959V24.4706H0.295898V0Z"></path>
                 </clippath>
               </defs>
-            </svg></a> -->
+            </svg></a>
             <a class="social-icon" href="https://twitter.com/mycollegeai01" target="_blank">
             <svg class="icon" id="twitter" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
@@ -399,7 +400,7 @@
                 </clippath>
               </defs>
             </svg></a>
-            <!-- <a class="social-icon" href="https://in.pinterest.com/MyCollegeAI/" target="_blank">
+            <a class="social-icon" href="https://in.pinterest.com/mycollegeai/" target="_blank">
             <svg class="icon" id="pinterest" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M12.2958 0C5.67908 0 0.295898 5.38319 0.295898 12C0.295898 15.0613 1.44886 17.9764 3.5422 20.2082C3.90623 20.5962 4.51572 20.6157 4.90389 20.2517C5.29194 19.8877 5.31146 19.2781 4.94744 18.89C3.19038 17.0167 2.22264 14.5698 2.22264 12C2.22264 6.44559 6.74149 1.92674 12.2958 1.92674C17.8502 1.92674 22.3692 6.44559 22.3692 12C22.3692 17.5544 17.8502 22.0733 12.2958 22.0733C11.3111 22.0733 10.3458 21.9331 9.41593 21.6559L10.4013 17.8045C11.0109 17.9532 11.6399 18.0289 12.282 18.0289C16.3292 18.0289 19.6219 14.9906 19.6219 11.256C19.6219 7.52135 16.3292 4.48288 12.282 4.48288C8.23484 4.48288 4.94217 7.52135 4.94217 11.256C4.94217 12.6018 5.36862 13.9022 6.17554 15.0166C6.48755 15.4476 7.08997 15.544 7.52079 15.2319C7.95174 14.9199 8.04808 14.3176 7.73607 13.8867C7.16871 13.103 6.86891 12.1934 6.86891 11.256C6.86891 8.58376 9.29725 6.40963 12.282 6.40963C15.2668 6.40963 17.6951 8.58376 17.6951 11.256C17.6951 13.9282 15.2669 16.1022 12.282 16.1022C11.8024 16.1022 11.3329 16.0472 10.8788 15.9381L12.2274 10.6667C12.3592 10.1512 12.0482 9.62651 11.5329 9.4946C11.0174 9.36268 10.4927 9.67365 10.3608 10.1891L7.32953 22.0377C7.20905 22.5086 7.45837 22.9955 7.91064 23.1732C9.30765 23.7218 10.7832 24 12.2958 24C18.9127 24 24.2959 18.6168 24.2959 12C24.2959 5.38319 18.9127 0 12.2958 0Z"></path>
@@ -409,7 +410,7 @@
                   <path d="M0.295898 0H24.2959V24H0.295898V0Z"></path>
                 </clippath>
               </defs>
-            </svg></a> -->
+            </svg></a>
           </div>
       </div>
       <div class="footer-copyright"><span>&copy; Copyright 2020 mycollegeai.com. All rights reserved. All trademarks are owned by their respective owners.</span></div>

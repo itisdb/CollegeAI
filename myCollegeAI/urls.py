@@ -27,6 +27,7 @@ urlpatterns = [
   path('register/', RegisterView.as_view(), name='register'),
   path('contact/', ContactUs.as_view(), name='contact'),
   path('', base_views.home, name='home'),
+  path('refer', base_views.refer, name='refer'),
 ]
 
 if settings.DEBUG:

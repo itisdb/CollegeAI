@@ -22,3 +22,6 @@ def home(request):
     return render(request, 'v2/pages/public/home.html', {
         'colleges': colleges
     })
+
+def refer(request):
+    return render(request, 'v2/pages/public/refer.html')
