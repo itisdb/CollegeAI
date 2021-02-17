@@ -61,4 +61,4 @@ class UpdatePassword(View):
         context = {
             'form':form,
         }
-        return render(request, 'v2/raw/update-password.html', context) 
+        return render(request, 'v2/raw/update-password.html', context)
