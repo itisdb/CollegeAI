@@ -43,24 +43,25 @@
     <div class="container">
       <div class="footer-links">
         <div class="footer-links_misc">
-          <a class="label-01" href="about.html">About Us</a>
+          <a class="label-01" href="{% url 'about' %}">About Us</a>
         </div> <div class="footer-links_misc">
-          <a class="label-01" href="contact.html">Contact Us</a>
+          <a class="label-01" href="{% url 'contact' %}">Contact Us</a>
         </div>
           <div class="footer-links_misc">
-            <a class="label-01" href="career.html">Career</a>
+            <a class="label-01" href="{% url 'career' %}">Career</a>
           </div> <div class="footer-links_misc">
-          <a class="label-01" href="advertising.html">Advertising</a>
+          <a class="label-01" href="{% url 'advertising' %}">Advertising</a>
       </div>
         <div class="footer-links_misc">
-        <a class="label-01" href="terms.html">Terms &#38; Conditions</a>
+        <a class="label-01" href="{% url 'terms' %}">Terms &#38; Conditions</a>
         </div><div class="footer-links_misc">
-          <a class="label-01" href="privacy-policy.html">Privacy Policy</a>
+          <a class="label-01" href="{% url 'privacy' %}">Privacy Policy</a>
         </div>
         <div class="footer-links_misc">
-          <a class="label-01" href="siteap.html">SiteMap</a>
+          <a class="label-01" href="#">SiteMap</a>
         </div>
       </div>
+
       <div class="footer-brand"><img class="footer-brand_img" src="{% static 'images/logo1.png' %}" alt="MyCollegeAI Logo White">
         <div class="footer-brand_social-icons">
           <a class="social-icon" href="https://www.youtube.com/channel/UC8od0bvxeRBYA61pb_st_Mg" target="_blank">

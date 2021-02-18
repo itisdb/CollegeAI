@@ -2,16 +2,21 @@
 
 {% block title %} About Us {% endblock %}
 
-{% block hero_title %} About MyCollegeAI {% endblock %}
+{% block hero_title %}
+<ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> About Us</li>
+</ul>
+<h2> About Us </h2>  {% endblock %}
 
 {% block content %}
     <section id="content">
       <div class="container">
         <p>
-          Examkhojo.com is a technology driven one stop solution for students, parents and
-          education industry players who are seeking for information on colleges, courses and
-          exams. Our aim is to help students in choosing the right path for their ambitious
-          career.
+          mycollegeai is an AI driven one stop solution for students, parents and education
+          industry players who are seeking information on colleges. Our aim is to help students
+          in choosing the right path for their ambitious career. mycollegeai - AI which helps to
+          find your perfect college.
         </p><br>
         <p>
           We also provide end-to-end solutions to the educational institutes by delivering high

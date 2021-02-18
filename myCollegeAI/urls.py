@@ -28,6 +28,12 @@ urlpatterns = [
   path('contact/', ContactUs.as_view(), name='contact'),
   path('', base_views.home, name='home'),
   path('refer', base_views.refer, name='refer'),
+  path('about', base_views.about, name='about'),
+  path('contact', base_views.contact, name='contact'),
+  path('career', base_views.career, name='career'),
+  path('advertising', base_views.advertising, name='advertising'),
+  path('terms', base_views.terms, name='terms'),
+  path('privacy',  base_views.privacy, name='privacy'),
 ]
 
 if settings.DEBUG:
