@@ -1,0 +1,41 @@
+{% extends 'v2/layouts/public.html' %}
+
+{% block title %} About Us {% endblock %}
+
+{% block hero_title %}
+<ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> About Us</li>
+</ul>
+<h2> About Us </h2>  {% endblock %}
+
+{% block content %}
+    <section id="content">
+      <div class="container">
+        <p>
+          mycollegeai is an AI driven one stop solution for students, parents and education
+          industry players who are seeking information on colleges. Our aim is to help students
+          in choosing the right path for their ambitious career. mycollegeai - AI which helps to
+          find your perfect college.
+        </p><br>
+        <p>
+          We also provide end-to-end solutions to the educational institutes by delivering high
+          quality leads. We also have plenty of other services to choose from, since it is
+          important to use multiple avenues to reach out to your target audience. Our data
+          segregation algorithm in the website helps in segregating the highly specific and
+          active database upto multiple levels.
+        </p><br>
+        <h4>Our Mission</h4>
+        <p>
+          We aspire to be one of the top educational portals by helping students in making the
+          right academic choices with our most interactive user interface and most validated
+          contents.
+        </p><br>
+        <h4>Our Vision</h4>
+        <p>
+          Our vision is to remove the hurdles and work as a catalyst in providing one stop
+          solution in empowering students while choosing their career path.
+        </p><br>
+      </div>
+    </section>
+{% endblock %}

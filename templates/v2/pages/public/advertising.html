@@ -1,0 +1,20 @@
+{% extends 'v2/layouts/public.html' %}
+
+{% block title %} Advertising {% endblock %}
+
+{% block hero_title %} <ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> Advertising </li>
+</ul>
+<h2> Advertising </h2> {% endblock %}
+
+{% block content %}
+    <section id="content">
+      <div class="container">
+        <p>We help you reach out to aspirants, students and alumni. Increase your reach by working with us. We have plenty of services for you to choose from, since it is important to use multiple avenues to reach out to your target audience. Drop us a quick email/telephone number so that we can get in touch to help you make the best choices.</p>
+        <br>
+        <p>Email: <a class="paragraph-01" href="mailto:hello@mycollegeai.com">hello@mycollegeai.com</a></p>
+        <p>Phone: <a class="paragraph-01" href="tel:+917250549857">(+91) 725 054 9857</a> / <a class="paragraph-01" href="tel:+917250549857">(+91) 9748 237 978</a></p><br>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,249 @@
+{% extends 'v2/layouts/public.html' %}
+{% load static %}
+{% block title %} {{ college.abbreviated_name }} {% endblock %}
+{% block page_name %}
+    <li class="breadcrumb-item active">Colleges</li>
+    <li class="breadcrumb-item active">{{ college.full_name }}, {{ college.city }}</li>
+{% endblock %}
+{% block hero_title %}
+  <div class="container">
+    <ul class="breadcrumb">
+      <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+      <li class="link-01"> <a href="/college/list">Colleges</a></li>
+      <li class="link-01">{{ college.abbreviated_name }}</li>
+    </ul>
+    <div class="header-primary-info">
+      <div class="logo"><img src="{{ college.image.url }}" alt="College Logo"></div>
+      <h3 class="header-03" style="margin: 0%;">{{ college.full_name }}</h3><span class="label-01" style="color: white;">
+        <svg class="icon" style="color: white;" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path d="M12.0781 0C6.77499 0 2.45801 4.23233 2.45801 9.4315C2.45801 10.0234 2.51335 10.6203 2.62908 11.2024C2.63411 11.2369 2.65423 11.3405 2.69449 11.5181C2.8404 12.1544 3.05675 12.7809 3.33851 13.3777C4.37499 15.7701 6.65423 19.4451 11.6555 23.3814C11.7813 23.4801 11.9322 23.5294 12.0832 23.5294C12.2341 23.5294 12.3851 23.4801 12.5108 23.3814C17.5071 19.4451 19.7913 15.7701 20.8278 13.3777C21.1096 12.7809 21.3259 12.1593 21.4718 11.5181C21.5121 11.3405 21.5322 11.2369 21.5373 11.2024C21.6479 10.6203 21.7083 10.0234 21.7083 9.4315C21.6983 4.23233 17.3813 0 12.0781 0ZM20.1888 10.9705C20.1888 10.9804 20.1838 10.9903 20.1838 11.0001C20.1788 11.0248 20.1637 11.0988 20.1385 11.2122C20.1385 11.2172 20.1385 11.2172 20.1385 11.2221C20.0127 11.7746 19.8266 12.3122 19.58 12.8302C19.575 12.8351 19.575 12.845 19.57 12.8499C18.6291 15.0351 16.5662 18.3697 12.0781 22.0052C7.59008 18.3697 5.52719 15.0351 4.58631 12.8499C4.58128 12.845 4.58128 12.8351 4.57625 12.8302C4.33474 12.3172 4.14857 11.7746 4.01776 11.2221C4.01776 11.2172 4.01776 11.2172 4.01776 11.2122C3.98757 11.0988 3.9775 11.0248 3.97247 11.0001C3.97247 10.9903 3.96744 10.9804 3.96744 10.9656C3.86681 10.4575 3.8165 9.94451 3.8165 9.42656C3.8165 4.96239 7.52467 1.32692 12.0781 1.32692C16.6316 1.32692 20.3398 4.96239 20.3398 9.42656C20.3398 9.94944 20.2895 10.4674 20.1888 10.9705Z"></path>
+            <path d="M12.0779 3.54675C8.71186 3.54675 5.96973 6.23512 5.96973 9.53516C5.96973 12.8352 8.71186 15.5236 12.0779 15.5236C15.4439 15.5236 18.1861 12.8352 18.1861 9.53516C18.1861 6.23512 15.4439 3.54675 12.0779 3.54675ZM12.0779 14.1917C9.45652 14.1917 7.32822 12.1002 7.32822 9.53516C7.32822 6.97011 9.46155 4.87861 12.0779 4.87861C14.6943 4.87861 16.8276 6.97011 16.8276 9.53516C16.8276 12.1002 14.6993 14.1917 12.0779 14.1917Z"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path d="M0.0830078 0H24.083V23.5294H0.0830078V0Z"></path>
+            </clipPath>
+          </defs>
+        </svg>{{college.city}},{{college.state}}</span>
+    </div>
+    <div class="header-buttons">
+      <button class="icon-button-primary"> 
+        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z"></path>
+          <path d="M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z"></path>
+        </svg>Bookmark
+      </button>
+      <button class="icon-button-outline">
+        <svg class="icon" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path d="M23.351 11.488C22.969 11.488 22.6634 11.7875 22.6634 12.1619V18.2914C22.6634 19.9586 21.278 21.3113 19.5819 21.3113H4.49528C2.79409 21.3113 1.41379 19.9536 1.41379 18.2914V12.062C1.41379 11.6877 1.10818 11.3882 0.72618 11.3882C0.344177 11.3882 0.0385742 11.6877 0.0385742 12.062V18.2914C0.0385742 20.7023 2.04027 22.659 4.49528 22.659H19.5819C22.042 22.659 24.0386 20.6974 24.0386 18.2914V12.1619C24.0386 11.7925 23.733 11.488 23.351 11.488Z"></path>
+            <path d="M11.5547 17.3081C11.6872 17.4379 11.8654 17.5078 12.0386 17.5078C12.2118 17.5078 12.39 17.4429 12.5225 17.3081L16.8926 13.0254C17.1625 12.7608 17.1625 12.3366 16.8926 12.072C16.6226 11.8075 16.1897 11.8075 15.9197 12.072L12.7262 15.2067V1.53494C12.7262 1.16057 12.4206 0.861084 12.0386 0.861084C11.6566 0.861084 11.351 1.16057 11.351 1.53494V15.2067L8.15235 12.072C7.8824 11.8075 7.44946 11.8075 7.17951 12.072C6.90956 12.3366 6.90956 12.7608 7.17951 13.0254L11.5547 17.3081Z"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path d="M0.0385742 0H24.0386V23.52H0.0385742V0Z"></path>
+            </clipPath>
+          </defs>
+        </svg>Download Brochure
+      </button>
+      <button class="icon-button-outline">
+        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path d="M22.5164 12.0847C22.4805 11.8896 22.3624 11.7253 22.193 11.6227C18.2914 9.29711 16.0018 8.81455 14.3282 8.46545C14.1126 8.41925 13.9021 8.37818 13.7019 8.33198L12.978 2.38203C12.9524 1.06781 11.8743 0 10.5549 0C9.25097 0 8.19857 1.0062 8.13183 2.29989C8.13183 2.32556 8.12669 2.3461 8.12669 2.37176V5.87294L8.07022 14.4205L7.14616 13.707C6.96648 13.5529 5.71386 12.5416 4.16349 12.5416C3.11621 12.5416 2.18701 12.9831 1.40156 13.8456C1.18081 14.0868 1.16028 14.4462 1.35022 14.7132C1.41696 14.8056 3.00841 17.0336 5.50338 19.3027C6.98188 20.6426 8.47065 21.7155 9.92862 22.4907C11.787 23.4764 13.6043 23.9846 15.3344 24C15.3601 24 15.3909 24 15.4165 24C17.778 24 19.6159 23.2197 20.8788 21.6847C23.692 18.2657 22.5626 12.3363 22.5164 12.0847ZM19.8058 20.812C18.8202 22.0133 17.3417 22.619 15.4165 22.619C15.3909 22.619 15.3703 22.619 15.3447 22.619C11.9102 22.5934 8.61439 20.2575 6.45824 18.3016C4.73846 16.741 3.43964 15.1701 2.84413 14.4C3.24969 14.0868 3.68605 13.9328 4.16862 13.9328C5.28263 13.9328 6.24776 14.7594 6.2529 14.7696C6.26316 14.7799 6.27856 14.7902 6.28883 14.8004L8.33717 16.3765C8.54766 16.5356 8.82488 16.5664 9.06616 16.4483C9.30231 16.3354 9.45119 16.0941 9.45632 15.8323L9.52306 5.88321V2.41797C9.52306 2.41283 9.52306 2.40257 9.52306 2.39743C9.53846 1.83273 9.99536 1.39123 10.5601 1.39123C11.135 1.39123 11.5971 1.8584 11.5971 2.42824C11.5971 2.4539 11.5971 2.48471 11.6022 2.51037L12.3774 8.97369C12.4133 9.25604 12.6135 9.48706 12.8856 9.55893C13.2552 9.65647 13.6351 9.73861 14.0407 9.82075C15.6629 10.1596 17.6754 10.5857 21.2073 12.6494C21.3819 13.8404 21.8798 18.2913 19.8058 20.812Z"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path d="M0 0H24V24H0V0Z"></path>
+            </clipPath>
+          </defs>
+        </svg>Apply Now
+      </button>
+    </div>
+  </div>
+{% endblock %}
+{% block content %}
+    <section id = "individual-page-content">
+      <div class="container">
+        <div class="main-content">
+          <div class="main-content-card quick-facts">
+            <h4 class="sub-header-01 quick-facts_header">Quick Facts</h4>
+            <div class="quick-facts_content">
+              <div class="quick-facts_content-item"><span class="label-01">Ownership</span>
+                <p class="paragraph-01">{{ college.get_ownership_display }}</p>
+              </div>
+              <div class="quick-facts_content-item"><span class="label-01">Approval</span>
+                <p class="paragraph-01">{{ college.approval }}</p>
+              </div>
+              <div class="quick-facts_content-item"><span class="label-01">Type of Institute</span>
+                <p class="paragraph-01">{{ college.get_college_type_display }}</p>
+              </div>
+              <div class="quick-facts_content-item"><span class="label-01">Established</span>
+                <p class="paragraph-01">{{ college.established_year }}</p>
+              </div>
+              <div class="quick-facts_content-item"><span class="label-01">Also Known As</span>
+                <p class="paragraph-01">{{ college.abbreviated_name }}</p>
+              </div>
+              <div class="quick-facts_content-item"><span class="label-01">Accepted Exams</span>
+                <p class="paragraph-01">mains</p>
+              </div>
+            </div>
+          </div>
+          <div class="main-content-cta">
+            <h5 class="sub-header-02">Interested in this College?</h5>
+            <button class="icon-button-primary">
+              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z"></path>
+                <path d="M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z"></path>
+              </svg>Bookmark
+            </button>
+          </div>
+
+          <div class="main-content-card">
+            <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
+            <div class="main-content-card-content unclamped">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Engineering - UG - B.Tech</th>
+                    <th>Engineering - PG - M.Tech</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Computer Science and Engineering</td>
+                    <td>Computer Science and Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Electrical Engineering</td>
+                    <td>Electrical Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Electronics Engineering</td>
+                    <td>Mechanical Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Mechanical Engineering</td>
+                    <td>Bio Technology</td>
+                  </tr>
+                  <tr>
+                    <td>Civil Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Information Technology</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Others - UG</th>
+                    <th>Otehrs - PG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BCA</td>
+                    <td>MCA</td>
+                  </tr>
+                  <tr>
+                    <td>BBA LLB</td>
+                    <td>MBA</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="icon-link main-content-card-button">
+              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+              </svg><span class="link-primary_lined">Read Less</span>
+            </button>
+          </div>
+         
+          <div class="main-content-card">
+            <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
+            <div class="main-content-card-content unclamped">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Engineering - UG - B.Tech</th>
+                    <th>Engineering - PG - M.Tech</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Computer Science and Engineering</td>
+                    <td>Computer Science and Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Electrical Engineering</td>
+                    <td>Electrical Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Electronics Engineering</td>
+                    <td>Mechanical Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Mechanical Engineering</td>
+                    <td>Bio Technology</td>
+                  </tr>
+                  <tr>
+                    <td>Civil Engineering</td>
+                  </tr>
+                  <tr>
+                    <td>Information Technology</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Others - UG</th>
+                    <th>Otehrs - PG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BCA</td>
+                    <td>MCA</td>
+                  </tr>
+                  <tr>
+                    <td>BBA LLB</td>
+                    <td>MBA</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="icon-link main-content-card-button">
+              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+              </svg><span class="link-primary_lined">Read Less</span>
+            </button>
+          </div>
+         
+          <div class="main-content-cta">
+            <h5 class="sub-header-02">Interested in this College?</h5>
+            <button class="icon-button-primary">
+              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z"></path>
+                <path d="M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z"></path>
+              </svg>Bookmark
+            </button>
+          </div>
+        </div>
+        <aside class="card_sidebar">
+          <div class="card_sidebar-suggestion">
+            <h4 class="sub-header-01">Top Colleges</h4><a class="paragraph-01" href="individual-college.html">IIT Bombay</a><a class="paragraph-01" href="individual-college.html">Jadavpur University</a><a class="paragraph-01" href="individual-college.html">IIM Delhi</a><a class="paragraph-01" href="individual-college.html">NID Ahmedabad</a><a class="paragraph-01" href="individual-college.html">NID Ahmedabad</a><a class="paragraph-01" href="individual-college.html">Amity University</a>
+          </div>
+          <div class="search-bar_small">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path d="M23.7901 22.3016L17.9577 16.5907C19.5222 14.8295 20.4694 12.5316 20.4694 10.0201C20.4694 4.49157 15.877 0 10.2362 0C4.59007 0 0.00292969 4.49678 0.00292969 10.0201C0.00292969 15.5433 4.59539 20.0401 10.2362 20.0401C12.8012 20.0401 15.1479 19.1126 16.9466 17.5807L22.779 23.2916C22.9173 23.4271 23.1036 23.5 23.2845 23.5C23.4655 23.5 23.6517 23.4323 23.7901 23.2916C24.0668 23.0206 24.0668 22.5725 23.7901 22.3016ZM1.43442 10.0201C1.43442 5.26796 5.38297 1.40687 10.2309 1.40687C15.0841 1.40687 19.0273 5.27317 19.0273 10.0201C19.0273 14.767 15.0841 18.6385 10.2309 18.6385C5.38297 18.6385 1.43442 14.7722 1.43442 10.0201Z"></path>
+              </g>
+            </svg>
+            <h6 class="label-02">Search Items</h6>
+          </div>
+        </aside>
+      </div>
+    </section>
+{% endblock %}

@@ -14,10 +14,10 @@ class IngestionEngine:
         "college_uuid": "128gf18-48sft2-a72cv17",
         "source": 1,
         "reviews": [{
-            "review": "Well maintained technical university with lush of greenery and better than 2nd tier IITs",
+            "review": "Well maintained technical university with lush of #099e00ery and better than 2nd tier IITs",
             "name": "Balaka Biswas"
         },{
-            "review": "Well maintained and clean lush green campus. \nHave bank, post office and all what needed.",
+            "review": "Well maintained and clean lush #099e00 campus. \nHave bank, post office and all what needed.",
             "name": ""
         }
          ..]

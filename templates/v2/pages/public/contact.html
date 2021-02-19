@@ -1,0 +1,19 @@
+{% extends 'v2/layouts/public.html' %}
+
+{% block title %} Contact Us {% endblock %}
+
+{% block hero_title %} <ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> Contact Us</li>
+</ul>
+<h2> Contact Us </h2> {% endblock %}
+
+{% block content %}
+<section id="content">
+    <div class="container">
+      <h4>For any queries email us at:</h4>
+      <p><a class="paragraph-01" href="mailto:hello@mycollegeai.com">hello@mycollegeai.com</a></p>
+      <p>Phone: <a class="paragraph-01" href="tel:+917250549857">(+91) 725 054 9857</a> / <a class="paragraph-01" href="tel:+917250549857">(+91) 9748 237 978</a></p><br>
+    </div>
+  </section>
+{% endblock %}

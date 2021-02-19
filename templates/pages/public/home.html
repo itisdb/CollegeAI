@@ -1,132 +1,60 @@
-{% extends 'layouts/public.html' %}
-
-{% block title %} Home {% endblock %}
 {% block content %}
-  
-  <!-- Container element -->
-  <div class="parallax"></div>
-
-    <div class="social-wrapper">
-    <div class="social " data-pages="social">
-      <!-- START JUMBOTRON -->
-      <div class="jumbotron" data-social="cover" data-pages="parallax" data-scroll-element=".page-container">
-        <div class="cover-photo">
-          <img alt="Cover photo" src="https://source.unsplash.com/random" />
+    <section id="featured-colleges">
+      <div class="container">
+        <div class="featured-section-header">
+          <div class="featured-section-header-content">
+            <h4 class="sub-header-01">Top Colleges</h4>
+            <p>Checkout the best colleges for you.</p>
+          </div>
+          <div class="search-bar_small">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path d="M23.7901 22.3016L17.9577 16.5907C19.5222 14.8295 20.4694 12.5316 20.4694 10.0201C20.4694 4.49157 15.877 0 10.2362 0C4.59007 0 0.00292969 4.49678 0.00292969 10.0201C0.00292969 15.5433 4.59539 20.0401 10.2362 20.0401C12.8012 20.0401 15.1479 19.1126 16.9466 17.5807L22.779 23.2916C22.9173 23.4271 23.1036 23.5 23.2845 23.5C23.4655 23.5 23.6517 23.4323 23.7901 23.2916C24.0668 23.0206 24.0668 22.5725 23.7901 22.3016ZM1.43442 10.0201C1.43442 5.26796 5.38297 1.40687 10.2309 1.40687C15.0841 1.40687 19.0273 5.27317 19.0273 10.0201C19.0273 14.767 15.0841 18.6385 10.2309 18.6385C5.38297 18.6385 1.43442 14.7722 1.43442 10.0201Z"></path>
+              </g>
+            </svg>
+            <h6 class="label-02">Search Colleges</h6>
+          </div>
         </div>
-        <div class=" container    container-fixed-lg sm-p-l-0 sm-p-r-0">
-          <div class="inner">
-            <div class="pull-bottom m-b-40 sm-p-l-15">
-                <h1 class="text-white no-margin"><span class="semi-bold">Welcome to MyCollegeAI</span></h1>
-                <h5 class="text-white no-margin">AI supported college suggester for you specially.</h5>
+        <div class="featured-section-cards">
+          <div class="cards-group">
+            <div class="card_college">
+              <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
+              <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Delhi</a>
+                <div class="card_college-details_secondary"><span class="label-01">Delhi</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+              </div>
+            </div>
+            <div class="card_college">
+              <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
+              <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IEM Saltlake</a>
+                <div class="card_college-details_secondary"><span class="label-01">Kolkata</span><span class="label-01">AICTE</span><span class="label-01">College</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+              </div>
+            </div>
+            <div class="card_college">
+              <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
+              <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">Amity University</a>
+                <div class="card_college-details_secondary"><span class="label-01">Kolkata</span><span class="label-01">UGC</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+              </div>
+            </div>
+            <div class="card_college">
+              <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
+              <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Delhi</a>
+                <div class="card_college-details_secondary"><span class="label-01">Delhi</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+              </div>
+            </div>
+            <div class="card_college">
+              <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
+              <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IEM Saltlake</a>
+                <div class="card_college-details_secondary"><span class="label-01">Kolkata</span><span class="label-01">AICTE</span><span class="label-01">College</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+              </div>
+            </div>
+            <div class="card_college">
+              <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
+              <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">Amity University</a>
+                <div class="card_college-details_secondary"><span class="label-01">Kolkata</span><span class="label-01">UGC</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- END JUMBOTRON -->
-    </div>
-    <!-- /container -->
-  
-
-
-    {% if error %}
-        <div class="alert alert-danger" style="margin: 5px" role="alert">
-          <button aria-label="" class="close" data-dismiss="alert"></button>
-          <strong>{{ error }}</strong>
-        </div>
-    {% endif %}
-    {% if message %}
-        <div class="alert alert-success" style="margin: 5px" role="alert">
-          <button aria-label="" class="close" data-dismiss="alert"></button>
-          <strong>{{ message }}</strong>
-        </div>
-    {% endif %}
-
-
-    <div class="inner" style="transform: translateY(17.34px); opacity: 1;">
-      <div class="container-md-height m-b-20 m-t-40">
-        <div class="row m-lg-0">
-          <div class="col-xl-7 col-lg-6 ">
-            <!-- START card -->
-            <div class="full-height">
-              <div class="card-body text-center justify-content-center align-items-center d-flex full-height">
-                <h1 class="text-black large-demo-text">Find out where you belong</h1>
-              </div>
-            </div>
-            <!-- END card -->
-          </div>
-          <div class="col-xl-5 col-lg-6">
-            <!-- START card -->
-            <div class="card card-transparent">
-              <div class="card-header ">
-                <div class="card-title">Getting started
-                </div>
-              </div>
-              <div class="card-body">
-                <h3 class="text-black">Psychometric test</h3>
-                <p>This test will help you understand you own potential and then find out where you belong. The AI will analyse your answers and you can find your destiny.</p>
-                <button aria-label="" class="btn btn-lg btn-rounded btn-primary m-r-10 m-b-10">Get Started</button>                <br>
-                <div>
-                  <div class="inline">
-                    <p class="small text-white hint-text m-t-5">Have an Improvement or a suggestion?
-                      <br>goto request box</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- END card -->
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  
-    <div class=" container    container-fixed-lg">
-            <!-- START card -->
-            <div class="card card-transparent">
-              <div class="row" style="margin: 3px">
-                <div class="card-body">
-                  <div class="row">                    
-                      {% for college in colleges %}
-                       <div class="col-lg-4 col-sm-6">
-                      <div class="card card-default">
-                        <div class="card-header  separator">
-                          <div class="card-title">{{ college.get_college_type_display }}
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <h3 style="white-space: nowrap; display: inline-block; overflow: hidden; clear:both; text-overflow:ellipsis; max-width:100%;"><a href="#">
-                  <span class="semi-bold">{{ college.abbreviated_name }}</span></a></h3>
-                          <h5>{{ college.city }}, {{ college.state}}</h5>
-                          <h6>{{ college.get_ownership_display }} | {{ college.approval }}</h6>
-                          <div class="card_college-img" style="height: 200px; overflow:hidden;">
-                      <a href="/college/{{ college.slug }}"><img alt="Quote" src="{{ college.image.url }}" width="100%" height="100%"></a>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                    {% endfor %}
-                    </div>
-                  </div>
-                </div>
-              <div class="m-0 row card-body">
-                <div class="col-lg-6 no-padding">
-                  <div class="p-r-30">
-                    <h3>Contact Us</h3>
-                      <h4>For any queries email us at:</h4>
-                      <p><a class="paragraph-01" href="#">hello@examkhojo.com</a></p>
-                      <p>Phone: <a class="paragraph-01" href="#">(+91) 725 054 9857</a> / <a class="paragraph-01" href="tel:+917250549857">(+91) 9748 237 978</a></p><br>
-                  </div>
-                </div>
-                <div class="col-lg-6 no-padding">
-                  <div class="p-r-30">
-                    <h3>About Us</h3>
-<p>mycollegeai is an AI driven one stop solution for students, parents and education industry players who are seeking information on colleges. Our aim is to help students in choosing the right path for their ambitious career. mycollegeai - AI which helps to find your perfect college.</p>
-                  </div>
-                </div>
-            </div>
-            <!-- END card -->
-          </div>
-  </div>
-
+    </section>
 {% endblock %}

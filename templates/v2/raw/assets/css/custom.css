@@ -1,0 +1,500 @@
+#recovery .container {
+    max-width: 800px;
+    margin: 64px auto 80px;
+}
+#recovery .container .label-01 {
+    display: block;
+    color: grey;
+}
+#recovery .container a {
+    color: #099e00;
+}
+#recovery .container a:hover {
+    color: #099e00;
+}
+#recovery .container form {
+    margin-bottom: 48px;
+}
+#recovery .container form input[type="email"] {
+    margin: 8px auto 16px;
+}
+#recovery .container form input[type="text"] {
+    margin: 8px auto 16px;
+}
+
+
+.above-the-fold .nav-content .nav-content-links .hamburger-content .nav-content-links__right-buttons button:first-child {
+    color: white;
+    border-color: grey;
+}
+@media screen and (max-width: 1200px) {
+    .above-the-fold .nav-content .nav-content-links .hamburger-content .nav-content-links__right-buttons button:first-child {
+        color: grey;
+        border-color: grey;
+   }
+}
+.above-the-fold .nav-content .nav-content-links .hamburger-content .nav-content-links__right-buttons button:first-child:hover {
+    color: #099e00;
+    border-color: #099e00;
+}
+.above-the-fold .nav-content .nav-content-links .hamburger-content .nav-content-links__right-buttons button:first-child:focus {
+    color: #099e00;
+    border-color:#099e00;
+    box-shadow: 0 0 0 2px grey;
+}
+.above-the-fold .nav-content .nav-content-links .hamburger-content .nav-content-links__right-buttons button:last-child:focus {
+    box-shadow: 0 0 0 2px grey;
+}
+
+#hero .container {
+    padding-bottom: 12vmin;
+}
+#hero .container .header-primary-info {
+    margin: 4vmin auto 16px;
+    color: white;
+}
+#hero .container .logo img {
+    height: 48px;
+}
+#hero .container .header-03 {
+    margin: 4px auto 6px;
+}
+#hero .container .label-01 .icon {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    fill: white;
+}
+#hero .container .header-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 12px 24px;
+    justify-content: start;
+    justify-items: start;
+}
+@media screen and (max-width: 800px) {
+    #hero .container .header-buttons {
+        grid-template-columns: auto;
+   }
+}
+#hero .container .header-buttons button:focus {
+    box-shadow: 0 0 0 2px grey;
+}
+#hero .container .header-buttons .icon-button-outline {
+    color: white;
+    border-color: grey;
+}
+#hero .container .header-buttons .icon-button-outline .icon {
+    fill: white;
+}
+#hero .container .header-buttons .icon-button-outline:hover {
+    color: #099e00;
+    border-color: #099e00;
+}
+#hero .container .header-buttons .icon-button-outline:hover .icon {
+    fill: #099e00;
+}
+#hero .container .header-buttons .icon-button-outline:focus {
+    color: #099e00;
+    border-color: #099e00;
+    box-shadow: 0 0 0 2px grey;
+}
+#hero .container .header-buttons .icon-button-outline:focus .icon {
+    fill: #099e00;
+}
+
+
+/****** Typography Styles****** */
+/* Header 01 */
+h1, .header-01 {
+    font-weight: 800;
+    font-size: 4.5rem;
+    line-height: 4.25rem;
+}
+/* Header 02 */
+h2, .header-02 {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.25rem;
+}
+/* Header 03 */
+h3, .header-03 {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.375rem;
+}
+/* Sub Header 01 */
+h4, .sub-header-01 {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.375rem;
+}
+/* Sub Header 02 */
+h5, .sub-header-02 {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.375rem;
+}
+/* Sub Header 03 */
+h6, .sub-header-03, #individual-page-content .container .main-content > div .main-content-card-content th, #individual-page-content .container .main-content > div .main-content-card-content td:before {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+/* Paragraph 01 */
+p, .paragraph-01, #individual-page-content .container .main-content > div .main-content-card-content ul li, #individual-page-content .container .main-content > div .main-content-card-content ol li, #individual-page-content .container .main-content > div .main-content-card-content td, #individual-page-content .container .main-content .quick-facts .quick-facts_content .link-primary {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+/* Button 01 */
+button, .button-01 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+}
+/* Link 01 */
+a, .link-01 {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.185rem;
+}
+/* Lable 01 */
+span, .label-01 {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+}
+/* Lable 02 */
+label, .label-02 {
+    font-weight: 400;
+    font-size: 1.35rem;
+    line-height: 1.5rem;
+}
+@media only screen and (max-width: 800px) {
+    h1, .header-01 {
+        font-size: 3.5rem;
+        line-height: 3.125rem;
+   }
+    h2, .header-02 {
+        font-size: 3rem;
+        line-height: 3.25rem;
+   }
+    h3, .header-03 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+   }
+}
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+    h1, .header-01 {
+        font-size: 2rem;
+        line-height: 2.25rem;
+   }
+    h2, .header-02 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+   }
+    h3, .header-03 {
+        font-size: 1.5rem;
+        line-height: 1.85rem;
+   }
+    h4, .sub-header-01 {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+   }
+    h5, .sub-header-02 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+   }
+    h6, .sub-header-03, #individual-page-content .container .main-content > div .main-content-card-content th, #individual-page-content .container .main-content > div .main-content-card-content td:before {
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+   }
+    p, .paragraph-01, #individual-page-content .container .main-content > div .main-content-card-content ul li, #individual-page-content .container .main-content > div .main-content-card-content ol li, #individual-page-content .container .main-content > div .main-content-card-content td, #individual-page-content .container .main-content .quick-facts .quick-facts_content .link-primary {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+   }
+    button, .button-01 {
+        font-size: 1rem;
+        line-height: 100%;
+   }
+    .link-01 {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+   }
+    span, .label-01 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+   }
+    label, .label-02 {
+        font-size: 1.125rem;
+        line-height: 1.25rem;
+   }
+}
+#individual-page-content .container {
+    margin: 80px auto;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    grid-column-gap: 24px;
+    align-items: start;
+}
+@media screen and (max-width: 1400px) {
+    #individual-page-content .container {
+        grid-template-columns: auto;
+   }
+}
+@media screen and (max-width: 600px) {
+    #individual-page-content .container {
+        width: 100%;
+   }
+}
+#individual-page-content .container .main-content > div {
+    margin: 0 auto 24px;
+    background-color: white;
+    padding: 48px 48px;
+    border-radius: 3px;
+}
+@media screen and (max-width: 800px) {
+    #individual-page-content .container .main-content > div {
+        padding: 24px 5%;
+   }
+}
+#individual-page-content .container .main-content > div h4, #individual-page-content .container .main-content > div .sub-header-01, #individual-page-content .container .main-content > div .main-content-card-header {
+    margin-bottom: 24px;
+    color: grey;
+}
+#individual-page-content .container .main-content > div .main-content-card-content {
+    max-height: calc(2.25rem * 5);
+    overflow: auto hidden;
+    position: relative;
+}
+#individual-page-content .container .main-content > div .main-content-card-content:after {
+    content: '';
+    height: calc(2.25rem * 2);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 1);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 5%, rgba(0, 0, 0, 0) 100%);
+}
+#individual-page-content .container .main-content > div .main-content-card-content p, #individual-page-content .container .main-content > div .main-content-card-content .paragraph-01, #individual-page-content .container .main-content > div .main-content-card-content ul li, #individual-page-content .container .main-content > div .main-content-card-content ol li, #individual-page-content .container .main-content > div .main-content-card-content td, #individual-page-content .container .main-content > div .main-content-card-content .quick-facts .quick-facts_content .link-primary, #individual-page-content .container .main-content .quick-facts .quick-facts_content > div .main-content-card-content .link-primary, #individual-page-content .container .main-content > div .main-content-card-content li {
+    margin: 4px auto;
+}
+#individual-page-content .container .main-content > div .main-content-card-content ul li {
+    margin-left: 1em;
+}
+#individual-page-content .container .main-content > div .main-content-card-content ul li:before {
+    content: "\2022";
+    color: grey;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+#individual-page-content .container .main-content > div .main-content-card-content ol li {
+    margin-left: 1em;
+    padding-left: 8px;
+    list-style: decimal;
+}
+#individual-page-content .container .main-content > div .main-content-card-content table, #individual-page-content .container .main-content > div .main-content-card-content th, #individual-page-content .container .main-content > div .main-content-card-content td {
+    margin-bottom: calc(1vmax + 8px);
+    border: 1px solid grey;
+    text-align: left;
+}
+#individual-page-content .container .main-content > div .main-content-card-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+#individual-page-content .container .main-content > div .main-content-card-content tr:nth-child(even) {
+    background: white;
+}
+#individual-page-content .container .main-content > div .main-content-card-content th, #individual-page-content .container .main-content > div .main-content-card-content td {
+    padding: 8px 24px;
+}
+@media screen and (max-width: 800px) {
+    #individual-page-content .container .main-content > div .main-content-card-content th, #individual-page-content .container .main-content > div .main-content-card-content td {
+        padding: 2px 2.5%;
+   }
+}
+#individual-page-content .container .main-content > div .main-content-card-content th {
+    background: rgba(0, 0, 255, 0.15);
+    color: grey;
+}
+@media screen and (max-width: 800px) {
+    #individual-page-content .container .main-content > div .main-content-card-content table {
+        border: 0;
+   }
+    #individual-page-content .container .main-content > div .main-content-card-content thead {
+        clip: rect(0, 0, 0, 0);
+        position: absolute;
+   }
+    #individual-page-content .container .main-content > div .main-content-card-content tr {
+        display: block;
+        border: 1px solid grey;
+        border-bottom: 3px solid grey;
+        margin-bottom: 16px;
+        border-radius: 3px;
+        padding: 0 2.5%;
+   }
+    #individual-page-content .container .main-content > div .main-content-card-content td {
+        display: block;
+        border: 0;
+        border-bottom: 1px solid grey;
+        padding: 2px 0;
+        text-align: left;
+   }
+    #individual-page-content .container .main-content > div .main-content-card-content td:last-child {
+        border-bottom: 0;
+   }
+    #individual-page-content .container .main-content > div .main-content-card-content td:before {
+        content: attr(data-label);
+        float: left;
+        padding-right: 8px;
+        color: grey;
+   }
+}
+#individual-page-content .container .main-content > div .unclamped {
+    max-height: none;
+}
+#individual-page-content .container .main-content > div .unclamped:after {
+    display: none;
+}
+#individual-page-content .container .main-content > div button, #individual-page-content .container .main-content > div .main-content-card-button {
+    margin-left: auto;
+}
+@media screen and (max-width: 800px) {
+    #individual-page-content .container .main-content > div button, #individual-page-content .container .main-content > div .main-content-card-button {
+        margin-top: 24px;
+   }
+}
+#individual-page-content .container .main-content > div button .icon, #individual-page-content .container .main-content > div .main-content-card-button .icon {
+    transition: transform 300ms ease-in-out;
+}
+#individual-page-content .container .main-content .quick-facts .quick-facts_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+}
+@media screen and (max-width: 1000px) {
+    #individual-page-content .container .main-content .quick-facts .quick-facts_content {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px 16px;
+   }
+}
+@media screen and (max-width: 375px) {
+    #individual-page-content .container .main-content .quick-facts .quick-facts_content {
+        grid-template-columns: 1fr;
+   }
+}
+#individual-page-content .container .main-content .quick-facts .quick-facts_content span, #individual-page-content .container .main-content .quick-facts .quick-facts_content p {
+    display: block;
+}
+#individual-page-content .container .main-content .quick-facts .quick-facts_content .label-01 {
+    color: grey;
+}
+@media screen {
+#individual-page-content .container .main-content .main-content-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+}
+@media screen and (max-width: 1000px) {
+    #individual-page-content .container .main-content .main-content-cta {
+        flex-direction: column;
+        align-items: flex-start;
+   }
+    #individual-page-content .container .main-content .main-content-cta button, #individual-page-content .container .main-content .main-content-cta .icon-button-primary {
+        margin: 12px auto auto 0;
+   }
+}
+#individual-page-content .container .main-content .main-content-cta .sub-header-02 {
+    color: grey;
+}
+#individual-page-content .container .card_sidebar {
+    padding: 48px 32px;
+    background-color: white;
+    border-radius: 3px;
+}
+@media screen and (max-width: 800px) {
+    #individual-page-content .container .card_sidebar {
+        padding: 24px 5%;
+   }
+}
+#individual-page-content .container .card_sidebar .card_sidebar-suggestion {
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px 24px;
+}
+@media screen and (max-width: 1400px) {
+    #individual-page-content .container .card_sidebar .card_sidebar-suggestion {
+        grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+@media screen and (max-width: 1200px) {
+    #individual-page-content .container .card_sidebar .card_sidebar-suggestion {
+        grid-template-columns: 1fr 1fr;
+   }
+}
+@media screen and (max-width: 800px) {
+    #individual-page-content .container .card_sidebar .card_sidebar-suggestion {
+        grid-template-columns: 1fr;
+   }
+}
+#individual-page-content .container .card_sidebar .card_sidebar-suggestion .sub-header-01, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .paragraph-01, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content ul li, #individual-page-content .container .main-content > div .main-content-card-content ul .card_sidebar .card_sidebar-suggestion li, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content ol li, #individual-page-content .container .main-content > div .main-content-card-content ol .card_sidebar .card_sidebar-suggestion li, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content td, #individual-page-content .container .main-content > div .main-content-card-content .card_sidebar .card_sidebar-suggestion td, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content .quick-facts .quick-facts_content .link-primary, #individual-page-content .container .main-content .quick-facts .quick-facts_content .card_sidebar .card_sidebar-suggestion .link-primary {
+    display: block;
+    color: grey;
+}
+#individual-page-content .container .card_sidebar .card_sidebar-suggestion .sub-header-01::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .paragraph-01::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content ul li::after, #individual-page-content .container .main-content > div .main-content-card-content ul .card_sidebar .card_sidebar-suggestion li::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content ol li::after, #individual-page-content .container .main-content > div .main-content-card-content ol .card_sidebar .card_sidebar-suggestion li::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content td::after, #individual-page-content .container .main-content > div .main-content-card-content .card_sidebar .card_sidebar-suggestion td::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content .quick-facts .quick-facts_content .link-primary::after, #individual-page-content .container .main-content .quick-facts .quick-facts_content .card_sidebar .card_sidebar-suggestion .link-primary::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    position: relative;
+}
+#individual-page-content .container .card_sidebar .card_sidebar-suggestion .sub-header-01 {
+    margin-bottom: 8px;
+}
+@media screen and (max-width: 1400px) {
+    #individual-page-content .container .card_sidebar .card_sidebar-suggestion .sub-header-01 {
+        grid-column: 1 / span 3;
+   }
+}
+@media screen and (max-width: 1200px) {
+    #individual-page-content .container .card_sidebar .card_sidebar-suggestion .sub-header-01 {
+        grid-column: 1 / span 2;
+   }
+}
+@media screen and (max-width: 800px) {
+    #individual-page-content .container .card_sidebar .card_sidebar-suggestion .sub-header-01 {
+        grid-column: 1 / span 1;
+   }
+}
+#individual-page-content .container .card_sidebar .card_sidebar-suggestion .sub-header-01::after {
+    top: calc(16px + 1px);
+}
+#individual-page-content .container .card_sidebar .card_sidebar-suggestion .paragraph-01::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content ul li::after, #individual-page-content .container .main-content > div .main-content-card-content ul .card_sidebar .card_sidebar-suggestion li::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content ol li::after, #individual-page-content .container .main-content > div .main-content-card-content ol .card_sidebar .card_sidebar-suggestion li::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content > div .main-content-card-content td::after, #individual-page-content .container .main-content > div .main-content-card-content .card_sidebar .card_sidebar-suggestion td::after, #individual-page-content .container .card_sidebar .card_sidebar-suggestion .main-content .quick-facts .quick-facts_content .link-primary::after, #individual-page-content .container .main-content .quick-facts .quick-facts_content .card_sidebar .card_sidebar-suggestion .link-primary::after {
+    top: calc(8px + 1px);
+}
+#individual-page-content .container .card_sidebar .search-bar_small {
+    width: 100%;
+}
+
+#hero .container {
+    padding-bottom: 8vmin;
+}
+#hero .container .header-03 {
+    margin: 8vmin auto 16px;
+    color: white;
+}
+#cards-section .container {
+    display: flex;
+    flex-direction: column;
+}
+@media screen{
+.container .load-more {
+    text-align: center;
+    margin: 10vmin auto;
+}}
+

@@ -1,0 +1,53 @@
+{% load static %}
+<nav class="primary-navbar above-the-fold">
+  <div class="nav-content"><a class="nav-content-brand" href="{% url 'home' %}"></a>
+    <div class="nav-content-links">
+      <div class="overlay"></div>
+      <div class="hamburger-content">
+
+        <div class="hamburger-content-header"><a class="hamburger-content-header__brand" href="{% url 'home' %}"><img src="{% static 'images/logo_background.png' %}" alt="Examkhojo Main Logo"></a>
+          <div class="close-menu">
+            <svg class="icon" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path d="M12.019 24C18.6357 24 24.019 18.6166 24.019 12C24.019 5.38336 18.6357 0 12.019 0C5.4024 0 0.019043 5.38336 0.019043 12C0.019043 18.6166 5.4024 24 12.019 24ZM12.019 1.19902C17.975 1.19902 22.82 6.04405 22.82 12C22.82 17.956 17.975 22.801 12.019 22.801C6.06309 22.801 1.21806 17.956 1.21806 12C1.21806 6.04405 6.06309 1.19902 12.019 1.19902Z"></path>
+                <path d="M6.80704 12.602H15.7826L13.4335 14.9511C13.1985 15.186 13.1985 15.5628 13.4335 15.7977C13.5509 15.9152 13.7026 15.9739 13.8592 15.9739C14.0158 15.9739 14.1676 15.9152 14.285 15.7977L17.6569 12.4258C17.8919 12.1909 17.8919 11.814 17.6569 11.5791L14.285 8.20719C14.0501 7.97228 13.6733 7.97228 13.4384 8.20719C13.2034 8.4421 13.2034 8.81893 13.4384 9.05385L15.7875 11.403H6.80704C6.47425 11.403 6.20508 11.6721 6.20508 12.0049C6.20508 12.3377 6.47425 12.602 6.80704 12.602Z"></path>
+              </g>
+              <defs>
+                <clippath id="clip0">
+                  <path d="M0.019043 0H24.019V24H0.019043V0Z"></path>
+                </clippath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <ul class="nav-content-links__left-links">
+          <li class="link-items"><a class="label-02" href="/college/list">Colleges</a></li>
+          <li class="link-items"><a class="label-02" href="#">Consult</a></li>
+          <li class="link-items"><a class="label-02" href="#">Compare</a></li>
+        </ul>
+        <div class="nav-content-links__right-buttons">
+          <button class="button-outline" id="logInButton">Log In</button>
+          <button class="button-primary" id="signUpButton">Sign Up for Free</button>
+        </div>
+      </div>
+      <div class="nav-content-links__user"><img class="user-avatar" src="https://ui-avatars.com/api/?format=svg&amp;name=Drady+jules" alt=""><span class="label-02">Drady</span>
+        <div class="chevron-button">
+          <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.9995 16.8175L2.74133 7.37419C2.51364 7.14195 2.14847 7.14195 1.92077 7.37419C1.69308 7.60644 1.69308 7.97892 1.92077 8.21117L11.5914 18.0752C11.8191 18.3075 12.1843 18.3075 12.412 18.0752L22.0783 8.21117C22.19 8.09723 22.2501 7.94386 22.2501 7.79487C22.2501 7.64588 22.1943 7.49251 22.0783 7.37858C21.8506 7.14633 21.4854 7.14633 21.2577 7.37858L11.9995 16.8175Z"></path>
+          </svg>
+        </div>
+        <div class="user-dropdown">
+          <li><a class="label-02" href="dashboard.html">Dashboard</a></li>
+          <li><a class="link-primary label-02" href="#LogOut">Log Out</a></li>
+        </div>
+      </div>
+      <div class="hamburger-menu">
+        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 4.51197C0 4.14083 0.300865 3.83997 0.672 3.83997H23.328C23.6991 3.83997 24 4.14083 24 4.51197C24 4.8831 23.6991 5.18397 23.328 5.18397H0.672C0.300865 5.18397 0 4.8831 0 4.51197Z"></path>
+          <path d="M0 12.192C0 11.8208 0.300865 11.52 0.672 11.52H23.328C23.6991 11.52 24 11.8208 24 12.192C24 12.5631 23.6991 12.864 23.328 12.864H0.672C0.300865 12.864 0 12.5631 0 12.192Z"></path>
+          <path d="M0.672 19.2C0.300865 19.2 0 19.5008 0 19.872C0 20.2431 0.300865 20.544 0.672 20.544H23.328C23.6991 20.544 24 20.2431 24 19.872C24 19.5008 23.6991 19.2 23.328 19.2H0.672Z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</nav>

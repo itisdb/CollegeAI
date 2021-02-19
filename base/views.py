@@ -19,6 +19,27 @@ def home(request):
     colleges = College.objects.filter(
         is_top=True,
     )[:9]
-    return render(request, 'pages/public/home.html', {
+    return render(request, 'v2/pages/public/home.html', {
         'colleges': colleges
     })
+
+def refer(request):
+    return render(request, 'v2/pages/public/refer.html')
+
+def about(request):
+    return render(request, 'v2/pages/public/about.html')
+
+def contact(request):
+    return render(request, 'v2/pages/public/contact.html')
+
+def career(request):
+    return render(request, 'v2/pages/public/career.html')
+
+def advertising(request):
+    return render(request, 'v2/pages/public/advertising.html')
+
+def terms(request):
+    return render(request, 'v2/pages/public/terms.html')
+
+def privacy(request):
+    return render(request, 'v2/pages/public/privacy.html')
