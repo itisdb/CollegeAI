@@ -173,5 +173,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bhardwaj.ud99@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 SMTP_EMAIL = 'udit@gmail.com'
-TEMPLATED_EMAIL_TEMPLATE_DIR = 'pages/auth/' #Use '' for top level template dir
+TEMPLATED_EMAIL_TEMPLATE_DIR = 'templates/raw/casual' #Use '' for top level template dir
 TEMPLATED_EMAIL_FILE_EXTENSION = 'html'
