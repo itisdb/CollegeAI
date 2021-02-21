@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.conf import settings
 from profiles.models import Profile, User
-
+from base import generic_mailer
 
 class LoginView(View):
 
@@ -47,6 +47,13 @@ class RegisterView(View):
         if not user:
             return render(request, 'pages/auth/login.html', {'error': 'Username/Password is incorrect.'})
         login(request, user)
+        context = {
+            'template_name' : 'welcome_mail.html',
+            'recipients' : email,
+            'username':username,
+            'first_name':first_name,
+        }
+        generic_mailer(context)
         return redirect('profile:dashboard')
 
     def get(self, request):
