@@ -145,11 +145,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-<<<<<<< HEAD
     os.path.join(BASE_DIR, 'templates/raw/casual/static')
-=======
     os.path.join(BASE_DIR, 'templates/v2/raw/assets/')
->>>>>>> 4786f5d1718ce76572efb12ccebcae489ebfde71
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -177,5 +174,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'bhardwaj.ud99@gmail.com'
 EMAIL_HOST_PASSWORD = ''
 SMTP_EMAIL = 'udit@gmail.com'
-TEMPLATED_EMAIL_TEMPLATE_DIR = 'templates/v2/raw' #Use '' for top level template dir
+TEMPLATED_EMAIL_TEMPLATE_DIR = 'templates/email/layout' #Use '' for top level template dir
 TEMPLATED_EMAIL_FILE_EXTENSION = 'html'
