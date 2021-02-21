@@ -1,0 +1,36 @@
+{% extends 'v2/layouts/edit-layout.html' %}
+{% block content %}
+
+<section id="account">
+      <div class="basic-details">
+        <div class="container">
+          <h4 class="sub-header-01">Basic Details</h4>
+          <form class="form-basic-details" method = "post" data-validate>
+            {% csrf_token %}
+            <div class="form-element">
+              <label for="name">First Name</label>
+              <input required type="text" name="first_name" value={{form.first_name.value}} placeholder="Type your First Name">
+            </div>
+            <div class="form-element">
+              <label for="name">Last Name</label>
+              <input required type="text" name="last_name" value={{form.last_name.value}} placeholder="Type your Last Name">
+            </div>
+             <div class="form-element">
+              <label class="nested-label" for="phone">Your Phone Number<span class="label-01">10 Digits Only</span></label><span class="phone-input" data-code="+91">
+              <input type="text" name="mobile_number" value={{profile_form.mobile_number.value}} placeholder="Your 10-digit Phone Number" maxlength="10" minlength="10" pattern="[0-9]{10}"></span>
+            </div>
+            <div class="form-element">
+              <input class="button-primary" type="submit" value="Save Basic Details">
+            </div>
+          </form><br><br>
+          <div class="form-element">
+              <a href = "/profile/update-password/"><button type="button" class ="button-primary">Update Password</button></a>
+          </div>
+        </div>
+      </div>
+    
+     
+      <br><br>
+
+
+{% endblock %}

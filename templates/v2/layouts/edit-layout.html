@@ -1,22 +1,20 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-{% load static%}
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ user.get_full_name }} | Dashboard| MyCollegeAI</title>
-    <meta property="og:title" content="MyCollegeAI, A Search Platform">
+    <title>Account Settings | Full Name | Examkhojo</title>
+    <meta property="og:title" content="Examkhojo, A Search Platform">
     <meta property="og:description" content="Find the best colleges, exams and courses in India">
     <meta property="og:image" content="https://raw.githubusercontent.com/GaziTaufiqIslam/examkhojo-ui/master/src/assets/images/og_img.jpg">
-    <meta property="og:url" content="mycollegeai.com">
+    <meta property="og:url" content="examkhojo.com">
     <meta property="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#1a3348">
-
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
-    <link rel="stylesheet" href="{% static 'css/pages/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pages/account-settings.css' %}">
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-
   </head>
 </html>
 <body>
@@ -24,11 +22,7 @@
     <div class="register-modal_login">
       <div class="modal-left">
         <div class="container">
-
-          <div class="modal-left-header"><a class="modal-left-header__brand" href="index.html"><img src="{% static 'images/logo_background.png' %}" alt="MyCollegeAI Main Logo"></a>
-
-          
-
+          <div class="modal-left-header"><a class="modal-left-header__brand" href="index.html"><img src="{% static 'images/logo_background.png' %}" alt="Examkhojo Main Logo"></a>
             <h4 class="sub-header-01">Welcome Back</h4>
             <h6 class="sub-header-03">Log In</h6>
           </div>
@@ -95,7 +89,7 @@
       <div class="modal-left">
         <div class="container">
           <div class="modal-left-header">
-            <h4 class="sub-header-01">Welcome to MyCollegeAI</h4>
+            <h4 class="sub-header-01">Welcome to Examkhojo</h4>
             <h6 class="sub-header-03">Sign Up</h6>
           </div>
           <div class="mobile_modal-switcher">
@@ -206,11 +200,8 @@
         <div class="nav-content-links">
           <div class="overlay"></div>
           <div class="hamburger-content">
-
-            <div class="hamburger-content-header"><a class="hamburger-content-header__brand" href="index.html"><img src="{% static 'images/logo_background.png' %}" alt="MyCollegeAI Main Logo"></a>
-
-            
-
+            <div class="hamburger-content-header"><a class="hamburger-content-header__brand" href="index.html"><img src="{% static 'images/logo_background.png' %}"
+             alt="Examkhojo Main Logo"></a>
               <div class="close-menu">
                 <svg class="icon" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0)">
@@ -261,120 +252,98 @@
       <div class="container">
         <ul class="breadcrumb">
           <li class="link-01"><a href="index.html">Home</a></li>
-          <li class="link-01">Dashboard</li>
+          <li class="link-01"><a href="dashboard.html">Dashboard</a></li>
+          <li class="link-01">Account Settings</li>
         </ul>
         <div class="header-primary-info">
-          <div class="avatar"><img src="https://ui-avatars.com/api/?format=svg&amp;name=Florence+Nightingale" alt="College Logo"></div>
-          <h4 class="sub-header-01">{{ user.get_full_name }}</h4>
-
-          <div class="header-buttons"><a class="icon-button-outline" href="/profile/edit-profile">
-              <svg class="icon" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0)">
-                  <path d="M22.8545 9.4811L21.17 9.19533C20.9945 8.6288 20.7689 8.08232 20.4932 7.56092L21.4858 6.17216C21.907 5.58057 21.8418 4.77338 21.3254 4.262L19.8314 2.76797C19.5506 2.48721 19.1796 2.33179 18.7835 2.33179C18.4727 2.33179 18.1769 2.42704 17.9262 2.60753L16.5325 3.60021C15.991 3.31444 15.4245 3.07881 14.8379 2.90333L14.5571 1.23883C14.4368 0.521897 13.8201 0.000488281 13.0932 0.000488281H10.9825C10.2555 0.000488281 9.63883 0.521897 9.5185 1.23883L9.22772 2.94344C8.6662 3.11891 8.11972 3.34954 7.59831 3.6303L6.21959 2.63761C5.96891 2.45713 5.6681 2.36187 5.35726 2.36187C4.96119 2.36187 4.58517 2.51729 4.30943 2.79805L2.81038 4.29208C2.299 4.80347 2.22881 5.61065 2.64994 6.20225L3.65265 7.61105C3.37691 8.13747 3.15631 8.68395 2.98585 9.25048L1.32135 9.53124C0.604417 9.65157 0.0830078 10.2682 0.0830078 10.9952V13.1059C0.0830078 13.8329 0.604417 14.4495 1.32135 14.5699L3.02596 14.8606C3.20143 15.4222 3.43206 15.9686 3.71282 16.49L2.72515 17.8638C2.30401 18.4554 2.36919 19.2625 2.88558 19.7739L4.37962 21.268C4.66038 21.5487 5.03138 21.7041 5.42745 21.7041C5.73829 21.7041 6.03409 21.6089 6.28477 21.4284L7.69357 20.4257C8.19994 20.6914 8.73138 20.907 9.27785 21.0774L9.55861 22.762C9.67894 23.4789 10.2956 24.0003 11.0226 24.0003H13.1383C13.8652 24.0003 14.4819 23.4789 14.6022 22.762L14.888 21.0774C15.4545 20.902 16.001 20.6764 16.5224 20.4006L17.9112 21.3933C18.1619 21.5738 18.4627 21.669 18.7735 21.669C19.1696 21.669 19.5406 21.5136 19.8213 21.2329L21.3154 19.7388C21.8268 19.2274 21.897 18.4203 21.4758 17.8287L20.4831 16.4349C20.7589 15.9085 20.9895 15.362 21.16 14.8005L22.8445 14.5197C23.5614 14.3994 24.0829 13.7827 24.0829 13.0558V10.9451C24.0929 10.2181 23.5715 9.60143 22.8545 9.4811ZM22.7392 13.0558C22.7392 13.1209 22.6941 13.1761 22.6289 13.1861L20.5232 13.5371C20.2575 13.5822 20.047 13.7777 19.9818 14.0334C19.7913 14.7704 19.5005 15.4773 19.1094 16.1341C18.9741 16.3647 18.9841 16.6505 19.1395 16.8711L20.3778 18.6158C20.4129 18.6659 20.4079 18.7411 20.3628 18.7862L18.8688 20.2803C18.8337 20.3154 18.7986 20.3204 18.7735 20.3204C18.7434 20.3204 18.7184 20.3104 18.6983 20.2953L16.9586 19.057C16.743 18.9016 16.4522 18.8915 16.2216 19.0269C15.5648 19.418 14.8579 19.7087 14.1209 19.8993C13.8602 19.9644 13.6647 20.18 13.6246 20.4407L13.2686 22.5464C13.2586 22.6116 13.2035 22.6567 13.1383 22.6567H11.0276C10.9624 22.6567 10.9073 22.6116 10.8972 22.5464L10.5463 20.4407C10.5012 20.175 10.3056 19.9644 10.0499 19.8993C9.333 19.7138 8.64113 19.428 7.99439 19.057C7.8891 18.9968 7.76878 18.9667 7.65346 18.9667C7.5181 18.9667 7.37772 19.0068 7.26241 19.0921L5.50767 20.3404C5.4826 20.3555 5.45753 20.3655 5.43246 20.3655C5.41241 20.3655 5.3723 20.3605 5.33721 20.3254L3.84317 18.8314C3.79805 18.7862 3.79303 18.7161 3.82813 18.6609L5.06146 16.9312C5.21688 16.7106 5.22691 16.4199 5.09154 16.1892C4.70048 15.5375 4.39967 14.8306 4.20916 14.0936C4.13897 13.8379 3.9284 13.6423 3.66769 13.5972L1.54696 13.2363C1.48179 13.2262 1.43667 13.1711 1.43667 13.1059V10.9952C1.43667 10.93 1.48179 10.8749 1.54696 10.8648L3.63761 10.5139C3.90333 10.4688 4.11891 10.2732 4.18409 10.0125C4.36959 9.27555 4.65536 8.56363 5.04141 7.90685C5.17677 7.67623 5.16173 7.39046 5.00631 7.17487L3.75794 5.42013C3.72284 5.37 3.72786 5.29479 3.77298 5.24967L5.26702 3.75563C5.30211 3.72054 5.33721 3.71553 5.36227 3.71553C5.39235 3.71553 5.41742 3.72555 5.43748 3.74059L7.16715 4.97393C7.38775 5.12935 7.67853 5.13937 7.90916 5.00401C8.56092 4.61295 9.26783 4.31214 10.0048 4.12162C10.2605 4.05143 10.456 3.84087 10.5012 3.58016L10.8621 1.45943C10.8722 1.39425 10.9273 1.34913 10.9925 1.34913H13.1032C13.1684 1.34913 13.2235 1.39425 13.2335 1.45943L13.5845 3.55008C13.6296 3.8158 13.8251 4.03138 14.0858 4.09656C14.8429 4.28707 15.5648 4.58287 16.2367 4.97894C16.4673 5.11431 16.7531 5.10428 16.9736 4.94886L18.7033 3.7055C18.7284 3.69046 18.7535 3.68043 18.7785 3.68043C18.7986 3.68043 18.8387 3.68544 18.8738 3.72054L20.3678 5.21458C20.4129 5.2597 20.418 5.32989 20.3829 5.38504L19.1445 7.12474C18.9891 7.34032 18.9791 7.63111 19.1144 7.86173C19.5055 8.5185 19.7963 9.22541 19.9868 9.96241C20.052 10.2231 20.2675 10.4186 20.5283 10.4587L22.6339 10.8147C22.6991 10.8247 22.7442 10.8799 22.7442 10.9451V13.0558H22.7392V13.0558Z"></path>
-                  <path d="M12.0852 6.81848C9.22752 6.81848 6.90625 9.13975 6.90625 11.9975C6.90625 14.8552 9.22752 17.1765 12.0852 17.1765C14.943 17.1765 17.2642 14.8552 17.2642 11.9975C17.2642 9.13975 14.943 6.81848 12.0852 6.81848ZM12.0852 15.8228C9.97454 15.8228 8.25991 14.1082 8.25991 11.9975C8.25991 9.88677 9.97454 8.17214 12.0852 8.17214C14.1959 8.17214 15.9106 9.88677 15.9106 11.9975C15.9106 14.1082 14.1959 15.8228 12.0852 15.8228Z"></path>
-                </g>
-                <defs>
-                  <clippath id="clip0">
-                    <path d="M0.0830078 0H24.083V24H0.0830078V0Z"></path>
-                  </clippath>
-                </defs>
-              </svg>Account Settings</a></div>
+          <h4 class="sub-header-01">Account Settings</h4>
+          <p class="paragraph-01">Add More Details to let us serve you better</p>
         </div>
       </div>
     </section>
-    <section id="dashboard-content">
-      <div class="container">
-        <nav class="bookmark-nav">
-          <h6 class="sub-header-03 bookmark-header">Set Bookmarks to Show</h6>
-          <ul class="bookmark-links"> 
-            <li class="active" data-content="exams"><a class="button-01" href="#BookmarkedExams">Exams</a></li>
-            <li data-content="colleges"><a class="button-01" href="#BookmarkedColleges">Colleges</a></li>
-            <li data-content="courses"><a class="button-01" href="#BookmarkedCourses">Courses</a></li>
-          </ul>
-        </nav>
-        <div class="cards-group">
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">JEE Mains</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Bombay</span><span class="label-01">UG</span><span class="label-01">B.Tech &amp; B.Arch</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+    {% comment %} <section id="account">
+      <div class="basic-details">
+        <div class="container">
+          <h4 class="sub-header-01">Basic Details</h4>
+          <form class="form-basic-details" data-validate>
+            <div class="form-element">
+              <label for="name">Full Name</label>
+              <input required type="text" name="name" value="Amit Trivedi" placeholder="Type your Full Name">
             </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">CEED</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Des</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+            <div class="form-element">
+              <input class="button-primary" type="submit" value="Save Basic Details">
             </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">GATE</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Tech</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+          </form>
+        </div>
+      </div>
+      <div class="contact-details" id="contact-details">
+        <div class="container">
+          <h4 class="sub-header-01">Contact Details</h4>
+          <form class="form-basic-details" data-validate>
+            <div class="form-element">
+              <label for="email">Your Email Address</label>
+              <input required type="email" autocomplete="username" name="email" value="amittrivedi@example.com" placeholder="Type your Email">
             </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">JEE Mains</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Bombay</span><span class="label-01">UG</span><span class="label-01">B.Tech &amp; B.Arch</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+            <div class="form-element">
+              <label class="nested-label" for="phone">Your Phone Number<span class="label-01">10 Digits Only</span></label><span class="phone-input" data-code="+91">
+                <input type="text" name="phone" value="" placeholder="Your 10-digit Phone Number" maxlength="10" minlength="10" pattern="[0-9]{10}"></span>
             </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">CEED</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Des</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+            <div class="form-element">
+              <input class="button-primary" type="submit" value="Save Contact Details">
             </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">GATE</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Tech</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+          </form>
+        </div>
+      </div>
+      <div class="edu-details">
+        <div class="container">
+          <h4 class="sub-header-01">Educational Details</h4>
+          <form class="form-edu-details" data-validate>
+            <div class="form-element">
+              <label for="college">Your Insititute</label>
+              <input type="text" name="college" value="" placeholder="Type your College Name">
             </div>
-          </div>
-          <div class="card_college">
-
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
-
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
+            <div class="form-element">
+              <label for="course">Interest/Course</label>
+              <input type="text" name="course" value="" placeholder="Your Course, for e.g. B.Tech CSE">
             </div>
-          </div>
-          <div class="card_college">
-
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
-
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
+            <div class="form-element">
+              <input class="button-primary" type="submit" value="Save Educational Details">
             </div>
-          </div>
-          <div class="card_college">
-
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
-
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
+          </form>
+        </div>
+      </div> 
+      {% endcomment %}<br><br>
+      {% block content %}{%endblock%}
+      {% comment %} <div class="update-password" id="update-password">
+        <div class="container">
+          <h4 class="sub-header-01">Update Password</h4>
+          <form class="form-edu-details" data-validate>
+            <div class="form-element">
+              <label for="password">Your Old/Current Password</label>
+              <input required type="password" autocomplete="password" name="password" placeholder="Type your Old Password">
             </div>
-          </div>
-          <div class="card_college">
-
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
-
-            
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
+            <div class="form-element">
+              <label class="set-password" for="new-password">
+                 Set New Password<span class="label-01">Please use atleast 8 characters</span></label>
+              <input data-bouncer-message="Hi" type="password" autocomplete="new-password" name="new-password" minlength="8" placeholder="Type your Password" required>
             </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">B.Tech - CSE</a>
-              <div class="card_course-details_secondary"><span class="label-01">Engineering</span><span class="label-01">Undergraduate</span><span class="label-01">4years</span></div>
+            <div class="form-element">
+              <input class="button-primary" type="submit" value="Update Password">
             </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">B.Des - Interaction Design</a>
-              <div class="card_course-details_secondary"><span class="label-01">Design</span><span class="label-01">Undergraduate</span><span class="label-01">4years</span></div>
-            </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">BCA</a>
-              <div class="card_course-details_secondary"><span class="label-01">Computer</span><span class="label-01">Undergraduate</span><span class="label-01">3years</span></div>
-            </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">B.Des - Interaction Design</a>
-              <div class="card_course-details_secondary"><span class="label-01">Design</span><span class="label-01">Undergraduate</span><span class="label-01">4years</span></div>
-            </div>
+          </form>
+        </div>
+      </div><br><br> {% endcomment %}
+      {% comment %} <div class="close-account">
+        <div class="container">
+          <h4 class="sub-header-01">Close Account</h4>
+          <p class="paragraph-01">All account data will be deleted</p>
+          <button class="button-primary_danger">Delete Account</button>
+        </div>
+        <div class="delete-confirmation-modal">
+          <div class="delete-confirmation">
+            <h6 class="sub-header-03">Are you sure you want to delete your account?</h6>
+            <button class="button-outline" id="delAccount">Yes, Delete Account</button>
+            <button class="button-primary">No, Go back</button>
           </div>
         </div>
       </div>
@@ -384,7 +353,7 @@
     <div class="container">
       <div class="subscribe-content">
         <h4 class="sub-header-01">Get Exclusive Updates</h4>
-        <p>Register now with MyCollegeAI.com</p>
+        <p>Register now with Examkhojo.com</p>
       </div>
       <form class="subscribe-form" action="#">
         <div class="form-element">
@@ -400,7 +369,7 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> {% endcomment %}
   <footer>
     <div class="container">
       <div class="footer-links">
@@ -420,10 +389,7 @@
           <h6 class="sub-header-03">Company</h6><a class="label-01" href="about.html">About Us</a><a class="label-01" href="contact.html">Contact Us</a><a class="label-01" href="career.html">Career</a><a class="label-01" href="advertising.html">Advertising</a><a class="label-01" href="terms.html">Terms &#38; Conditions</a><a class="label-01" href="privacy-policy.html">Privacy Policy</a><a class="label-01" href="#">Sitemap</a>
         </div>
       </div>
-
-      <div class="footer-brand"><img class="footer-brand_img" src="{% static 'images/logo1.png' %}" alt="MyCollegeAI Logo White">
-
-      
+      <div class="footer-brand"><img class="footer-brand_img" src=images/logo_background.pngimages/logo1.png" alt="Examkhojo Logo White">
         <div class="footer-brand_social-icons"><a class="social-icon" href="https://www.youtube.com/channel/UC4Kc7m9reV-1qxAUFap8-Zw/featured" target="_blank"> 
             <svg class="icon" id="youtube" width="24" height="25" viewBox="0 0 24 25" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
@@ -447,7 +413,7 @@
                   <path d="M0 0H24V24.4211H0V0Z"></path>
                 </clippath>
               </defs>
-            </svg></a><a class="social-icon" href="https://www.facebook.com/mycollegeai/" target="_blank">
+            </svg></a><a class="social-icon" href="https://www.facebook.com/examkhojo/" target="_blank">
             <svg class="icon" id="facebook" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M11.8162 6.39184C12.0222 6.39184 12.2152 6.33655 12.3813 6.24C12.7169 6.04498 12.9424 5.68162 12.9424 5.26559C12.9424 3.36 13.4961 2.25251 14.9955 2.25251H18.1759C18.7979 2.25251 19.3022 1.74824 19.3022 1.12625C19.3022 0.504261 18.7979 0 18.1759 0H14.9955C12.2961 0 10.6899 1.92 10.6899 5.26559C10.6899 5.88743 11.1942 6.39184 11.8162 6.39184Z"></path>
@@ -458,7 +424,7 @@
                   <path d="M0.295898 0H24.2959V24H0.295898V0Z"></path>
                 </clippath>
               </defs>
-            </svg></a><a class="social-icon" href="https://www.linkedin.com/company/mycollegeai" target="_blank">
+            </svg></a><a class="social-icon" href="https://www.linkedin.com/company/examkhojo" target="_blank">
             <svg class="icon" id="linkedin" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M2.57608 5.75806C1.92301 5.75806 1.39355 6.2979 1.39355 6.96377V23.2649C1.39355 23.9308 1.92301 24.4706 2.57608 24.4706C3.22916 24.4706 3.75861 23.9308 3.75861 23.2649V6.96377C3.75861 6.29774 3.22916 5.75806 2.57608 5.75806Z"></path>
@@ -470,7 +436,7 @@
                   <path d="M0.295898 0H24.2959V24.4706H0.295898V0Z"></path>
                 </clippath>
               </defs>
-            </svg></a><a class="social-icon" href="https://www.facebook.com/mycollegeai/" target="_blank">
+            </svg></a><a class="social-icon" href="https://www.facebook.com/examkhojo/" target="_blank">
             <svg class="icon" id="twitter" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M24.1343 5.12983C23.8493 4.71912 23.2848 4.61695 22.8738 4.90207L20.0614 6.85348C19.806 7.03064 19.6594 7.32638 19.6728 7.63686C19.6809 7.82308 19.6849 7.9977 19.6849 8.17063C19.6849 13.9193 15.3106 19.8653 7.99038 19.8653C6.49811 19.8653 5.03206 19.5813 3.66188 19.0334L8.00197 17.8194C8.48369 17.6847 8.76495 17.185 8.63018 16.7032C8.49541 16.2216 7.99617 15.9403 7.51397 16.075L0.957645 17.9089C0.613955 18.0051 0.358783 18.294 0.305889 18.647C0.253116 18.9999 0.412402 19.3511 0.712859 19.5437C2.88949 20.9391 5.40606 21.6768 7.99038 21.6768C13.0693 21.6768 16.2503 19.2773 18.0247 17.2644C20.231 14.7613 21.4963 11.4468 21.4963 8.17076C21.4963 8.13489 21.4962 8.09902 21.496 8.06304L23.9065 6.39047C24.3174 6.10523 24.4194 5.54091 24.1343 5.12983Z"></path>
@@ -483,7 +449,7 @@
                   <path d="M0.295898 0H24.2959V24H0.295898V0Z"></path>
                 </clippath>
               </defs>
-            </svg></a><a class="social-icon" href="https://in.pinterest.com/mycollegeai/" target="_blank">
+            </svg></a><a class="social-icon" href="https://in.pinterest.com/examkhojo/" target="_blank">
             <svg class="icon" id="pinterest" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M12.2958 0C5.67908 0 0.295898 5.38319 0.295898 12C0.295898 15.0613 1.44886 17.9764 3.5422 20.2082C3.90623 20.5962 4.51572 20.6157 4.90389 20.2517C5.29194 19.8877 5.31146 19.2781 4.94744 18.89C3.19038 17.0167 2.22264 14.5698 2.22264 12C2.22264 6.44559 6.74149 1.92674 12.2958 1.92674C17.8502 1.92674 22.3692 6.44559 22.3692 12C22.3692 17.5544 17.8502 22.0733 12.2958 22.0733C11.3111 22.0733 10.3458 21.9331 9.41593 21.6559L10.4013 17.8045C11.0109 17.9532 11.6399 18.0289 12.282 18.0289C16.3292 18.0289 19.6219 14.9906 19.6219 11.256C19.6219 7.52135 16.3292 4.48288 12.282 4.48288C8.23484 4.48288 4.94217 7.52135 4.94217 11.256C4.94217 12.6018 5.36862 13.9022 6.17554 15.0166C6.48755 15.4476 7.08997 15.544 7.52079 15.2319C7.95174 14.9199 8.04808 14.3176 7.73607 13.8867C7.16871 13.103 6.86891 12.1934 6.86891 11.256C6.86891 8.58376 9.29725 6.40963 12.282 6.40963C15.2668 6.40963 17.6951 8.58376 17.6951 11.256C17.6951 13.9282 15.2669 16.1022 12.282 16.1022C11.8024 16.1022 11.3329 16.0472 10.8788 15.9381L12.2274 10.6667C12.3592 10.1512 12.0482 9.62651 11.5329 9.4946C11.0174 9.36268 10.4927 9.67365 10.3608 10.1891L7.32953 22.0377C7.20905 22.5086 7.45837 22.9955 7.91064 23.1732C9.30765 23.7218 10.7832 24 12.2958 24C18.9127 24 24.2959 18.6168 24.2959 12C24.2959 5.38319 18.9127 0 12.2958 0Z"></path>
@@ -495,69 +461,36 @@
               </defs>
             </svg></a></div>
       </div>
-      <div class="footer-copyright"><span>&copy; Copyright 2020 MyCollegeAI.com. All rights reserved. All trademarks are owned by their respective owners.</span></div>
+      <div class="footer-copyright"><span>&copy; Copyright 2020 Examkhojo.com. All rights reserved. All trademarks are owned by their respective owners.</span></div>
     </div>
   </footer>
-
   <script async src="{% static 'js/all.js' %}"></script>
-
   <script>
-    // Dashboard Bookmarks User navigation
-    
-    var bookmarkLinks = document.querySelectorAll("#dashboard-content li");
-    var cardExams = document.querySelectorAll("#dashboard-content .card_exam");
-    var cardCollege = document.querySelectorAll("#dashboard-content .card_college");
-    var cardCourse = document.querySelectorAll("#dashboard-content .card_course");
+    //File MIME check
+    var fileInput = document.querySelector('.form-upload-picture input');
     
     
-    Object.entries(bookmarkLinks).map((object) => {
-    	object[1].onclick = function() {
+    //Delete Account
+    var deleteModalOpenButton = document.querySelector("#account .close-account .button-primary_danger");
+    var deleteModal = document.querySelector("#account .close-account .delete-confirmation-modal");
+    var deleteModalCloseButton = document.querySelector("#account .close-account .button-primary");
     
-    		var i;
-    		for( i = 0; i < bookmarkLinks.length; i++) {
-    			bookmarkLinks[i].classList.remove("active");
-    		}
-    		this.classList.toggle("active");
+    deleteModalOpenButton.onclick = function() {
+    	deleteModal.style.display = "block";
+    }
+    deleteModalCloseButton.onclick = function() {
+    	deleteModal.style.display = "none";
+    }
     
-    		var dataContent = this.getAttribute("data-content");
-    		
     
-    		if(dataContent == "exams") {
-    			for( i = 0; i < cardExams.length; i++) {
-    				cardExams[i].style.display = 'block';
-    			}
-    			for( i = 0; i < cardCollege.length; i++) {
-    				cardCollege[i].style.display = 'none';
-    			}
-    			for( i = 0; i < cardCourse.length; i++) {
-    				cardCourse[i].style.display = 'none';
-    		}
-    		
-    		}
-    		if(dataContent == "colleges") {
-    			for( i = 0; i < cardExams.length; i++) {
-    				cardExams[i].style.display = 'none';
-    			}
-    			for( i = 0; i < cardCollege.length; i++) {
-    				cardCollege[i].style.display = 'block';
-    			}
-    			for( i = 0; i < cardCourse.length; i++) {
-    				cardCourse[i].style.display = 'none';
-    			}
-    		}
-    		if(dataContent == "courses") {
-    			for( i = 0; i < cardExams.length; i++) {
-    				cardExams[i].style.display = 'none';
-    			}
-    			for( i = 0; i < cardCollege.length; i++) {
-    				cardCollege[i].style.display = 'none';
-    			}
-    			for( i = 0; i < cardCourse.length; i++) {
-    				cardCourse[i].style.display = 'block';
-    			}
-    		}
-    		
-    	}
-    });
+    //- // Avatar Change Button
+    
+    //- // var displayImageButtons = document.querySelector(".display-image-buttons");
+    //- var uploadFormShowButton = document.querySelector(".display-image-buttons .button-primary");
+    //- var uploadForm = document.querySelector(".display-image-buttons form");
+    //- uploadFormShowButton.onclick = function() {
+    //- 	uploadForm.style.display = 'block';
+    //- 	this.style.display = 'none';
+    //- }
   </script>
 </body>
