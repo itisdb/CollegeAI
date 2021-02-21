@@ -17,7 +17,7 @@ class EditUserProfileView(View):
 
     def get(self, request, format=None):
         form = EditProfileForm(instance=request.user)
-        profile_form = ProfileForm(instance=request.user.userprofile)
+        profile_form = ProfileForm(instance=request.user.profile)
         context = {
             'form':form,
             'profile_form': profile_form,
@@ -26,7 +26,7 @@ class EditUserProfileView(View):
 
     def post(self, request, format=None):
         form = EditProfileForm(request.POST, instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user.userprofile) 
+        profile_form = ProfileForm(request.POST, instance=request.user.profile) 
        
         if form.is_valid() and profile_form.is_valid():
             user_form = form.save()
