@@ -17,28 +17,18 @@ class EditUserProfileView(View):
 
     def get(self, request, format=None):
         form = EditProfileForm(instance=request.user)
-<<<<<<< HEAD
         profile_form = ProfileForm(instance=request.user.profile)
-=======
-        profile_form = ProfileForm(instance=request.user.userprofile)
->>>>>>> 4786f5d1718ce76572efb12ccebcae489ebfde71
+
         context = {
             'form':form,
             'profile_form': profile_form,
         }
-<<<<<<< HEAD
         return render(request, 'v2/pages/protected/edit-profile.html', context) 
+
 
     def post(self, request, format=None):
         form = EditProfileForm(request.POST, instance=request.user)
         profile_form = ProfileForm(request.POST, instance=request.user.profile) 
-=======
-        return render(request, 'v2/raw/edit-profile.html', context) 
-
-    def post(self, request, format=None):
-        form = EditProfileForm(request.POST, instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user.userprofile) 
->>>>>>> 4786f5d1718ce76572efb12ccebcae489ebfde71
        
         if form.is_valid() and profile_form.is_valid():
             user_form = form.save()
@@ -50,21 +40,13 @@ class EditUserProfileView(View):
             'form':form,
             'profile_form': profile_form,
         }
-<<<<<<< HEAD
-        return render(request, 'v2/pages/protected/edit-profile.html', context) 
-=======
-        return render(request, 'v2/raw/edit-profile.html', context) 
->>>>>>> 4786f5d1718ce76572efb12ccebcae489ebfde71
 
+        return render(request, 'v2/pages/protected/edit-profile.html', context) 
 
 class UpdatePassword(View):
 
     def get(self, request,  format=None):
-<<<<<<< HEAD
         return render(request, 'v2/pages/protected/update-password.html', {}) 
-=======
-        return render(request, 'v2/raw/update-password.html', {}) 
->>>>>>> 4786f5d1718ce76572efb12ccebcae489ebfde71
 
     def post(self, request, format=None):
         user = request.user
@@ -81,8 +63,4 @@ class UpdatePassword(View):
         context = {
             'form':form,
         }
-<<<<<<< HEAD
         return render(request, 'v2/pages/protected/update-password.html', context)
-=======
-        return render(request, 'v2/raw/update-password.html', context) 
->>>>>>> 4786f5d1718ce76572efb12ccebcae489ebfde71
