@@ -8,7 +8,11 @@ from base.models import BaseModel
 class Profile(BaseModel):
     """Profile class based on top of user."""
 
+<<<<<<< HEAD
     user = models.OneToOneField(User,on_delete=models.CASCADE)
+=======
+    user = models.OneToOneField(User, related_name='userprofile',on_delete=models.CASCADE)
+>>>>>>> 4786f5d1718ce76572efb12ccebcae489ebfde71
     dob = models.DateField(null=True, blank=True)
     display_pic = models.ImageField(upload_to='user/dp/', null=True, blank=True)
     mobile_number = models.CharField(max_length=20, null=True, blank=True)

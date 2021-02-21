@@ -14,7 +14,7 @@ class IndividualCollegeView(DetailView):
 
     model = College
     context_object_name = 'college'
-    template_name = 'pages/public/college.html'
+    template_name = 'v2/pages/public/college.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -42,6 +42,6 @@ class IndividualCollegeView(DetailView):
 class CollegesView(ListView):
 
     model = College
-    template_name = 'pages/public/colleges.html'
+    template_name = 'v2/pages/public/colleges.html'
     context_object_name = 'colleges'
     paginate_by = 20

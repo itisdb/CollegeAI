@@ -1,0 +1,40 @@
+{% extends 'v2/layouts/public.html' %}
+{% load static %}
+{% block title %} Refer Your Friends {% endblock %}
+{% block page_name %}
+<li class="breadcrumb-item active"> Refer Your Friends</li>
+{% endblock %}
+{% block hero_title %}
+    <ul class="breadcrumb">
+      <li class="link-01"><a href="/">Home</a></li>
+      <li class="link-01">Refer Friends</li>
+    </ul>
+    <div class="header-primary-info">
+      <h4 class="sub-header-01">Refer Your Friends</h4>
+      <p class="paragraph-01">Help your friends in finding their perfect college by referring this website to them.You can do this by follwoing the steps below —</p>
+    </div>
+{% endblock%}
+
+{% block content %}
+<section id="recovery">
+    <div class="container">
+      <form class="form-recovery" method="" data-validate="" novalidate="true">
+        <div class="form-element">
+            <label for="name">Enter the Name of your friend </label>
+            <input type="text" name="name" placeholder="Type your friend's name" required>
+        </div>
+        <div class="form-element">
+          <label for="email">Enter the email address of your friend</label>
+          <input type="email"  name="email" placeholder="Type your friend's email" required>
+        </div>
+        <div class="form-element">
+            <label for="mobile">Enter the mobile number of your friend</label>
+            <input type="text" name="mobile" placeholder="Type your friend's mobile number">
+          </div>
+        <div class="form-element">
+          <input class="button-primary" type="submit" value="Refer Here">
+        </div>
+      </form>
+    </div>
+  </section>
+  {% endblock %}
