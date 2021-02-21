@@ -22,7 +22,7 @@ class EditUserProfileView(View):
             'form':form,
             'profile_form': profile_form,
         }
-        return render(request, 'v2/layouts/edit-profile.html', context) 
+        return render(request, 'v2/pages/protected/edit-profile.html', context) 
 
     def post(self, request, format=None):
         form = EditProfileForm(request.POST, instance=request.user)
@@ -38,13 +38,13 @@ class EditUserProfileView(View):
             'form':form,
             'profile_form': profile_form,
         }
-        return render(request, 'v2/layouts/edit-profile.html', context) 
+        return render(request, 'v2/pages/protected/edit-profile.html', context) 
 
 
 class UpdatePassword(View):
 
     def get(self, request,  format=None):
-        return render(request, 'v2/layouts/update-password.html', {}) 
+        return render(request, 'v2/pages/protected/update-password.html', {}) 
 
     def post(self, request, format=None):
         user = request.user
@@ -61,4 +61,4 @@ class UpdatePassword(View):
         context = {
             'form':form,
         }
-        return render(request, 'v2/layouts/update-password.html', context)
+        return render(request, 'v2/pages/protected/update-password.html', context)
