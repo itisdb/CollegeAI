@@ -7,4 +7,4 @@ class ProfilesConfig(AppConfig):
     verbose_name = _('profiles')
 
     def ready(self):
-        import cmdbox.profiles.signals  # noqa
+        import profiles.signals  # noqa
