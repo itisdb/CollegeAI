@@ -65,11 +65,18 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.google.GoogleOAuth',
     'social_core.backends.facebook.FacebookOAuth2',
 
     'django.contrib.auth.backends.ModelBackend',
 )
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
 
 ROOT_URLCONF = 'myCollegeAI.urls'
 
@@ -168,7 +175,14 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.getenv('EMAIL_USER')
+<<<<<<< HEAD
 EMAIL_HOST_PASSWORD = ''
 SMTP_EMAIL = 'udit@gmail.com'
 TEMPLATED_EMAIL_TEMPLATE_DIR = 'templates/email/layout' #Use '' for top level template dir
 TEMPLATED_EMAIL_FILE_EXTENSION = 'html'
+=======
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
+
+SOCIAL_AUTH_FACEBOOK_KEY = 'YOUR_APP_KRY'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'YOUR_APP_SECRET'
+>>>>>>> 5a37e47eab37106dad3e6bbc23517d8bd33ba94d
