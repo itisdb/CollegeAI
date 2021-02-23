@@ -2,7 +2,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-
 from base import views as base_views
 
 from leads.views.public import ContactUs
@@ -12,6 +11,10 @@ from profiles.views.authentication import (
     LogoutView,
     RegisterView
 )
+
+from django.utils.encoding import force_bytes,force_text,DjangoUnicodeDecodeError
+from django.utils.http import urlsafe_base64_encode,urlsafe_base64_decode
+from django.contrib.sites.shortcuts import get_current_site
 
 handler404 = 'base.views.custom_not_found_error'
 handler500 = 'base.views.custom_internal_error'
