@@ -1,7 +1,7 @@
 from django.db import models
 from profiles.models import Profile
 
-class tracker(models.Model):
+class Tracker(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     ip_address = models.GenericIPAddressField()
     curr_page = models.CharField(max_length=20, null=True, blank=True)
