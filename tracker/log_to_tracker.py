@@ -10,5 +10,5 @@ def log_to_tracker(request, curr_page):
             ip = get_client_ip(request)
             obj = Tracker.objects.create(profile = profile,ip_address = ip, curr_page=curr_page)
             obj.save()
-        except:
+        except BaseException:
             print('Failed to log to database!')
