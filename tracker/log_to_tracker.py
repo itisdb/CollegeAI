@@ -5,7 +5,10 @@ from tracker.utilities import get_client_ip
 
 def log_to_tracker(request, curr_page):
     if request.user.is_authenticated:
-        profile = request.user.profile
-        ip = get_client_ip(request)
-        obj = Tracker.objects.create(profile = profile,ip_address = ip, curr_page=curr_page)
-        obj.save()
+        try:
+            profile = request.user.profile
+            ip = get_client_ip(request)
+            obj = Tracker.objects.create(profile = profile,ip_address = ip, curr_page=curr_page)
+            obj.save()
+        except:
+            print('Failed to log to database!')
