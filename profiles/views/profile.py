@@ -6,10 +6,12 @@ from profiles.models import Profile
 from profiles.forms import ProfileForm,EditProfileForm
 from profiles.forms import ChangePasswordForm
 
+from tracker.log_to_tracker import log_to_tracker
 
 class Dashboard(View):
 
     def get(self, request, *args, **kwargs):
+        log_to_tracker(request,'dashboard')
         return render(request, 'v2/raw/dashboard.html', {})
 
 
