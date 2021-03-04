@@ -22,3 +22,7 @@ class ProfileForm(ModelForm):
 class ChangePasswordForm(forms.Form):
     old_password = forms.CharField(max_length = 20,required=True)
     new_password = forms.CharField(max_length = 20,required=True)
+
+class ResetPassword(forms.Form):
+    new_password = forms.CharField(max_length = 20,required=True)
+    confirm_password = forms.CharField(max_length = 20,required=True)

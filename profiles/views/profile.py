@@ -1,12 +1,23 @@
 from django.shortcuts import render
 from django.views import View
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.models import User
 from profiles.models import Profile 
-from profiles.forms import ProfileForm,EditProfileForm
+from profiles.forms import ProfileForm,EditProfileForm,ResetPassword
 from profiles.forms import ChangePasswordForm
 
 from tracker.log_to_tracker import log_to_tracker
+
+def ForgotPassword(request, username, otp):
+    if request.method == 'POST':
+        user = User.objects.get(username=username)
+        form = ResetPassword(request.POST)
+        if form.is_valid():
+            user.set_password(form.data.get('new_password'))
+            user.save()
+        return HttpResponseRedirect('/profile/dashboard')
+    return render(request, 'v2/pages/protected/reset_password.html')
 
 class Dashboard(View):
 
