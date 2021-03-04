@@ -23,5 +23,5 @@ class ContactUs(View):
             name, phone_number, email, text
         )
         if is_done:
-            return render('pages/public/contact.html', {'message': 'You will be contacted soon!'})
-        return render('pages/public/contact.html', {'error': 'Failed to save! Please try again.'})
+            return render(request, 'pages/public/contact.html', {'message': 'You will be contacted soon!'})
+        return render(request, 'pages/public/contact.html', {'error': 'Failed to save! Please try again.'})
