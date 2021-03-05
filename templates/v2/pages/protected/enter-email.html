@@ -1,0 +1,12 @@
+{% extends "v2/layouts/edit-layout.html" %}
+{% block content %}
+
+<form method = "post">
+  {% csrf_token %}
+  <label for="email">Email:</label>
+  <input type="email" name="email"><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

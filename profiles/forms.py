@@ -26,3 +26,6 @@ class ChangePasswordForm(forms.Form):
 class ResetPassword(forms.Form):
     new_password = forms.CharField(max_length = 20,required=True)
     confirm_password = forms.CharField(max_length = 20,required=True)
+
+class EnterEmail(forms.Form):
+    email = forms.EmailField(max_length = 30)
