@@ -3,9 +3,11 @@ from django.views import View
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.models import User
+
 from profiles.models import Profile 
 from profiles.forms import ProfileForm,EditProfileForm,ResetPassword,EnterEmail
 from profiles.forms import ChangePasswordForm
+
 from base import generic_mailer
 
 from tracker.log_to_tracker import log_to_tracker
@@ -26,16 +28,16 @@ class ForgotPassword(View):
 
 class EnterEmail(View):
 
-    def get(self, request, format=None):
+    def get(self, request):
         return render(request, 'v2/pages/protected/enter-email.html',{}) 
 
-    def post(self, request, format=None):
+    def post(self, request):
         form = EnterEmail(request.POST or None)
         if form.is_valid():
             email = form.data.get('email')
             print(email)
             u = User.objects.get(email = email)
-            if user is not None:
+            if not user:
                 username = u.username
                 context = {
                 'template_name' : 'forgot-password-mail.html',
@@ -58,7 +60,6 @@ class Dashboard(View):
         log_to_tracker(request,'dashboard')
         return render(request, 'v2/raw/dashboard.html', {})
     
-
 class EditUserProfileView(View):
 
     def get(self, request, format=None):
