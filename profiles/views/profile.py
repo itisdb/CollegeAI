@@ -1,20 +1,65 @@
 from django.shortcuts import render
 from django.views import View
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.models import User
+
 from profiles.models import Profile 
-from profiles.forms import ProfileForm,EditProfileForm
+from profiles.forms import ProfileForm,EditProfileForm,ResetPassword,EnterEmail
 from profiles.forms import ChangePasswordForm
 
+from base import generic_mailer
+
 from tracker.log_to_tracker import log_to_tracker
+
+class ForgotPassword(View):
+
+    def get(self, request, username, otp):
+        return render(request, 'v2/pages/protected/reset_password.html')
+
+    def post(self, request, username, otp):
+        user = User.objects.get(username=username)
+        form = ResetPassword(request.POST)
+        if form.is_valid():
+            user.set_password(form.data.get('new_password'))
+            user.save()
+            return HttpResponseRedirect('/profile/dashboard')
+        return render(request, 'v2/pages/protected/reset_password.html')
+
+class EnterEmail(View):
+
+    def get(self, request):
+        return render(request, 'v2/pages/protected/enter-email.html',{}) 
+
+    def post(self, request):
+        form = EnterEmail(request.POST or None)
+        if form.is_valid():
+            email = form.data.get('email')
+            print(email)
+            u = User.objects.get(email = email)
+            if not user:
+                username = u.username
+                context = {
+                'template_name' : 'forgot-password-mail.html',
+                'recipients' : email,
+                'username':username,
+                'link':'',
+                }
+                try:
+                    generic_mailer(context)
+                except:
+                    pass
+                messages.info(request, 'Mail has been sent to you succesfully!!')
+            else:
+                messages.info(request, 'No profile exists with such email!!')
+        return render(request, 'v2/pages/protected/enter-email.html',{}) 
 
 class Dashboard(View):
 
     def get(self, request, *args, **kwargs):
         log_to_tracker(request,'dashboard')
         return render(request, 'v2/raw/dashboard.html', {})
-
-
+    
 class EditUserProfileView(View):
 
     def get(self, request, format=None):
