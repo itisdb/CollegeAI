@@ -49,10 +49,10 @@ class RegisterView(View):
             return render(request, 'v2/pages/public/home.html', {'error': 'Username/Password is incorrect.'})
         login(request, user)
         context = {
-            'template_name' : 'welcome_mail.html',
-            'recipients' : email,
-            'username':username,
-            'first_name':first_name,
+            'template_name': 'welcome_mail.html',
+            'recipients': username,
+            'username': username,
+            'first_name': first_name,
         }
         try:
             generic_mailer(context)
