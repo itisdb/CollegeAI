@@ -4,7 +4,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-from profiles.models import Profile 
+from profiles.models import OTPVerification, Profile 
 from profiles.forms import ProfileForm,EditProfileForm,ResetPassword,EnterEmail
 from profiles.forms import ChangePasswordForm
 
@@ -20,6 +20,15 @@ class ForgotPassword(View):
     def post(self, request, username, otp):
         user = User.objects.get(username=username)
         form = ResetPassword(request.POST)
+        profile = Profile.objects.get(user = user)
+        otp_object = OTPVerification.objects.get(
+                profile=profile,
+                otp=otp,
+                verifier_tag=OTPVerification.VerifierTag.MAIL_VERIFICATION.value,
+                is_verified=False
+            )
+        otp_object.is_verified = True
+        otp_object.save()
         if form.is_valid():
             user.set_password(form.data.get('new_password'))
             user.save()
@@ -35,15 +44,26 @@ class EnterEmail(View):
         form = EnterEmail(request.POST or None)
         if form.is_valid():
             email = form.data.get('email')
-            print(email)
-            u = User.objects.get(email = email)
-            if not user:
-                username = u.username
+            user = User.objects.get(email = email)
+            if user:
+                username = user.username
+                profile = Profile.objects.get(user = user)
+            
+                otp_object, _ = OTPVerification.objects.get_or_create(
+                profile=profile,
+                otp=str(random.randint(100000, 999999)),
+                verifier_tag=OTPVerification.VerifierTag.PASSWORD_RESET.value,
+                is_verified=False
+                )
+                link = '/reset-password/{}/{}'.format(
+                username,
+                otp_object.otp
+                ),
                 context = {
                 'template_name' : 'forgot-password-mail.html',
                 'recipients' : email,
                 'username':username,
-                'link':'',
+                'link':link,
                 }
                 try:
                     generic_mailer(context)
