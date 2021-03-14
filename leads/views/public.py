@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views.generic.base import View
 
 from leads.controllers.direct_lead_handler import DirectLeadHandler
+from leads.controllers.refer_handler import ReferHandler
 
 
 class ContactUs(View):
@@ -25,3 +26,22 @@ class ContactUs(View):
         if is_done:
             return render(request, 'pages/public/contact.html', {'message': 'You will be contacted soon!'})
         return render(request, 'pages/public/contact.html', {'error': 'Failed to save! Please try again.'})
+
+
+class Refer(View):
+    """Handles all refer form actions."""
+
+    def get(self, request, *args, **kwargs):
+        """Load the refer page."""
+        return render(request, 'pages/public/refer.html')
+
+    def post(self, request, *args, **kwargs):
+        """Handle the refer form."""
+        phone_number = request.data.get('phone_number')
+        email = request.data.get('email')
+
+        is_done = ReferHandler().refer(phone_number, email)
+
+        if is_done:
+            return render(request, 'pages/public/refer.html', {'message': 'Your referral has been recorded!'})
+        return render(request, 'pages/public/refer.html', {'error': 'Failed to save! Please try again.'})
