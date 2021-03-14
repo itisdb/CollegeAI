@@ -1,6 +1,7 @@
 from django.conf import settings
 from templated_email import send_templated_mail
 
+
 def generic_mailer(**kwargs):
     send_templated_mail(
         template_name=kwargs.get('context').get('template_name'),
