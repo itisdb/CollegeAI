@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.urls import path, include
 from base import views as base_views
 
-from leads.views.public import ContactUs
+from leads.views.public import ContactUs, ReferView
 
 from profiles.views.authentication import (
     LoginView,
@@ -31,7 +31,7 @@ urlpatterns = [
   path('register/', RegisterView.as_view(), name='register'),
   path('contact/', ContactUs.as_view(), name='contact'),
   path('', base_views.home, name='home'),
-  path('refer', base_views.refer, name='refer'),
+  path('refer', ReferView.as_view(), name='refer'),
   path('about', base_views.about, name='about'),
   path('contact', base_views.contact, name='contact'),
   path('career', base_views.career, name='career'),
