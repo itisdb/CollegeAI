@@ -498,3 +498,6 @@ label, .label-02 {
     margin: 10vmin auto;
 }}
 
+.quick-facts_content-item a{
+    color: #099e00;
+}
