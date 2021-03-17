@@ -1,11 +1,9 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
-from django.core.mail import send_mail
-from django.core.mail import EmailMessage
-from django.conf import settings
 from profiles.models import Profile, User
-from base import generic_mailer
+from base.generic_mailer import generic_mailer
+
 
 class LoginView(View):
 
@@ -29,7 +27,7 @@ class RegisterView(View):
     def post(self, request):
         try:
             name = request.POST['name']
-            name = name.split(" ",1)
+            name = name.split(" ", 1)
             first_name = name[0]
             last_name = name[-1]
             username = request.POST['username']
@@ -55,7 +53,7 @@ class RegisterView(View):
             'first_name': first_name,
         }
         try:
-            generic_mailer(context)
+            generic_mailer(**context)
         except:
             pass
         return redirect('profile:dashboard')
