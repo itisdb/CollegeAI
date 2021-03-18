@@ -231,10 +231,17 @@
               <li class="link-items"><a class="label-02" href="courses.html">Courses</a></li>
               <li class="link-items"><a class="label-02" href="index.html#counselling">Get Counselling</a></li>
             </ul>
-            <div class="nav-content-links__right-buttons">
-              <button class="button-outline" id="logInButton">Log In</button>
-              <button class="button-primary" id="signUpButton">Sign Up for Free</button>
-            </div>
+            {% if not user.is_authenticated %}
+        <div class="nav-content-links__right-buttons">
+          <button class="button-outline" id="logInButton">Log In</button>
+          <button class="button-primary" id="signUpButton">Sign Up for Free</button>
+        </div>
+        {% else %}
+        <div class="nav-content-links__right-buttons">
+          <a href="/profile/dashboard"><button class="button-outline" id="#">{{ user.first_name }}</button></a>
+          <a href="/logout"><button class="button-outline">Log Out</button></a>
+        </div>
+        {% endif %}
           </div>
           <div class="nav-content-links__user"><img class="user-avatar" src="https://ui-avatars.com/api/?format=svg&amp;name=Drady+jules" alt=""><span class="label-02">Drady</span>
             <div class="chevron-button">
