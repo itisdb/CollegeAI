@@ -23,6 +23,7 @@ urlpatterns = [
   path('college/', include(('college.urls', 'college'), namespace='college')),
   path('profile/', include(('profiles.urls', 'profile'), namespace='profile')),
   path('login/', LoginView.as_view(), name='login'),
+  path('accounts/', include('allauth.urls')),
   path('social-auth/', include('social_django.urls', namespace="social")),
   path('logout/', LogoutView.as_view(), name='logout'),
   path('register/', RegisterView.as_view(), name='register'),

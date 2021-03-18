@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
+
+    'allauth',
+    'allauth.account',   # <--
+    'allauth.socialaccount',   # <--
+    'allauth.socialaccount.providers.google',
     'social_django',
     'celery',
 
@@ -64,16 +70,32 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.google.GoogleOAuth2',
-
+    # 'social_core.backends.google.GoogleOAuth2',
+    'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = 'home'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+
 
 SOCIAL_AUTH_FACEBOOK_KEY = '187311743169596'       # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = 'af8c07267d4800bd2b155667cfcd5507'
 
-SOCIAL_AUTH_GOOGLE_KEY = '737106119386-h8g69k7fgqub2ofat90kvn8kb45nphie.apps.googleusercontent.com/'
-SOCIAL_AUTH_GOOGLE_SECRET = 'aPr5vV2GazZO1-UP_NbZh--m'
+# SOCIAL_AUTH_GOOGLE_KEY = '737106119386-h8g69k7fgqub2ofat90kvn8kb45nphie.apps.googleusercontent.com/'
+# SOCIAL_AUTH_GOOGLE_SECRET = 'aPr5vV2GazZO1-UP_NbZh--m'
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
