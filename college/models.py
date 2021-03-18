@@ -43,7 +43,7 @@ class College(BaseModel):
     slug = models.SlugField(null=True, blank=True, max_length=50)
     is_top = models.BooleanField(null=True, default=False)
     stream_degree = models.JSONField(null=True)
-    entrance_exams = models.JSONField(null=True)
+    entrance_exams = models.CharField(null=True, max_length=200)
     website = models.CharField(max_length=400, null=True, blank=True)
     phone = models.CharField(max_length=200, null=True, blank=True)
     address = models.CharField(max_length=300, null=True, blank=True)

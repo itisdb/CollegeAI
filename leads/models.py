@@ -14,3 +14,13 @@ class DirectLead(BaseModel):
 
     def __str__(self):
         return f'{self.name}'
+
+
+class ReferLead(BaseModel):
+    """Store refer leads to convert to future."""
+
+    email = models.CharField(max_length=200, null=True, blank=True)
+    mobile = models.CharField(max_length=200, null=True, blank=True)
+
+    def __str__(self):
+        return self.email or self.mobile

@@ -18,7 +18,7 @@
 {% block content %}
 <section id="recovery">
     <div class="container">
-      <form class="form-recovery" method="" data-validate="" novalidate="true">
+      <form class="form-recovery" method="POST" action="{% url 'refer' %}" data-validate="" novalidate="true">
         <div class="form-element">
             <label for="name">Enter the Name of your friend </label>
             <input type="text" name="name" placeholder="Type your friend's name" required>
