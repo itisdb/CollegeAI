@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
+
+    'allauth',
+    'allauth.account',   # <--
+    'allauth.socialaccount',   # <--
+    'allauth.socialaccount.providers.google',
     'social_django',
     'celery',
     'crispy_forms',
@@ -65,24 +71,37 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.google.GoogleOAuth',
     'social_core.backends.facebook.FacebookOAuth2',
-
+    # 'social_core.backends.google.GoogleOAuth2',
+    'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
+SITE_ID = 2
+LOGIN_REDIRECT_URL = 'home'
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        }
+    }
+}
+
+
+SOCIAL_AUTH_FACEBOOK_KEY = '187311743169596'       # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'af8c07267d4800bd2b155667cfcd5507'
+
+# SOCIAL_AUTH_GOOGLE_KEY = '737106119386-h8g69k7fgqub2ofat90kvn8kb45nphie.apps.googleusercontent.com/'
+# SOCIAL_AUTH_GOOGLE_SECRET = 'aPr5vV2GazZO1-UP_NbZh--m'
 
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
-
-#
-SOCIAL_AUTH_FACEBOOK_KEY = '187311743169596'        # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = 'af8c07267d4800bd2b155667cfcd5507' 
-
-
 
 
 ROOT_URLCONF = 'myCollegeAI.urls'
@@ -184,10 +203,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.getenv('EMAIL_USER')
 EMAIL_HOST_PASSWORD = ''
 SMTP_EMAIL = 'udit@gmail.com'
-TEMPLATED_EMAIL_TEMPLATE_DIR = 'templates/email/layout' #Use '' for top level template dir
+TEMPLATED_EMAIL_TEMPLATE_DIR = 'templates/email/layout'
 TEMPLATED_EMAIL_FILE_EXTENSION = 'html'
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
-
-SOCIAL_AUTH_FACEBOOK_KEY = 'YOUR_APP_KRY'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'YOUR_APP_SECRET'
 
