@@ -4,11 +4,13 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-from profiles.models import Profile 
-from profiles.forms import ProfileForm,EditProfileForm,ResetPassword,EnterEmail
+from profiles.models import OTPVerification, Profile 
+from profiles.forms import ProfileForm,EditProfileForm,ResetPassword,EnterEmailForm
 from profiles.forms import ChangePasswordForm
 
-from base import generic_mailer
+from base.generic_mailer import generic_mailer
+
+import random
 
 from tracker.log_to_tracker import log_to_tracker
 
@@ -20,10 +22,21 @@ class ForgotPassword(View):
     def post(self, request, username, otp):
         user = User.objects.get(username=username)
         form = ResetPassword(request.POST)
+        profile = Profile.objects.get(user = user)
+        otp_object = OTPVerification.objects.get(
+                profile=profile,
+                otp=otp,
+                verifier_tag=OTPVerification.VerifierTag.PASSWORD_RESET.value,
+                is_verified=False
+            )
+        otp_object.is_verified = True
+        otp_object.save()
         if form.is_valid():
             user.set_password(form.data.get('new_password'))
             user.save()
             return HttpResponseRedirect('/profile/dashboard')
+        else:
+            messages.info(request, 'Confirm password and new password not matching!!')
         return render(request, 'v2/pages/protected/reset_password.html')
 
 class EnterEmail(View):
@@ -32,18 +45,30 @@ class EnterEmail(View):
         return render(request, 'v2/pages/protected/enter-email.html',{}) 
 
     def post(self, request):
-        form = EnterEmail(request.POST or None)
+        form = EnterEmailForm(request.POST)
         if form.is_valid():
             email = form.data.get('email')
-            print(email)
-            u = User.objects.get(email = email)
-            if not user:
-                username = u.username
+            user = User.objects.filter(email=email).first()
+            if user:
+                username = user.username
+                profile = Profile.objects.get(user = user)
+                otp_object, _ = OTPVerification.objects.get_or_create(
+                profile=profile,
+                otp=str(random.randint(100000, 999999)),
+                verifier_tag=OTPVerification.VerifierTag.PASSWORD_RESET.value,
+                is_verified=False
+                )
+                link = '/reset-password/{}/{}'.format(
+                username,
+                otp_object.otp
+                ),
+                print(link)
                 context = {
                 'template_name' : 'forgot-password-mail.html',
                 'recipients' : email,
                 'username':username,
-                'link':'',
+                'link':link,
+                'full_name':user.first_name,
                 }
                 try:
                     generic_mailer(context)
@@ -52,6 +77,8 @@ class EnterEmail(View):
                 messages.info(request, 'Mail has been sent to you succesfully!!')
             else:
                 messages.info(request, 'No profile exists with such email!!')
+        else:
+            print('No')
         return render(request, 'v2/pages/protected/enter-email.html',{}) 
 
 class Dashboard(View):

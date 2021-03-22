@@ -37,5 +37,5 @@ class ResetPassword(forms.Form):
                 "new_password and confirm_password does not match"
             )
 
-class EnterEmail(forms.Form):
+class EnterEmailForm(forms.Form):
     email = forms.EmailField(max_length = 30)
