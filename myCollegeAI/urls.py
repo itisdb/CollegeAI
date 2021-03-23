@@ -38,7 +38,8 @@ urlpatterns = [
   path('advertising', base_views.advertising, name='advertising'),
   path('terms', base_views.terms, name='terms'),
   path('privacy',  base_views.privacy, name='privacy'),
-  path('social', include('social_django.urls', namespace='social'))
+  path('social', include('social_django.urls', namespace='social')),
+  path('psychometric', base_views.psycho, name='psycho' )
 ]
 
 if settings.DEBUG:

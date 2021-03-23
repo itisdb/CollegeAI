@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from college.models import College
-
+from profiles.models import psychometry, Profile
 
 def custom_not_found_error(request, *args, **argv):
     response = render(request, 'pages/error/404.html')
@@ -43,3 +43,18 @@ def terms(request):
 
 def privacy(request):
     return render(request, 'v2/pages/public/privacy.html')
+
+def psycho(request):
+    if request.method == 'POST':
+        placement = request.POST['placement']
+        infrastructure = request.POST['infrastructure']
+        academics = request.POST['academics']
+        print(request.user)
+        profile_obj = Profile.objects.get(user = request.user)
+        print(profile_obj)
+        psycho_obj = psychometry.objects.create(profile=profile_obj, infrastructure=infrastructure, academics=academics, placement=placement)
+        print(psycho_obj)
+        psycho_obj.save()
+        return redirect(request, 'v2/pages/public/home.html')
+    else:
+        return render(request, 'v2/pages/public/psychometric.html')

@@ -15,6 +15,14 @@ class Profile(BaseModel):
     def __str__(self):
         return self.user.get_full_name()
 
+class psychometry(BaseModel):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    infrastructure = models.IntegerField(null=False)
+    academics = models.IntegerField(null=False)
+    placement = models.IntegerField(null=False)
+
+    def __str__(self):
+        return self.profile.user.get_full_name()
 
 class OTPVerification(BaseModel):
     """OTP Verification stack trace."""
