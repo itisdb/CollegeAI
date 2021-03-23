@@ -16,10 +16,10 @@ class Profile(BaseModel):
         return self.user.get_full_name()
 
 class psychometry(BaseModel):
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    infrastructure = models.IntegerField(null=False)
-    academics = models.IntegerField(null=False)
-    placement = models.IntegerField(null=False)
+    profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    infrastructure = models.DecimalField(max_digits=4, decimal_places=2)
+    academics = models.DecimalField(max_digits=4, decimal_places=2)
+    placement = models.DecimalField(max_digits=4, decimal_places=2)
 
     def __str__(self):
         return self.profile.user.get_full_name()

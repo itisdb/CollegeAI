@@ -147,6 +147,7 @@ function optionSelected(answer){
 function showResult(){
     // info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
+    updatepsycho();
     result_box.classList.add("activeResult"); //show result box
     // const scoreText = result_box.querySelector(".score_text");
     // if (userScore > 3){ // if user scored more than 3
@@ -208,4 +209,14 @@ function queCounter(index){
     //creating a new span tag and passing the question number and total question
     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
+}
+
+var infra = document.getElementById("infrastructure");
+var place = document.getElementById("placement");
+var acad = document.getElementById("academics");
+
+function updatepsycho(){
+    infra.value = user_infrastructure
+    place.value = user_placement
+    acad.value = user_academic
 }

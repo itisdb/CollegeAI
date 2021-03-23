@@ -49,12 +49,9 @@ def psycho(request):
         placement = request.POST['placement']
         infrastructure = request.POST['infrastructure']
         academics = request.POST['academics']
-        print(request.user)
         profile_obj = Profile.objects.get(user = request.user)
-        print(profile_obj)
         psycho_obj = psychometry.objects.create(profile=profile_obj, infrastructure=infrastructure, academics=academics, placement=placement)
-        print(psycho_obj)
         psycho_obj.save()
-        return redirect(request, 'v2/pages/public/home.html')
+        return redirect('/')
     else:
         return render(request, 'v2/pages/public/psychometric.html')
