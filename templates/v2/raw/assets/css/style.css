@@ -1,34 +1,19 @@
 /* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body{
-    background: #099e00;
-}
-
-::selection{
-    color: #fff;
-    background: #099e00;
-}
 
 .start_btn,
-.info_box,
 .quiz_box,
 .result_box{
     position: absolute;
+    margin-top: 50px;
     top: 50%;
     left: 50%;
+    width: 200px;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.info_box.activeInfo,
 .quiz_box.activeQuiz,
 .result_box.activeResult{
     opacity: 1;
@@ -49,69 +34,10 @@ body{
     cursor: pointer;
 }
 
-.info_box{
-    width: 540px;
-    background: #fff;
-    border-radius: 5px;
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.info_box .info-title{
-    height: 60px;
-    width: 100%;
-    border-bottom: 1px solid lightgrey;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    border-radius: 5px 5px 0 0;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.info_box .info-list{
-    padding: 15px 30px;
-}
-
-.info_box .info-list .info{
-    margin: 5px 0;
-    font-size: 17px;
-}
-
-.info_box .info-list .info span{
-    font-weight: 600;
-    color: #099e00;
-}
-.info_box .buttons{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0 30px;
-    border-top: 1px solid lightgrey;
-}
-
-.info_box .buttons button{
-    margin: 0 5px;
-    height: 40px;
-    width: 100px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #099e00;
-    transition: all 0.3s ease;
-}
-
-
-
 .quiz_box{
     width: 550px;
     background: #fff;
+    padding: 10px;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -124,7 +50,7 @@ body{
         width: 90%;
     }
 }
-.quiz_box header{
+.quiz_box header-p{
     position: relative;
     z-index: 2;
     height: 70px;
@@ -137,69 +63,26 @@ body{
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
 
-.quiz_box header .title{
+.quiz_box header-p .title{
     font-size: 20px;
     font-weight: 600;
 }
 
-.quiz_box header .timer{
-    color: #008540;
-    background: #ccffd5;
-    border: 1px solid #b8ffda;
-    height: 45px;
-    padding: 0 8px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 145px;
-}
-
-.quiz_box header .timer .time_left_txt{
-    font-weight: 400;
-    font-size: 17px;
-    user-select: none;
-}
-
-.quiz_box header .timer .timer_sec{
-    font-size: 18px;
-    font-weight: 500;
-    height: 30px;
-    width: 45px;
-    color: #fff;
-    border-radius: 5px;
-    line-height: 30px;
-    text-align: center;
-    background: #343a40;
-    border: 1px solid #343a40;
-    user-select: none;
-}
-
-.quiz_box header .time_line{
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    height: 3px;
-    background: #099e00;
-}
-
-section{
-    padding: 25px 30px 20px 30px;
+section-p{
     background: #fff;
 }
 
-section .que_text{
+section-p .que_text{
     font-size: 25px;
     font-weight: 600;
 }
 
-section .option_list{
+section-p .option_list{
     padding: 20px 0px;
     display: block;   
 }
 
-section .option_list .option{
-    background: #d0ffd8;
+section-p .option_list .option{
     border: 1px solid #84fec5;
     border-radius: 5px;
     padding: 8px 15px;
@@ -212,33 +95,33 @@ section .option_list .option{
     justify-content: space-between;
 }
 
-section .option_list .option:last-child{
+section-p .option_list .option:last-child{
     margin-bottom: 0px;
 }
 
-section .option_list .option:hover{
+section-p .option_list .option:hover{
     color: #008540;
     background: #ccffd5;
     border: 1px solid #b8ffda;
 }
 
-section .option_list .option.correct{
+section-p .option_list .option.correct{
     color: #155724;
     background: #d4edda;
     border: 1px solid #c3e6cb;
 }
 
-section .option_list .option.incorrect{
+section-p .option_list .option.incorrect{
     color: #721c24;
     background: #f8d7da;
     border: 1px solid #f5c6cb;
 }
 
-section .option_list .option.disabled{
+section-p .option_list .option.disabled{
     pointer-events: none;
 }
 
-section .option_list .option .icon{
+section-p .option_list .option .icon{
     height: 26px;
     width: 26px;
     border: 2px solid transparent;
@@ -249,19 +132,8 @@ section .option_list .option .icon{
     transition: all 0.3s ease;
     line-height: 24px;
 }
-.option_list .option .icon.tick{
-    color: #23903c;
-    border-color: #23903c;
-    background: #d4edda;
-}
 
-.option_list .option .icon.cross{
-    color: #a42834;
-    background: #f8d7da;
-    border-color: #a42834;
-}
-
-footer{
+footer-p{
     height: 60px;
     padding: 0 30px;
     display: flex;
@@ -270,21 +142,22 @@ footer{
     border-top: 1px solid lightgrey;
 }
 
-footer .total_que span{
+footer-p .total_que span{
     display: flex;
     user-select: none;
 }
 
-footer .total_que span p{
+footer-p .total_que span p{
     font-weight: 500;
     padding: 0 5px;
+    line-height: 1.375rem;
 }
 
-footer .total_que span p:first-child{
+footer-p .total_que span p:first-child{
     padding-left: 0px;
 }
 
-footer button{
+footer-p button{
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
@@ -303,11 +176,11 @@ footer button{
     transition: all 0.3s ease;
 }
 
-footer button:hover{
+footer-p button:hover{
     background: #02fa23;
 }
 
-footer button.show{
+footer-p button.show{
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);

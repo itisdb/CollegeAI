@@ -1,50 +1,62 @@
+{% extends 'v2/layouts/public.html' %}
 {% load static %}
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{% block title %} Psychometric Test {% endblock %}
+{% block page_name %}
+<li class="breadcrumb-item active"> Psychometric Test</li>
+{% endblock %}
+{% block add_css %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <div class="start_btn"><button>Start Quiz</button></div>
-    <div class="quiz_box">
-        <header>
-            <div class="title">Psychometric Test</div>
-        </header>
-        <section>
-            <div class="que_text">
-                <!-- Here I've inserted question from JavaScript -->
-            </div>
-            <div class="option_list">
-                <!-- Here I've inserted options from JavaScript -->
-            </div>
-        </section>
-        <footer>
-            <div class="total_que">
-                <!-- Here I've inserted Question Count Number from JavaScript -->
-            </div>
-            <button class="next_btn">Next</button>
-        </footer>
+{% endblock %}
+{% block hero_title %}
+    <ul class="breadcrumb">
+      <li class="link-01"><a href="/">Home</a></li>
+      <li class="link-01">Psychometric Test</li>
+    </ul>
+    <div class="header-primary-info">
+      <h4 class="sub-header-01">Psychometric Test</h4>
+      <p class="paragraph-01"> Click on the start button given below to start your psychometric test -></p>
     </div>
-    <div class="result_box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete_text">You've completed the Quiz!</div>
-        <div class="score_text">
-            <!-- Here I've inserted Score Result from JavaScript -->
-        </div>
-        <div class="buttons">
-            <form action="{% url 'psycho' %}" method="POST" >
+{% endblock%}
+
+{% block content %}
+    <section id="content">
+        <div class="container">
+            <div class="start_btn"><button>Start Quiz</button></div>
+            <div class="quiz_box">
+            <header-p>
+                <div class="title">Psychometric Test</div>
+            </header-p>
+            <section-p>
+                <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+                </div>
+                <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+                </div>
+            </section-p>
+            <footer-p>
+                <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+                </div>
+                <button class="next_btn">Next</button>
+            </footer-p>
+            </div>
+            <div class="result_box">
+            <div class="complete_text">You've completed the Quiz!</div>
+            <div class="buttons">
+                <form action="{% url 'psycho' %}" method="POST" >
                 {% csrf_token %}
                 <input type="hidden" id ="infrastructure" name="infrastructure" value="1">
                 <input type="hidden" id="placement" name="placement" value="1"> 
                 <input type="hidden" id ="academics" name="academics" value="1"> 
                 <input type="submit" value="Submit" class="submit_button">
-            </form>
-            <button class="quit">Quit Quiz</button>
+                </form>
+            </div>
         </div>
-    </div>
+        </div>
+    </section>
+    {% endblock %}
+    {% block add_js %}
     <script src="{% static 'js/questions.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+    {% endblock %}

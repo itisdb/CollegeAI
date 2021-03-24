@@ -50,8 +50,15 @@ def psycho(request):
         infrastructure = request.POST['infrastructure']
         academics = request.POST['academics']
         profile_obj = Profile.objects.get(user = request.user)
-        psycho_obj = psychometry.objects.create(profile=profile_obj, infrastructure=infrastructure, academics=academics, placement=placement)
-        psycho_obj.save()
+        if  psychometry.objects.get(profile=profile_obj):
+            psycho_obj = psychometry.objects.get(profile=profile_obj)
+            psycho_obj.infrastructure = infrastructure
+            psycho_obj.academics = academics
+            psycho_obj.placement = placement
+            psycho_obj.save()
+        else:
+            psycho_obj = psychometry.objects.create(profile=profile_obj, infrastructure=infrastructure, academics=academics, placement=placement)
+            psycho_obj.save()
         return redirect('/')
     else:
         return render(request, 'v2/pages/public/psychometric.html')

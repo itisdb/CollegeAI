@@ -43,16 +43,9 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
-const quit_quiz = result_box.querySelector(".buttons .quit");
 
-
-// if quitQuiz button clicked
-quit_quiz.onclick = ()=>{
-    window.location.reload(); //reload the current window
-}
-
-const next_btn = document.querySelector("footer .next_btn");
-const bottom_ques_counter = document.querySelector("footer .total_que");
+const next_btn = document.querySelector("footer-p .next_btn");
+const bottom_ques_counter = document.querySelector("footer-p .total_que");
 
 // if Next Que button clicked
 next_btn.onclick = ()=>{
@@ -68,6 +61,7 @@ next_btn.onclick = ()=>{
         // timeText.textContent = "Time Left"; //change the timeText to Time Left
         next_btn.classList.remove("show"); //hide the next button
     }else{
+        console.log("else working");
         clearInterval(counter); //clear counter
         clearInterval(counterLine); //clear counterLine
         showResult(); //calling showResult function
@@ -145,6 +139,7 @@ function optionSelected(answer){
 // }
 
 function showResult(){
+    console.log("Show result inserted");
     // info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     updatepsycho();
@@ -207,7 +202,7 @@ function showResult(){
 
 function queCounter(index){
     //creating a new span tag and passing the question number and total question
-    let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+    let totalQueCounTag = '<span> '+ index +' of '+ questions.length +' Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
 }
 
