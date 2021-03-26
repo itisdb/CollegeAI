@@ -3,6 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from base import views as base_views
+from base.views import PsychoView
 
 from leads.views.public import ContactUs
 
@@ -39,7 +40,7 @@ urlpatterns = [
   path('terms', base_views.terms, name='terms'),
   path('privacy',  base_views.privacy, name='privacy'),
   path('social', include('social_django.urls', namespace='social')),
-  path('psychometric', base_views.psycho, name='psycho' )
+  path('psychometric', PsychoView.as_view(), name='psycho' )
 ]
 
 if settings.DEBUG:

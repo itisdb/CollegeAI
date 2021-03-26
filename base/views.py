@@ -1,7 +1,10 @@
 from django.shortcuts import render, redirect
+from django.views.generic.base import View
+
 
 from college.models import College
-from profiles.models import psychometry, Profile
+
+from profiles.models import Psychometry, Profile
 
 def custom_not_found_error(request, *args, **argv):
     response = render(request, 'pages/error/404.html')
@@ -44,21 +47,29 @@ def terms(request):
 def privacy(request):
     return render(request, 'v2/pages/public/privacy.html')
 
-def psycho(request):
-    if request.method == 'POST':
+class PsychoView(View): 
+    def get(self, request):
+        print(request.user)
+        if request.user:
+            return render(request, 'v2/pages/public/psychometric.html')
+        else:
+            return render(request, 'v2/pages/public/home.html', {'error': 'You need to login in order to give the exam'})
+
+    def post(self, request):
         placement = request.POST['placement']
         infrastructure = request.POST['infrastructure']
         academics = request.POST['academics']
         profile_obj = Profile.objects.get(user = request.user)
-        if  psychometry.objects.get(profile=profile_obj):
-            psycho_obj = psychometry.objects.get(profile=profile_obj)
+        psycho_obj = Psychometry.objects.get(profile=profile_obj)
+        if  psycho_obj:
             psycho_obj.infrastructure = infrastructure
             psycho_obj.academics = academics
             psycho_obj.placement = placement
             psycho_obj.save()
         else:
-            psycho_obj = psychometry.objects.create(profile=profile_obj, infrastructure=infrastructure, academics=academics, placement=placement)
+            psycho_obj = Psychometry.objects.create(profile=profile_obj)
+            psycho_obj.infrastructure = infrastructure
+            psycho_obj.academics = academics
+            psycho_obj.placement = placement
             psycho_obj.save()
-        return redirect('/')
-    else:
-        return render(request, 'v2/pages/public/psychometric.html')
+        return redirect('/', {'message': 'Your test was succesful, we will contact you soon'})

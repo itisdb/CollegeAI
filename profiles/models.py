@@ -15,7 +15,7 @@ class Profile(BaseModel):
     def __str__(self):
         return self.user.get_full_name()
 
-class psychometry(BaseModel):
+class Psychometry(BaseModel):
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     infrastructure = models.DecimalField(max_digits=4, decimal_places=2)
     academics = models.DecimalField(max_digits=4, decimal_places=2)
