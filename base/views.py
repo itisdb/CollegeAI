@@ -48,28 +48,27 @@ def privacy(request):
     return render(request, 'v2/pages/public/privacy.html')
 
 class PsychoView(View): 
-    def get(self, request):
-        print(request.user)
-        if request.user:
+    def get(self, request, *args, **kwargs):
+        if request.user.id:
             return render(request, 'v2/pages/public/psychometric.html')
         else:
             return render(request, 'v2/pages/public/home.html', {'error': 'You need to login in order to give the exam'})
 
-    def post(self, request):
+    def post(self, request, *args, **kwargs):
         placement = request.POST['placement']
         infrastructure = request.POST['infrastructure']
         academics = request.POST['academics']
-        profile_obj = Profile.objects.get(user = request.user)
-        psycho_obj = Psychometry.objects.get(profile=profile_obj)
+        psycho_obj = Psychometry.objects.filter(profile= request.user.profile).first()
         if  psycho_obj:
             psycho_obj.infrastructure = infrastructure
             psycho_obj.academics = academics
             psycho_obj.placement = placement
             psycho_obj.save()
         else:
-            psycho_obj = Psychometry.objects.create(profile=profile_obj)
-            psycho_obj.infrastructure = infrastructure
-            psycho_obj.academics = academics
-            psycho_obj.placement = placement
+            psycho_obj = Psychometry.objects.create(
+                profile= request.user.profile, 
+                infrastructure = infrastructure,
+                academics=academics,
+                placement=placement)
             psycho_obj.save()
         return redirect('/', {'message': 'Your test was succesful, we will contact you soon'})

@@ -1,11 +1,13 @@
 /* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+
+
 .start_btn,
 .quiz_box,
 .result_box{
     position: absolute;
-    margin-top: 50px;
+    margin-top: 100px;
     top: 50%;
     left: 50%;
     width: 200px;
@@ -13,11 +15,11 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 @media screen and (max-width: 800px) {
-.start_btn{
-    position: relative;
-}
+    .start_btn{
+        position: relative;
+    }
+} 
 
 .quiz_box.activeQuiz,
 .result_box.activeResult{
