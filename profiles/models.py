@@ -15,6 +15,14 @@ class Profile(BaseModel):
     def __str__(self):
         return self.user.get_full_name()
 
+class Psychometry(BaseModel):
+    profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    infrastructure = models.DecimalField(max_digits=4, decimal_places=2)
+    academics = models.DecimalField(max_digits=4, decimal_places=2)
+    placement = models.DecimalField(max_digits=4, decimal_places=2)
+
+    def __str__(self):
+        return self.profile.user.get_full_name()
 
 class OTPVerification(BaseModel):
     """OTP Verification stack trace."""

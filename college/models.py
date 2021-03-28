@@ -65,3 +65,7 @@ class CollegeImages(BaseModel):
 
     def __str__(self):
         return self.college.full_name
+
+
+
+
