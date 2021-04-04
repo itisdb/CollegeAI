@@ -2,6 +2,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView, DetailView
+from django.db.models import Q
 
 from base.constants import SUCCESS_ALERT_KEY
 
@@ -47,9 +48,8 @@ class CollegesView(ListView):
     paginate_by = 20
 
     def get_queryset(self):
-        name = self.kwargs.get('sea', None)
-        print(self.kwargs)
+        name = self.request.GET.get('sea')
         object_list = self.model.objects.all()
         if name:
-            object_list = object_list.filter(full_name__icontains=name)
+            object_list = object_list.filter(Q(full_name__icontains=name) | Q(abbreviated_name__icontains=name))
         return object_list
