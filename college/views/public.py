@@ -48,7 +48,7 @@ class CollegesView(ListView):
     paginate_by = 20
 
     def get_queryset(self):
-        name = self.request.GET.get('sea')
+        name = self.request.GET.get('search')
         object_list = self.model.objects.all()
         if name:
             object_list = object_list.filter(Q(full_name__icontains=name) | Q(abbreviated_name__icontains=name))

@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='otpverification',
             name='is_verified',
-            field=models.BooleanField(default=0),
+            field=models.SmallIntegerField(default=0),
         ),
         migrations.AlterField(
             model_name='profile',
