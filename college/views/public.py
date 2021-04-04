@@ -45,3 +45,11 @@ class CollegesView(ListView):
     template_name = 'v2/pages/public/colleges.html'
     context_object_name = 'colleges'
     paginate_by = 20
+
+    def get_queryset(self):
+        name = self.kwargs.get('sea', None)
+        print(self.kwargs)
+        object_list = self.model.objects.all()
+        if name:
+            object_list = object_list.filter(full_name__icontains=name)
+        return object_list
