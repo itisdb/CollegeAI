@@ -72,3 +72,10 @@ class PsychoView(View):
                 placement=placement)
             psycho_obj.save()
         return redirect('/', {'message': 'Your test was succesful, we will contact you soon'})
+
+
+def compare(request):
+    colleges = College.objects.all()[0:4]
+    return render(request, 'v2/pages/public/compare.html', {
+        'colleges': colleges
+    })

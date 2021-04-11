@@ -42,7 +42,8 @@ urlpatterns = [
   path('terms', base_views.terms, name='terms'),
   path('privacy',  base_views.privacy, name='privacy'),
   path('social', include('social_django.urls', namespace='social')),
-  path('psychometric', PsychoView.as_view(), name='psycho' )
+  path('psychometric', PsychoView.as_view(), name='psycho' ),
+  path('compare', base_views.compare, name='compare')
 ]
 
 if settings.DEBUG:
