@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
-
+from django.db.models import Q
 
 from college.models import College
 
@@ -22,6 +22,7 @@ def home(request):
     colleges = College.objects.filter(
         is_top=True,
     )[:9]
+    print(colleges)
     return render(request, 'v2/pages/public/home.html', {
         'colleges': colleges
     })
@@ -73,9 +74,15 @@ class PsychoView(View):
             psycho_obj.save()
         return redirect('/', {'message': 'Your test was succesful, we will contact you soon'})
 
-
-def compare(request):
-    colleges = College.objects.all()[0:4]
-    return render(request, 'v2/pages/public/compare.html', {
-        'colleges': colleges
-    })
+class CompareView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'v2/pages/public/comparef.html')
+    def post(self, request, *args, **kwargs):
+        first_col = request.POST['first_col']
+        second_col = request.POST['second_col']
+        third_col = request.POST['third_col']
+        fourth_col = request.POST['fourth_col']
+        compare_College = (College.objects.filter(Q(full_name=first_col) | Q(full_name=second_col) | Q(abbreviated_name=first_col) | Q(abbreviated_name = second_col) | Q(full_name=third_col) | Q(abbreviated_name=third_col) | Q(full_name=fourth_col) | Q(abbreviated_name=fourth_col)))
+        return render(request, 'v2/pages/public/compare.html', {
+            'colleges': compare_College
+        })

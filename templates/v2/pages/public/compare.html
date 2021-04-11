@@ -7,7 +7,7 @@
   <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
   <li class="link-01"> Compare Different Colleges</li>
 </ul>
-<h2> Compare Different Colleges </h2>  {% endblock %}
+<h2> Compare 4 Different Colleges of your choice </h2>  {% endblock %}
 
 {% block content %}
 <section id="content">
@@ -96,6 +96,7 @@
             </div>
             {% endfor %}
         </div>
+        <a class="button button-primary" href="{% url 'compare' %}" style="color: white;"> Add or Change College </a>
     </div>
 </section>
 

@@ -1,0 +1,40 @@
+{% extends 'v2/layouts/public.html' %}
+
+{% block title %} Compare Different Colleges {% endblock %}
+
+{% block hero_title %}
+<ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> Compare Different Colleges</li>
+</ul>
+<h2> Compare Different Colleges </h2>  {% endblock %}
+
+
+{% block content %}
+<section id="recovery">
+    <div class="container">
+      <form class="form-recovery" method="POST" action="{% url 'compare' %}" data-validate="" novalidate="true">
+        {% csrf_token %}
+        <div class="form-element">
+            <label for="name">Enter the First College </label>
+            <input type="text" name="first_col" placeholder="Type the college you want to compare" required>
+        </div>
+        <div class="form-element">
+          <label for="email">Enter the Second College</label>
+          <input type="text"  name="second_col" placeholder="Type the college you want to compare" required>
+        </div>
+        <div class="form-element">
+            <label for="mobile">Enter the Third College (optional)</label>
+            <input type="text" name="third_col" placeholder="Type the college you want to compare">
+          </div>
+          <div class="form-element">
+            <label for="mobile">Enter the Fourth College (optional)</label>
+            <input type="text" name="fourth_col" placeholder="Type the college you want to compare">
+          </div>
+        <div class="form-element">
+          <input class="button-outline" type="submit" value="Compare Here">
+        </div>
+      </form>
+    </div>
+  </section>
+  {% endblock %}
