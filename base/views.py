@@ -22,7 +22,6 @@ def home(request):
     colleges = College.objects.filter(
         is_top=True,
     )[:9]
-    print(colleges)
     return render(request, 'v2/pages/public/home.html', {
         'colleges': colleges
     })
@@ -77,6 +76,7 @@ class PsychoView(View):
 class CompareView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'v2/pages/public/comparef.html')
+
     def post(self, request, *args, **kwargs):
         first_col = request.POST['first_col']
         second_col = request.POST['second_col']
