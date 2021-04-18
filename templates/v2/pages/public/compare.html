@@ -1,0 +1,103 @@
+{% extends 'v2/layouts/public.html' %}
+
+{% block title %} Compare Different Colleges {% endblock %}
+
+{% block hero_title %}
+<ul class="breadcrumb">
+  <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+  <li class="link-01"> Compare Different Colleges</li>
+</ul>
+<h2> Compare 4 Different Colleges of your choice </h2>  {% endblock %}
+
+{% block content %}
+<section id="content">
+    <div class="container" style="max-width: 1440px;">
+        <div class="table_row">
+            <div class="table_column1">
+                <table>
+                    <tr>
+                        <th> Name </th>
+                    </tr>
+                    <tr>
+                        <th> Abbreviated Name </th>
+                    </tr>
+                    <tr>
+                        <th> City </th>
+                    </tr>
+                    <tr>
+                        <th> State </th>
+                    </tr>
+                    <tr>
+                        <th>College Type</th>
+                    </tr>
+                    <tr>
+                        <th>College Ownership</th>
+                    </tr>
+                    <tr>
+                        <th> Approved By </th>
+                    </tr>
+                    <tr>
+                        <th> Entrance Exams </th>
+                    </tr>
+                    <tr>
+                        <th> Website </th>
+                    </tr>
+                    <tr>
+                        <th> Phone </th>
+                    </tr>
+                    <tr>
+                        <th>   Address </th>
+                    </tr>
+                    <tr>
+                        <th> Established Year </th>
+                    </tr>
+                </table>
+            </div>
+            {% for college in colleges %}
+            <div class="table_column">
+            <table>
+                <tr>
+                    <th><strong>{{ college.full_name }}</strong></th>
+                </tr>
+                <tr>
+                    <td>{{ college.abbreviated_name }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.city }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.state }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.get_college_type_display }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.get_ownership_display }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.approval }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.entrance_exams }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.website }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.phone }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.address }}</td>
+                </tr>
+                <tr>
+                    <td>{{ college.established_year }}</td>
+                </tr>
+            </table>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="button button-primary" href="{% url 'compare' %}" style="color: white;"> Add or Change College </a>
+    </div>
+</section>
+
+{% endblock %}
