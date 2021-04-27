@@ -27,39 +27,28 @@
     <div class="card_college">
       <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"></div>
       <div class="card_college-details"><a class="sub-header-02" href="/college/{{ college.slug}}">{{ college.abbreviated_name }}</a>
-        <div class="card_college-details_secondary"><span class="label-01">{{ college.city}}</span><span class="label-01">{{ college.approval }}</span><span class="label-01">{{ college.get_college_type_display }}</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
+        <div class="card_college-details_secondary"><span class="label-01">{{ college.city}}</span><span class="label-01">{{ college.get_ownership_display }}</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Apply Now</a>
       </div>
     </div>
     {% endfor %}
   </div>
-  <button class="button-outline load-more">Load More</button>
-</div>
-</section>
-    {% if is_paginated %}
-        <div class="card-body">
+  {% if is_paginated %}
+        <div class="card-body" style="margin: auto;">
         <br>
         <div class="btn-group btn-toolbar" style="margin: 5px">
             {% if page_obj.has_previous %}
               <a href="{% url 'college:list' %}?page={{ page_obj.previous_page_number }}">
-                  <button aria-label="" type="button" class="btn btn-default">
+                  <button aria-label="" type="button" class="btn button-outline">
                     <div class="p-t-5 p-b-5">
-                      <i class="pg-icon">chevron_left</i>
                       <div class="fs-11 font-montserrat text-uppercase">Previous</div>
                     </div>
                   </button>
               </a>
             {% endif %}
-          <button aria-label="" type="button" class="btn btn-default">
-            <div class="p-t-5 p-b-5">
-              <i class="pg-icon">time</i>
-              <div class="fs-11 font-montserrat text-uppercase">Current</div>
-            </div>
-          </button>
             {% if page_obj.has_next %}
               <a href="{% url 'college:list' %}?page={{ page_obj.next_page_number }}">
-                  <button aria-label="" type="button" class="btn btn-default">
+                  <button aria-label="" type="button" class="btn button-outline">
                     <div class="p-t-5 p-b-5">
-                      <i class="pg-icon">chevron_right</i>
                       <div class="fs-11 font-montserrat text-uppercase">Next</div>
                     </div>
                   </button>
@@ -68,5 +57,8 @@
         </div>
       </div>
     {% endif %}
+</div>
+</section>
+    
 
 {% endblock%}

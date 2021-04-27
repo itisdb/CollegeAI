@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('established_year', models.CharField(max_length=100, null=True)),
                 ('slug', models.SlugField(null=True)),
                 ('about', models.TextField(null=True)),
-                ('is_top', models.BooleanField(default=False, null=True)),
+                ('is_top', models.SmallIntegerField(default=0, null=True)),
                 ('admission_process', models.TextField(null=True)),
                 ('placements', models.TextField(null=True)),
                 ('degrees', models.JSONField(null=True)),

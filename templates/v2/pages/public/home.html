@@ -25,7 +25,7 @@
             <div class="card_college">
               <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"/></div>
               <div class="card_college-details"><a class="sub-header-02" href="/college/{{ college.slug }}">{{college.abbreviated_name}}</a>
-                <div class="card_college-details_secondary"><span class="label-01">{{college.city}}</span><span class="label-01">{{college.state}}</span><span class="label-01">{{ college.get_ownership_display }}</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
+                <div class="card_college-details_secondary"><span class="label-01">{{college.city}}</span><span class="label-01">{{ college.get_ownership_display }}</span></div><a class="link-primary_lined" href="#download" download="download">Apply Now</a>
               </div>
             </div>
             {% endfor %}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
     <link rel="stylesheet" href="{% static 'css/pages/company.css' %}">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    {% block add_css %} {% endblock %}
     <link rel="icon" href="{% static 'images/logo_favicon.png' %}" type="image/x-icon">
   </head>
 </html>
@@ -144,4 +145,5 @@
     </div>
   </footer>
   <script async src="{% static 'js/all.js' %}"></script>
+  {% block add_js %}{% endblock %}
 </body>

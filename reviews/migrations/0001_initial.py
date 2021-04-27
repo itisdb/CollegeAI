@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(blank=True, max_length=200, null=True)),
                 ('source', models.IntegerField(choices=[(1, 'Google'), (2, 'Shiksha'), (3, 'College Dunia'), (4, 'College Search'), (5, 'Get My Uni'), (6, 'Self'), (0, 'Other')])),
                 ('batch', models.IntegerField(blank=True, null=True)),
-                ('is_displayed', models.BooleanField(default=True)),
+                ('is_displayed', models.SmallIntegerField(default=0)),
                 ('college', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='college.college')),
                 ('profile', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='profiles.profile')),
             ],

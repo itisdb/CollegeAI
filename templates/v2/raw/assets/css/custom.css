@@ -501,3 +501,57 @@ label, .label-02 {
 .quick-facts_content-item a{
     color: #099e00;
 }
+
+
+.table_row {
+    margin-left:-5px;
+    margin-right:-5px;
+  }
+    
+.table_column {
+    float: left;
+    width: 22%;
+    padding: 5px;
+  }
+
+.table_column1{
+    float: left;
+    width: 12%;
+    padding: 5px;
+}
+  /* Clearfix (clear floats) */
+.table_row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+  }
+  
+th, td {
+    text-align: left;
+    height: 100px;
+    padding: 16px;
+  }
+
+th {
+    color: #099e00;
+}
+
+@media screen and (max-width: 800px) {
+    .table_column {
+      width: 100%;
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+    .table_column1{
+        display: none;
+    }
+}
