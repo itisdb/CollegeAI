@@ -36,6 +36,7 @@ class College(BaseModel):
     approval = models.CharField(null=True, max_length=100)
     slug = models.SlugField(null=True, blank=True, max_length=50)
     is_top = models.BooleanField(null=True, default=False)
+    degree = models.JSONField(null=True)
     stream_degree = models.JSONField(null=True)
     entrance_exams = models.CharField(null=True, max_length=200)
     website = models.CharField(max_length=400, null=True, blank=True)

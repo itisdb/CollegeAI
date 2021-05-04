@@ -1,15 +1,11 @@
 {% extends 'v2/layouts/public.html' %}
 {% load static %}
-{% block title %} {{ college.abbreviated_name }} {% endblock %}
+{% block title %} {{ college.meta_title }} {% endblock %}
 {% block meta_title %} {{ college.meta_title }} {% endblock %}
 {% block meta_description %} {{ college.meta }} {% endblock %}
 {% block meta_keywords %}
-    {% if college.meta_keywords %}
-        {% for kw in college.meta_keywords %}
-            {{ kw }},
-        {% endfor %}
-    {% endif %}
- {% endblock %}
+    {% if college.meta_keywords %}{% for kw in college.meta_keywords %}{{ kw }},{% endfor %}{% endif %}
+{% endblock %}
 {% block page_name %}
     <li class="breadcrumb-item active">Colleges</li>
     <li class="breadcrumb-item active">{{ college.full_name }}, {{ college.city }}</li>
@@ -98,9 +94,11 @@
             </div>
           </div>
           <div class="main-content-cta">
-            <h5 class="sub-header-02">Address:                             {{ college.address}} </span></h5>
+            <h5 class="sub-header-02">Address: {{ college.address}}</h5>
+            <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
+              <br>
+              <p>{{ college.about_us }}</p>
           </div>
-
           <div class="main-content-card">
             <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
             <div class="main-content-card-content unclamped">
