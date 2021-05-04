@@ -95,11 +95,11 @@
           </div>
           <div class="main-content-cta">
             <h5 class="sub-header-02">Address: {{ college.address}}</h5>
-            <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
-              <br>
-              <p>{{ college.about_us }}</p>
           </div>
           <div class="main-content-card">
+              <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
+              <br>
+              <p>{{ college.about_us }}</p>
             <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
             <div class="main-content-card-content unclamped">
               {% for x,y in college.stream_degree.items %}
