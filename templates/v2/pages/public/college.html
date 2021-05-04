@@ -4,9 +4,11 @@
 {% block meta_title %} {{ college.meta_title }} {% endblock %}
 {% block meta_description %} {{ college.meta }} {% endblock %}
 {% block meta_keywords %}
-    {% for kw in college.meta_keywords %}
-        {{ kw }},
-    {% endfor %}
+    {% if college.meta_keywords %}
+        {% for kw in college.meta_keywords %}
+            {{ kw }},
+        {% endfor %}
+    {% endif %}
  {% endblock %}
 {% block page_name %}
     <li class="breadcrumb-item active">Colleges</li>
