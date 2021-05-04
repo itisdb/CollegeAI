@@ -1,6 +1,13 @@
 {% extends 'v2/layouts/public.html' %}
 {% load static %}
 {% block title %} {{ college.abbreviated_name }} {% endblock %}
+{% block meta_title %} {{ college.meta_title }} {% endblock %}
+{% block meta_description %} {{ college.meta }} {% endblock %}
+{% block meta_keywords %}
+    {% for kw in college.meta_keywords %}
+        {{ kw }},
+    {% endfor %}
+ {% endblock %}
 {% block page_name %}
     <li class="breadcrumb-item active">Colleges</li>
     <li class="breadcrumb-item active">{{ college.full_name }}, {{ college.city }}</li>

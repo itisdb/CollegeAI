@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %} {% endblock %}| MyCollegeAI</title>
-    <meta property="og:title" content="MyCollegeAI, A Search Platform">
-    <meta property="og:description" content="Find the best colleges, exams and courses in India">
+    <meta property="og:title" content="{% block meta_title %} MyCollegeAI, A Search Platform {% endblock %}">
+    <meta property="og:description" content="{% block meta_description %} Find the best colleges, exams and courses in India {% endblock %}">
+    <meta property="og:keywords" content="{% block meta_keywords %} college, ai, mycollegeai, india, students, teen {% endblock %}">
     <meta property="og:image" content="https://raw.githubusercontent.com/GaziTaufiqIslam/MyCollegeAI-ui/master/src/assets/images/og_img.jpg">
     <meta property="og:url" content="MyCollegeAI.com">
     <meta property="twitter:card" content="summary_large_image">
