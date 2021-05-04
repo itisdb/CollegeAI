@@ -27,7 +27,6 @@ class College(BaseModel):
     meta = models.TextField(null=True, blank=True)
     meta_keywords = models.JSONField(null=True, blank=True, default=[])
     about_us = models.TextField(null=True, blank=True)
-    keywords = models.CharField(null=True, blank=True, max_length=500)
     established_year = models.CharField(max_length=4, null=True, blank=True)
     city = models.CharField(null=True, max_length=50)
     state = models.CharField(null=True, max_length=50)
