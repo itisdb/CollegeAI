@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
                 ('modified_at', models.DateTimeField(auto_now=True, verbose_name='Last Modified At')),
                 ('otp', models.CharField(max_length=6)),
                 ('verifier_tag', models.IntegerField(choices=[(1, 'MAIL VERIFICATION'), (2, 'PHONE VERIFICATION'), (3, 'PASSWORD RESET'), (0, 'Other')])),
-                ('is_verified', models.SmallIntegerField(default=0)),
+                ('is_verified', models.BooleanField(default=0)),
                 ('profile', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to='profiles.profile')),
             ],
             options={
