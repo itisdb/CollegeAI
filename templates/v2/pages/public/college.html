@@ -94,12 +94,12 @@
             </div>
           </div>
           <div class="main-content-cta">
-            <h5 class="sub-header-02">Address: {{ college.address}}</h5>
+            <h5 class="sub-header-02">Address: </h5><p class="paragraph-01"> {{ college.address}}</p>
           </div>
           <div class="main-content-card">
               <h4 class="sub-header-01 main-content-card-header">About Us</h4>
-                {% for title, description in college.about_us %}
-                    <h5 class="sub-header-02 main-content-card-header">{{ title }}</h5>
+                {% for title, description in college.about_us.items %}
+                    {% if title %}<h5 class="sub-header-02 main-content-card-header">{{ title }}</h5>{% endif %}
                     <p>{{ description }}</p>
                     <br>
                 {% endfor %}
