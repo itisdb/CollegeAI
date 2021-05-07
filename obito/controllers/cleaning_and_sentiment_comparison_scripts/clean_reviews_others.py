@@ -5,6 +5,8 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 # Run only once, then comment it out
+from obito.controllers.cleaning_and_sentiment_comparison_scripts.clean_reviews_google import clean_reviews
+
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
