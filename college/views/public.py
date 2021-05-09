@@ -17,19 +17,44 @@ class IndividualCollegeView(DetailView):
     context_object_name = 'college'
     template_name = 'v2/pages/public/college.html'
 
+    @staticmethod
+    def _get_nearest_length(n, m):
+        # Find the quotient
+        q = int(n / m)
+
+        # 1st possible closest number
+        n1 = m * q
+
+        # 2nd possible closest number
+        if (n * m) > 0:
+            n2 = (m * (q + 1))
+        else:
+            n2 = (m * (q - 1))
+
+        # if true, then n1 is the required closest number
+        if abs(n - n1) < abs(n - n2):
+            return n1
+        return n2
+
     def get_context_data(self, **kwargs):
+        row_limit = 3
+
         context = super().get_context_data(**kwargs)
         context['reviews'] = Review.objects.filter(college=self.object)[:20]
+
         degrees = []
-        rows = ()
-        row_limit = 3
-        for index, d in enumerate(self.object.degree):
+        degree_tuple = []
+
+        for index, degree in enumerate(self.object.degree):
+            degree_tuple.append(degree)
+
             if index + 1 // row_limit == 0:
-                rows += tuple(d)
-                degrees.append(rows)
-                rows = ()
-                continue
-            rows += tuple(d)
+                degrees.append(degree_tuple)
+                degree_tuple = []
+
+        if degree_tuple:
+            degrees.append(degree_tuple)
+
         context['degrees'] = degrees
         return context
 

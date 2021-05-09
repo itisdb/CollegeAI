@@ -96,70 +96,77 @@
           <div class="main-content-cta">
             <h5 class="sub-header-02">Address: </h5><p class="paragraph-01"> {{ college.address}}</p>
           </div>
-            <div class="main-content-card">
-            <h4 class="sub-header-01 main-content-card-header">Degrees Offered</h4>
-            <div class="main-content-card-content">
-              <table>
-                <tbody>
-                  {% for degree_tuple in degrees %}
-                      {% if forloop.counter0|divisibleby:3 == 0 %}<tr>{% endif %}
-                          {% for degree in degree_tuple %}
-                           <td>{{ degree }}</td>
-                          {% endfor %}
-                      {% if forloop.counter0|divisibleby:3 == 0 %}</tr>{% endif %}
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
-            <button class="icon-link main-content-card-button">
-              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
-              </svg><span class="link-primary_lined">Read More</span>
-            </button>
-          </div>
-          <div class="main-content-card">
-              <h4 class="sub-header-01 main-content-card-header">About Us</h4>
-                {% for title, description in college.about_us.items %}
-                    {% if title %}<h5 class="sub-header-02 main-content-card-header">{{ title }}</h5>{% endif %}
-                    <p>{{ description }}</p>
-                    <br>
-                {% endfor %}
-          <br>
-            <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
-            <div class="main-content-card-content unclamped">
-              {% for x,y in college.stream_degree.items %}
-              <table>
-                <thead>
-                  <tr>
-                    <th>{{ x }}</th>
+              <div class="main-content-card">
+               <h4 class="sub-header-01 main-content-card-header">About Us</h4>
+                    {% for title, description in college.about_us.items %}
+                        {% if title %}<h5 class="sub-header-02 main-content-card-header">{{ title }}</h5>{% endif %}
+                        <p>{{ description }}</p>
+                        <br>
+                    {% endfor %}
+                <button class="icon-link main-content-card-button">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                  </svg><span class="link-primary_lined">Read More</span>
+                </button>
+              </div>
+              <div class="main-content-card">
+                <h4 class="sub-header-01 main-content-card-header">Degrees Offered</h4>
+                <div class="main-content-card-content">
+                  <table>
+                    <tbody>
+                      {% for degree_tuple in degrees %}
+                          {% if forloop.counter0|divisibleby:3 == 0 %}<tr>{% endif %}
+                              {% for degree in degree_tuple %}
+                               <td>{{ degree }}</td>
+                              {% endfor %}
+                          {% if forloop.counter0|divisibleby:3 == 0 %}</tr>{% endif %}
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+                <button class="icon-link main-content-card-button">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                  </svg><span class="link-primary_lined">Read More</span>
+                </button>
+              </div>
+              <div class="main-content-card">
+                <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
+                <div class="main-content-card-content unclamped">
+                  {% for x,y in college.stream_degree.items %}
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>{{ x }}</th>
 
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for y1 in y %}
-                  <tr>
-                    <td>{{ y1 }}</td>
-                  </tr>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for y1 in y %}
+                      <tr>
+                        <td>{{ y1 }}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
                   {% endfor %}
-                </tbody>
-              </table>
-              {% endfor %}
-            </div>
-            <button class="icon-link main-content-card-button">
-              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
-                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
-              </svg><span class="link-primary_lined">Read Less</span>
-            </button>
-          </div>
-          <div class="main-content-cta">
-            <h5 class="sub-header-02">Interested in this College?</h5>
-            <button class="icon-button-primary">
-              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z"></path>
-                <path d="M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z"></path>
-              </svg>Bookmark
-            </button>
-          </div>
+                </div>
+                <button class="icon-link main-content-card-button">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                    <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                  </svg><span class="link-primary_lined">Read Less</span>
+                </button>
+              </div>
+
+              <div class="main-content-cta">
+                <h5 class="sub-header-02">Interested in this College?</h5>
+                <button class="icon-button-primary">
+                  <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.4896 20.4896C25.1701 15.8091 25.1701 8.19094 20.4896 3.5104C15.8091 -1.17013 8.19094 -1.17013 3.5104 3.5104C-1.17013 8.19094 -1.17013 15.8091 3.5104 20.4896C8.19094 25.1701 15.8091 25.1701 20.4896 20.4896ZM4.3574 4.3574C8.57283 0.141983 15.4272 0.141983 19.6426 4.3574C23.858 8.57283 23.858 15.4272 19.6426 19.6426C15.4272 23.858 8.57283 23.858 4.3574 19.6426C0.141983 15.4272 0.146879 8.57283 4.3574 4.3574Z"></path>
+                    <path d="M11.9999 16.4945C12.1664 16.4945 12.3132 16.426 12.4258 16.3183C12.5335 16.2106 12.6021 16.0588 12.6021 15.8923V12.5974H15.8971C16.0635 12.5974 16.2104 12.5288 16.323 12.4211C16.4307 12.3134 16.4993 12.1616 16.4993 11.9952C16.4993 11.6622 16.23 11.3929 15.902 11.3978H12.607V8.10287C12.607 7.76994 12.3377 7.50066 12.0097 7.50556C11.6768 7.50556 11.4075 7.77484 11.4124 8.10287V11.3978H8.11739C7.78447 11.3978 7.51519 11.6671 7.52009 11.9952C7.52009 12.3281 7.78936 12.5974 8.11739 12.5925H11.4124V15.8874C11.3977 16.2253 11.667 16.4945 11.9999 16.4945Z"></path>
+                  </svg>Bookmark
+                </button>
+              </div>
         </div>
 {#        <aside class="card_sidebar">#}
 {#          <div class="card_sidebar-suggestion">#}
