@@ -135,11 +135,6 @@
             <div class="main-content-card-content">
               <table>
                 <tbody>
-                  <tr>
-                    <td>M.Tech</td>
-                    <td>BCA</td>
-                    <td>B.Tech</td>
-                  </tr>
                   {% for degree in college.degree %}
                       {% if forloop.counter0|divisibleby:3 == 0 %}<tr>{% endif %}
                        <td>{{ degree }}</td>
