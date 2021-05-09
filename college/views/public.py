@@ -45,7 +45,7 @@ class CollegesView(ListView):
     model = College
     template_name = 'v2/pages/public/colleges.html'
     context_object_name = 'colleges'
-    paginate_by = 20
+    paginate_by = 21
 
     def get_queryset(self):
         name = self.request.GET.get('search')
