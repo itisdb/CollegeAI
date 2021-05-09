@@ -20,6 +20,16 @@ class IndividualCollegeView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['reviews'] = Review.objects.filter(college=self.object)[:20]
+        degrees = []
+        rows = []
+        row_limit = 3
+        for index, d in enumerate(self.object.degree):
+            if index + 1 // row_limit == 0:
+                degrees.append(rows)
+                rows = []
+                continue
+            rows.append(d)
+        context['degrees'] = degrees
         return context
 
     def post(self, request, *args, **kwargs):
