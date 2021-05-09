@@ -101,9 +101,9 @@
             <div class="main-content-card-content">
               <table>
                 <tbody>
-                  {% for degrees in college.degree %}
+                  {% for degree_tuple in degrees %}
                       {% if forloop.counter0|divisibleby:3 == 0 %}<tr>{% endif %}
-                          {% for degree in degrees %}
+                          {% for degree in degree_tuple %}
                            <td>{{ degree }}</td>
                           {% endfor %}
                       {% if forloop.counter0|divisibleby:3 == 0 %}</tr>{% endif %}
