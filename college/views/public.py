@@ -21,7 +21,7 @@ class IndividualCollegeView(DetailView):
         context = super().get_context_data(**kwargs)
         context['reviews'] = Review.objects.filter(college=self.object)[:20]
         degrees = []
-        rows = []
+        rows = ()
         row_limit = 3
         for index, d in enumerate(self.object.degree):
             if index + 1 // row_limit == 0:
