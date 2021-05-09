@@ -25,11 +25,11 @@ class IndividualCollegeView(DetailView):
         row_limit = 3
         for index, d in enumerate(self.object.degree):
             if index + 1 // row_limit == 0:
-                rows += d
+                rows += tuple(d)
                 degrees.append(rows)
                 rows = []
                 continue
-            rows += d
+            rows += tuple(d)
         context['degrees'] = degrees
         return context
 
