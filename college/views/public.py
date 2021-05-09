@@ -27,7 +27,7 @@ class IndividualCollegeView(DetailView):
             if index + 1 // row_limit == 0:
                 rows += tuple(d)
                 degrees.append(rows)
-                rows = []
+                rows = ()
                 continue
             rows += tuple(d)
         context['degrees'] = degrees
