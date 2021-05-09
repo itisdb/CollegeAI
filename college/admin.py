@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from college.models import College, CollegeImages
+from college.models import College, CollegeImages, CollegeFacilities
 
 
 class CollegeImageInline(admin.StackedInline):
@@ -14,3 +14,4 @@ class CollegeAdmin(admin.ModelAdmin):
 
 
 admin.site.register(College, CollegeAdmin)
+admin.site.register(CollegeFacilities)
