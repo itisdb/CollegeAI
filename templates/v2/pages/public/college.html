@@ -115,11 +115,11 @@
                   <table>
                     <tbody>
                       {% for degree_tuple in degrees %}
-                          {% if forloop.counter0|divisibleby:3 == 0 %}<tr>{% endif %}
+                          <tr>
                               {% for degree in degree_tuple %}
                                <td>{{ degree }}</td>
                               {% endfor %}
-                          {% if forloop.counter0|divisibleby:3 == 0 %}</tr>{% endif %}
+                          </tr>
                       {% endfor %}
                     </tbody>
                   </table>
