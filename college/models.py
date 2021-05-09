@@ -5,6 +5,15 @@ from django.utils.translation import gettext_lazy as _
 from base.models import BaseModel
 
 
+class CollegeFacilities(BaseModel):
+
+    name = models.CharField(max_length=100, unique=True)
+    icon = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 class College(BaseModel):
     """Model for college."""
 
@@ -43,6 +52,7 @@ class College(BaseModel):
     phone = models.CharField(max_length=200, null=True, blank=True)
     address = models.CharField(max_length=300, null=True, blank=True)
     scraping_urls = models.JSONField(null=True, blank=True)
+    facilities = models.ManyToManyField(CollegeFacilities)
 
     def __str__(self):
         return '{}, {}'.format(self.abbreviated_name, self.city)
