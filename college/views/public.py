@@ -48,7 +48,7 @@ class IndividualCollegeView(DetailView):
         for index, degree in enumerate(self.object.degree):
             degree_tuple.append(degree)
 
-            if index + 1 // row_limit == 0:
+            if (index + 1) % row_limit == 0:
                 degrees.append(degree_tuple)
                 degree_tuple = []
 
