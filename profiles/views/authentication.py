@@ -59,7 +59,7 @@ class RegisterView(View):
         return redirect('profile:dashboard')
 
     def get(self, request):
-        return render(request,'v2/pages/public/home.html')
+        return render(request, 'v2/pages/public/home.html')
 
 
 class LogoutView(View):
