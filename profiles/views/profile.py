@@ -14,6 +14,7 @@ import random
 
 from tracker.log_to_tracker import log_to_tracker
 
+
 class ForgotPassword(View):
 
     def get(self, request, username, otp):
@@ -38,6 +39,7 @@ class ForgotPassword(View):
         else:
             messages.info(request, 'Confirm password and new password not matching!!')
         return render(request, 'v2/pages/protected/reset_password.html')
+
 
 class EnterEmail(View):
 
@@ -79,14 +81,16 @@ class EnterEmail(View):
                 messages.info(request, 'No profile exists with such email!!')
         else:
             print('No')
-        return render(request, 'v2/pages/protected/enter-email.html',{}) 
+        return render(request, 'v2/pages/protected/enter-email.html', {})
+
 
 class Dashboard(View):
 
     def get(self, request, *args, **kwargs):
         log_to_tracker(request,'dashboard')
         return render(request, 'v2/raw/dashboard.html', {})
-    
+
+
 class EditUserProfileView(View):
 
     def get(self, request, format=None):
@@ -116,6 +120,7 @@ class EditUserProfileView(View):
         }
 
         return render(request, 'v2/pages/protected/edit-profile.html', context) 
+
 
 class UpdatePassword(View):
 

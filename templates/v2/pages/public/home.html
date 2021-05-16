@@ -3,6 +3,49 @@
 {% load static %}
 
 {% block content %}
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+          {{ error }}
+        </div>
+    {% elif message %}
+        <div class="alert alert-success" role="alert">
+          {{ message }}
+        </div>
+    {% endif %}
+
+    <section id="counselling">
+      <div class="container">
+        <div class="counselling-header">
+          <h2 class="header-02">Having Problems in Choosing your College?</h2>
+        </div>
+        <div class="counselling-content">
+          <h4 class="sub-header-01">Psychometric Test</h4>
+          <p>
+            We ease your biggest doubts with our AI based technology in finding your dream college.
+          </p>
+          <a href="{% url 'psycho' %}" class="button-primary" id="psychoid">Get Started</a>
+        </div>
+        <div class="counselling-confirmation">
+          <div class="counselling-confirmation-message">
+            <h5>
+               <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+                <g clip-path="url(#clip0)">
+                <path xmlns="http://www.w3.org/2000/svg" d="M12.0576 0C5.44098 0 0.0576172 5.38336 0.0576172 12C0.0576172 18.6166 5.44098 24 12.0576 24C18.6743 24 24.0576 18.6166 24.0576 12C24.0576 5.38336 18.6743 0 12.0576 0ZM12.0576 22.801C6.10166 22.801 1.25664 17.956 1.25664 12C1.25664 6.04405 6.10166 1.19902 12.0576 1.19902C18.0136 1.19902 22.8586 6.04405 22.8586 12C22.8586 17.956 18.0136 22.801 12.0576 22.801Z"/>
+                <path d="M15.1994 9.07828L10.5991 13.6541L8.92043 11.9657C8.68552 11.7308 8.30868 11.7308 8.07377 11.9608C7.83886 12.1908 7.83886 12.5726 8.06888 12.8075L10.1684 14.9217C10.2858 15.0391 10.4376 15.0979 10.5942 15.0979C10.7459 15.0979 10.8976 15.0391 11.015 14.9217L16.0411 9.92494C16.2761 9.69003 16.2761 9.31319 16.046 9.07828C15.8111 8.84337 15.4343 8.84337 15.1994 9.07828Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <path d="M0.0576172 0H24.0576V24H0.0576172V0Z"/>
+                </clipPath>
+                </defs>
+                </svg>You are queued
+            </h5>
+            <p>Our Expert will contact you through your email or phone(if provided).</p><span><span class="label-01 message-tip">Tip</span><span class="label-01">To add your Phone number go to your <a href="account-settings.html#contact-details">Account Settings</a></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="featured-colleges">
       <div class="container">
         <div class="featured-section-header">
