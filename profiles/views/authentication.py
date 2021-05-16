@@ -1,7 +1,7 @@
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
 from django.views.generic.base import View
-from profiles.models import Profile, User
+from profiles.models import User
 from base.generic_mailer import generic_mailer
 
 
