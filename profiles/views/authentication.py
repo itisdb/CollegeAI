@@ -41,7 +41,6 @@ class RegisterView(View):
         user_obj.first_name = first_name
         user_obj.last_name = last_name
         user_obj.save()
-        Profile.objects.create(user=user_obj)
         user = authenticate(username=username, password=password)
         if not user:
             return render(request, 'v2/pages/public/home.html', {'error': 'Username/Password is incorrect.'})
