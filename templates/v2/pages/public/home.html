@@ -3,12 +3,13 @@
 {% load static %}
 
 {% block content %}
+
     {% if error %}
-        <div class="alert alert-danger" role="alert">
+    <div class="alert alert-success" style="margin-top: 10px; text-align: center; background-color: orangered; font-family: Roboto" role="alert">
           {{ error }}
         </div>
     {% elif message %}
-        <div class="alert alert-success" role="alert">
+    <div class="alert alert-success" style="margin-top: 10px; text-align: center; background-color: limegreen; font-family: Roboto" role="alert">
           {{ message }}
         </div>
     {% endif %}
