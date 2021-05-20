@@ -292,14 +292,15 @@
     <section id="dashboard-content">
       <div class="container">
         <nav class="bookmark-nav">
-          <h6 class="sub-header-03 bookmark-header">Set Bookmarks to Show</h6>
+            {% if bookmarks %}
+              <h6 class="sub-header-03 bookmark-header">Set Bookmarks to Show</h6>
+            {% else %}
+              <h6 class="sub-header-03 bookmark-header">You have no Bookmarks</h6>
+            {% endif %}
           <ul class="bookmark-links">
               {% if bookmarks %}
                 <li data-content="colleges"><a class="button-01" href="#BookmarkedColleges">Colleges</a></li>
-              {% else %}
-                  <li data-content="colleges"><a class="button-01" href="#" disabled>You have no bookmarks.</a></li>
               {% endif %}
-
           </ul>
         </nav>
         <div class="cards-group">
