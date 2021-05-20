@@ -296,7 +296,10 @@
           <ul class="bookmark-links">
               {% if bookmarks %}
                 <li data-content="colleges"><a class="button-01" href="#BookmarkedColleges">Colleges</a></li>
+              {% else %}
+                  <li data-content="colleges"><a class="button-01" href="#" disabled>You have no bookmarks.</a></li>
               {% endif %}
+
           </ul>
         </nav>
         <div class="cards-group">
