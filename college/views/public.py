@@ -17,25 +17,6 @@ class IndividualCollegeView(DetailView):
     context_object_name = 'college'
     template_name = 'v2/pages/public/college.html'
 
-    @staticmethod
-    def _get_nearest_length(n, m):
-        # Find the quotient
-        q = int(n / m)
-
-        # 1st possible closest number
-        n1 = m * q
-
-        # 2nd possible closest number
-        if (n * m) > 0:
-            n2 = (m * (q + 1))
-        else:
-            n2 = (m * (q - 1))
-
-        # if true, then n1 is the required closest number
-        if abs(n - n1) < abs(n - n2):
-            return n1
-        return n2
-
     def get_context_data(self, **kwargs):
         row_limit = 3
 
@@ -87,5 +68,10 @@ class CollegesView(ListView):
         name = self.request.GET.get('search')
         object_list = self.model.objects.all()
         if name:
-            object_list = object_list.filter(Q(full_name__icontains=name) | Q(abbreviated_name__icontains=name))
+            object_list = object_list.filter(
+                Q(full_name__icontains=name) |
+                Q(abbreviated_name__icontains=name) |
+                Q(state__icontains=name) |
+                Q(city__icontains=name)
+            )
         return object_list
