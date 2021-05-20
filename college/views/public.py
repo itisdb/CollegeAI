@@ -79,7 +79,7 @@ class CollegesView(ListView):
 
 class AddBookmarkView(View):
 
-    def post(self, request, college_slug: str):
+    def get(self, request, college_slug: str):
         try:
             college = College.objects.get(slug=college_slug)
             profile = request.user.profile
