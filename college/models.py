@@ -3,6 +3,7 @@ from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
 from base.models import BaseModel
+from profiles.models import Profile
 
 
 class CollegeFacilities(BaseModel):
@@ -72,5 +73,13 @@ class CollegeImages(BaseModel):
         return self.college.full_name
 
 
+class CollegeBookmark(BaseModel):
 
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f'{self.profile.user.username} bookmarked {self.college.abbreviated_name}'
+
+    class Meta:
+        unique_together = ('college', 'profile', )
