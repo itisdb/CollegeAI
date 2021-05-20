@@ -293,96 +293,26 @@
       <div class="container">
         <nav class="bookmark-nav">
           <h6 class="sub-header-03 bookmark-header">Set Bookmarks to Show</h6>
-          <ul class="bookmark-links"> 
-            <li class="active" data-content="exams"><a class="button-01" href="#BookmarkedExams">Exams</a></li>
-            <li data-content="colleges"><a class="button-01" href="#BookmarkedColleges">Colleges</a></li>
-            <li data-content="courses"><a class="button-01" href="#BookmarkedCourses">Courses</a></li>
+          <ul class="bookmark-links">
+              {% if bookmarks %}
+                <li data-content="colleges"><a class="button-01" href="#BookmarkedColleges">Colleges</a></li>
+              {% endif %}
           </ul>
         </nav>
         <div class="cards-group">
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">JEE Mains</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Bombay</span><span class="label-01">UG</span><span class="label-01">B.Tech &amp; B.Arch</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">CEED</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Des</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">GATE</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Tech</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">JEE Mains</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Bombay</span><span class="label-01">UG</span><span class="label-01">B.Tech &amp; B.Arch</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">CEED</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Des</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_exam">
-            <div class="card_exam-details"><a class="sub-header-02" href="individual-exam.html">GATE</a>
-              <div class="card_exam-details_secondary"><span class="label-01">IIT Delhi</span><span class="label-01">PG</span><span class="label-01">M.Tech</span></div><a class="link-primary_lined" href="#download" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_college">
+          {% if bookmarks %}
+              {% for bookmark in bookmarks %}
+                  <div class="card_college">
 
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
+                    <div class="card_college-img"><img src="{{ bookmark.college.image.url }}" alt="College Image"/></div>
 
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_college">
-
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
-
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_college">
-
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
-
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_college">
-
-            <div class="card_college-img"><img src="{% static 'images/sample.jpg' %}" alt="College Logo"/></div>
-
-            
-            <div class="card_college-details"><a class="sub-header-02" href="individual-college.html">IIT Bomabay</a>
-              <div class="card_college-details_secondary"><span class="label-01">Bombay</span><span class="label-01">AICTE</span><span class="label-01">University</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>
-            </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">B.Tech - CSE</a>
-              <div class="card_course-details_secondary"><span class="label-01">Engineering</span><span class="label-01">Undergraduate</span><span class="label-01">4years</span></div>
-            </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">B.Des - Interaction Design</a>
-              <div class="card_course-details_secondary"><span class="label-01">Design</span><span class="label-01">Undergraduate</span><span class="label-01">4years</span></div>
-            </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">BCA</a>
-              <div class="card_course-details_secondary"><span class="label-01">Computer</span><span class="label-01">Undergraduate</span><span class="label-01">3years</span></div>
-            </div>
-          </div>
-          <div class="card_course">
-            <div class="card_course-details"><a class="sub-header-02" href="individual-course.html">B.Des - Interaction Design</a>
-              <div class="card_course-details_secondary"><span class="label-01">Design</span><span class="label-01">Undergraduate</span><span class="label-01">4years</span></div>
-            </div>
-          </div>
+                    <div class="card_college-details"><a class="sub-header-02" href="{% url 'college:individual' bookmark.college.slug  %}">{{ bookmark.college.abbreviated_name }}</a>
+                      <div class="card_college-details_secondary"><span class="label-01">{{ bookmark.college.city }}</span><span class="label-01">{{ bookmark.college.state }}</span>
+{#                      </div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>#}
+                    </div>
+                  </div>
+              {% endfor %}
+          {% endif %}
         </div>
       </div>
     </section>

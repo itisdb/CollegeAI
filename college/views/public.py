@@ -1,12 +1,12 @@
 """Public views for colleges."""
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic import ListView, DetailView
 from django.db.models import Q
 
 from base.constants import SUCCESS_ALERT_KEY
 
-from college.models import College
+from college.models import College, CollegeBookmark
 
 from reviews.models import Review
 
@@ -75,3 +75,18 @@ class CollegesView(ListView):
                 Q(city__icontains=name)
             )
         return object_list
+
+
+class AddBookmarkView(View):
+
+    def post(self, request, college_slug: str):
+        try:
+            college = College.objects.get(slug=college_slug)
+            profile = request.user.profile
+            CollegeBookmark.objects.create(
+                college=college,
+                profile=profile
+            )
+            return redirect('profile:dashboard')
+        except BaseException:
+            return redirect(request.META['HTTP_REFERER'])

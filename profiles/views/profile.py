@@ -4,7 +4,8 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-from profiles.models import OTPVerification, Profile 
+from college.models import CollegeBookmark
+from profiles.models import OTPVerification, Profile
 from profiles.forms import ProfileForm,EditProfileForm,ResetPassword,EnterEmailForm
 from profiles.forms import ChangePasswordForm
 
@@ -87,8 +88,9 @@ class EnterEmail(View):
 class Dashboard(View):
 
     def get(self, request, *args, **kwargs):
-        log_to_tracker(request,'dashboard')
-        return render(request, 'v2/raw/dashboard.html', {})
+        log_to_tracker(request, 'dashboard')
+        bookmarks = CollegeBookmark.objects.all()
+        return render(request, 'v2/raw/dashboard.html', {'bookmarks': bookmarks})
 
 
 class EditUserProfileView(View):
