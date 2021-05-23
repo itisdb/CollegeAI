@@ -12,7 +12,7 @@ class SEOCollegesView(View):
         colleges = College.objects.filter(
             Q(state__icontains=location) |
             Q(city__icontains=location)
-        )
+        ).order_by('created_at')
         context = {
             'colleges': colleges,
             'location': location,

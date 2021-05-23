@@ -1,8 +1,8 @@
 {% extends 'v2/pages/public/temporary/public.html' %}
 {% load static %}
-{% block title %}Best Engineering colleges in {{ location }} : Placements, Admission, Fees, Ranking{% endblock %}
-{% block meta_title %} Best Engineering colleges in {{ location }} : Placements, Admission, Fees, Ranking{% endblock %}
-{% block meta_description %} Find and compare best engineering colleges in {{ location }} by Fees, Ranking, Admission and Placement. {% endblock %}
+{% block title %}Best Engineering colleges in {{ location| title }} : Placements, Admission, Fees, Ranking{% endblock %}
+{% block meta_title %} Best Engineering colleges in {{ location| title }} : Placements, Admission, Fees, Ranking{% endblock %}
+{% block meta_description %} Find and compare best engineering colleges in {{ location| title }} by Fees, Ranking, Admission and Placement. {% endblock %}
 {% block meta_keywords %} college, ai, mycollegeai, india, students, academics, placement, {{ location }} {% endblock %}
 {% block page_name %}
     <li class="breadcrumb-item active">Colleges</li>
@@ -10,7 +10,7 @@
 {% block hero_title %}
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
-      <li class="link-01">Colleges</li>
+      <li class="link-01">Best Engineering colleges in {{ location| title }}</li>
     </ul>
     <h3 class="header-03">Check Out the Top Colleges</h3>
     <div class="search-bar_small">

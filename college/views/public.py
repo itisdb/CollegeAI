@@ -17,6 +17,9 @@ class IndividualCollegeView(DetailView):
     context_object_name = 'college'
     template_name = 'v2/pages/public/college.html'
 
+    def get_queryset(self):
+        return College.objects.all().order_by('created_at')
+
     def get_context_data(self, **kwargs):
         row_limit = 3
 
