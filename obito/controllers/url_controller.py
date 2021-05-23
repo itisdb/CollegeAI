@@ -1,6 +1,6 @@
 from data_sanitize_and_other_scripts import data_sanitize,reviews_myuni
 # Import constants
-import .constants
+from obito import constants
 import re
 
 # Try 1 : "https://collegedunia.com/college/13834-institute-of-engineering-and-management-iem-kolkata/reviews"

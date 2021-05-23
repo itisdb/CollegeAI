@@ -1,0 +1,57 @@
+{% extends 'layouts/public.html' %}
+{% load static %}
+{% block title %} Colleges {% endblock %}
+{% block page_name %}
+    <li class="breadcrumb-item active">Colleges</li>
+{% endblock %}
+{% block content %}
+    <div class="row">
+    {% for college in colleges %}
+        <div class="card social-card col-lg-4 col-md-6 col-sm-12 padding-10" data-social="item">
+          <div class="circle" data-toggle="tooltip" title="Label" data-container="body"></div>
+          <div class="card-content">
+            <a href="/college/{{ college.slug }}"><img alt="Quote" src="{{ college.image.url }}" height="350px" width="250px"></a>
+          </div>
+          <div class="card-header clearfix last">
+            <h5>{{ college.abbreviated_name }}, {{ college.city }}</h5>
+            <h6>{{ college.get_ownership_display }} | {{ college.state }}</h6>
+          </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    {% if is_paginated %}
+        <div class="card-body">
+        <br>
+        <div class="btn-group btn-toolbar" style="margin: 5px">
+            {% if page_obj.has_previous %}
+              <a href="{% url 'college:list' %}?page={{ page_obj.previous_page_number }}">
+                  <button aria-label="" type="button" class="btn btn-default">
+                    <div class="p-t-5 p-b-5">
+                      <i class="pg-icon">chevron_left</i>
+                      <div class="fs-11 font-montserrat text-uppercase">Previous</div>
+                    </div>
+                  </button>
+              </a>
+            {% endif %}
+          <button aria-label="" type="button" class="btn btn-default">
+            <div class="p-t-5 p-b-5">
+              <i class="pg-icon">time</i>
+              <div class="fs-11 font-montserrat text-uppercase">Current</div>
+            </div>
+          </button>
+            {% if page_obj.has_next %}
+              <a href="{% url 'college:list' %}?page={{ page_obj.next_page_number }}">
+                  <button aria-label="" type="button" class="btn btn-default">
+                    <div class="p-t-5 p-b-5">
+                      <i class="pg-icon">chevron_right</i>
+                      <div class="fs-11 font-montserrat text-uppercase">Next</div>
+                    </div>
+                  </button>
+              </a>
+            {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+{% endblock%}
