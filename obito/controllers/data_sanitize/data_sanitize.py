@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 
 # final_ratings_stream = pd.DataFrame()
 
-def create_datasets(url="https://collegedunia.com/review/get-college-reviews",get_offset_url="https://collegedunia.com/university/25948-indian-institute-of-technology-iit-kanpur/reviews",college_id="25948", path_to_reviews_csv = 'data_files\iitk_reviews.csv',path_to_other_csv = 'data_files\iitk_others.csv'):
+def create_datasets(url="https://collegedunia.com/review/get-college-reviews",get_offset_url="https://collegedunia.com/university/25948-indian-institute-of-technology-iit-kanpur/reviews",college_id="25948", path_to_reviews_csv = 'data/collegedunia.csv',path_to_other_csv = 'data/collegeduniaothers.csv'):
     # Automating the fetching of offset(no. of review pages)
     offset_request = requests.get(get_offset_url, headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
     soup = bs(offset_request, 'html.parser')
@@ -95,7 +95,7 @@ def create_datasets(url="https://collegedunia.com/review/get-college-reviews",ge
 # print("REVIEWS :\n",reviews,"\nRATINGS :\n",ratings,"\nSTREAM OF STUDY :\n",stream)
 # OPTIONAL : print("REVIEWS SHAPE :\n",len(reviews),"\nRATINGS SHAPE :\n",len(ratings),"\nSTREAM OF STUDY SHAPE :\n",len(stream))'''
 
-
+others_iitk = create_datasets(get_offset_url="https://collegedunia.com/qna?college=25948",college_id="25948")
 # Create CSV files for different colleges.
 '''
 # 1. IIT Kanpur
@@ -228,4 +228,4 @@ others_kjsieit = create_datasets(get_offset_url="https://collegedunia.com/colleg
 others_tsec = create_datasets(get_offset_url="https://collegedunia.com/college/15452-thadomal-shahani-engineering-college-tsec-mumbai/reviews",college_id="15452", path_to_reviews_csv = 'data_files/review_CSVs/_tsec_reviews.csv',path_to_other_csv = 'data_files\_tsec_others.csv')
 '''
 # 443. Thakur college
-others_thakur = create_datasets(get_offset_url="https://collegedunia.com/college/54796-thakur-college-of-engineering-and-technology-tcet-mumbai/reviews",college_id="54796", path_to_reviews_csv = 'data_files/review_CSVs/_thakur_reviews.csv',path_to_other_csv = 'data_files\_thakur_others.csv')
+#others_thakur = create_datasets(get_offset_url="https://collegedunia.com/college/54796-thakur-college-of-engineering-and-technology-tcet-mumbai/reviews",college_id="54796", path_to_reviews_csv = 'data_files/review_CSVs/_thakur_reviews.csv',path_to_other_csv = 'data_files\_thakur_others.csv')
