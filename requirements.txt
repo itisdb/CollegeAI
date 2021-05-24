@@ -17,6 +17,8 @@ cryptography==3.3.1
 decorator==4.4.2
 defusedxml==0.7.0rc1
 Django==3.1.4
+django-allauth==0.44.0
+django-crispy-forms==1.11.1
 django-render-block==0.8.1
 django-templated-email==2.3.0
 googletrans==3.0.0
@@ -43,10 +45,11 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==8.0.1
 prompt-toolkit==3.0.8
+psycopg2-binary==2.8.6
 ptyprocess==0.6.0
 pycparser==2.20
 Pygments==2.7.3
-PyJWT==1.7.1
+PyJWT==2.1.0
 python-dateutil==2.8.1
 python3-openid==3.2.0
 pytz==2020.4
@@ -61,7 +64,7 @@ six==1.15.0
 smart-open==4.0.1
 sniffio==1.2.0
 social-auth-app-django==4.0.0
-social-auth-core==3.3.3
+social-auth-core==4.1.0
 soupsieve==2.0.1
 sqlparse==0.4.1
 tqdm==4.54.1

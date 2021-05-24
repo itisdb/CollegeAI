@@ -42,3 +42,10 @@ class Rating(BaseModel):
 
     def __str__(self):
         return self.college.full_name
+
+'''
+https://www.facebook.com/v3.2/dialog/oauth?client_id=187311743169596&
+
+redirect_uri=https%3A%2F%2Fmycollegeai.com%2Fsocial-auth%2Fcomplete%2Ffacebook%2F
+&state=bi9pYLvVAwhQ7ZoXAIlvJ2W0GxdO22Z1&return_scopes=true&ret=login&fbapp_pres=0&logger_id=a243128b-c0ca-4e8a-b444-636e0d1b8bc4&tp=unspecified&ext=1621866730&hash=AeZBDudkdpvUmWp6Y44
+'''
