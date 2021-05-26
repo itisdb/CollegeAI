@@ -68,9 +68,9 @@ def get_reviews(url=None,existing=True,path_to_existing_df=None,path_to_new_df=N
         reviews_df.to_csv(path_for_csv)
 
 # Scraping script
-get_reviews(url="https://www.getmyuni.com/college/indraprastha-institute-of-information-technology-iiit-new-delhi/reviews",existing=False,path_for_csv="data/_indraprastha_reviews.csv")
-get_reviews(url="https://www.getmyuni.com/college/national-institute-of-technology-nit-new-delhi/reviews",existing=False,path_for_csv="data/_nit_delhi_reviews_new.csv")
-get_reviews(url="https://www.getmyuni.com/college/kj-somaiya-institute-of-engineering-and-information-technology-kjsieit-mumbai/reviews",existing=False,path_for_csv="data/_kjsieit_reviews_new.csv")
-get_reviews(url="https://www.getmyuni.com/college/thadomal-shahani-engineering-college-tsec-mumbai/reviews",existing=False,path_for_csv="data/_tsec_reviews_new.csv")
-get_reviews(url="https://www.getmyuni.com/college/jaipur-national-university-jnu-jaipur/reviews",existing=False,path_for_csv="data/_jnu_reviews_new.csv")
-get_reviews(url="https://www.getmyuni.com/college/thakur-college-of-engineering-and-technology-tcet-mumbai/reviews",existing=False,path_for_csv="data/_thakur_reviews_new.csv")
+#get_reviews(url="https://www.getmyuni.com/college/indraprastha-institute-of-information-technology-iiit-new-delhi/reviews",existing=False,path_for_csv="data/getmyuni1.csv")
+get_reviews(url="https://www.getmyuni.com/college/national-institute-of-technology-nit-new-delhi/reviews",existing=False,path_for_csv="data/getmyuni2.csv")
+get_reviews(url="https://www.getmyuni.com/college/kj-somaiya-institute-of-engineering-and-information-technology-kjsieit-mumbai/reviews",existing=False,path_for_csv="data/getmyuni1.csv")
+#get_reviews(url="https://www.getmyuni.com/college/thadomal-shahani-engineering-college-tsec-mumbai/reviews",existing=False,path_for_csv="data/_tsec_reviews_new.csv")
+#get_reviews(url="https://www.getmyuni.com/college/jaipur-national-university-jnu-jaipur/reviews",existing=False,path_for_csv="data/_jnu_reviews_new.csv")
+#get_reviews(url="https://www.getmyuni.com/college/thakur-college-of-engineering-and-technology-tcet-mumbai/reviews",existing=False,path_for_csv="data/_thakur_reviews_new.csv")

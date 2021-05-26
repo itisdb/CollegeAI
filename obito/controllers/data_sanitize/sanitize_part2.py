@@ -42,10 +42,10 @@ def get_reviews(url = None , path_to_csv = None):
     review_df = pd.DataFrame({'review' : reviews_per_user})
     review_df.to_csv(path_to_csv,index=False)
 
-get_reviews(url = "https://www.careers360.com/university/dit-university-dehradun/reviews", path_to_csv = 'data/_dit_reviews.csv')
-get_reviews(url = 'https://www.careers360.com/university/parul-university-vadodara/reviews', path_to_csv = 'data/_parul_uni.csv')
-get_reviews(url = 'https://www.careers360.com/university/sharda-university-greater-noida/reviews', path_to_csv = 'data/_sharda.csv')
-get_reviews(url = 'https://www.careers360.com/colleges/arya-college-of-engineering-and-research-centre-jaipur/reviews', path_to_csv = 'data/_arya_college.csv')
+get_reviews(url = "https://www.careers360.com/university/dit-university-dehradun/reviews", path_to_csv = 'data/career360_1.csv')
+get_reviews(url = 'https://www.careers360.com/university/parul-university-vadodara/reviews', path_to_csv = 'data/career360_2.csv')
+#get_reviews(url = 'https://www.careers360.com/university/sharda-university-greater-noida/reviews', path_to_csv = 'data/_sharda.csv')
+#get_reviews(url = 'https://www.careers360.com/colleges/arya-college-of-engineering-and-research-centre-jaipur/reviews', path_to_csv = 'data/_arya_college.csv')
 
 
 

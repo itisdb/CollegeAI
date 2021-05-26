@@ -40,11 +40,11 @@ def get_reviews(url=None, path_to_csv=None):
     review = pd.DataFrame(reviews_list)
     review.to_csv(path_to_csv)
 
-get_reviews(url = "https://www.shiksha.com/university/iit-delhi-indian-institute-of-technology-53938/reviews-3", path_to_csv="data/_iit_delhi.csv")
-get_reviews(url='https://www.shiksha.com/college/iit-kharagpur-indian-institute-of-technology-2999/reviews',path_to_csv='data/_iit_kharagpur.csv')
-get_reviews(url='https://www.shiksha.com/university/nit-trichy-national-institute-of-technology-tiruchirappalli-2996/reviews', path_to_csv='data/_nit_trichy.csv')
-get_reviews(url='https://www.shiksha.com/university/vellore-institute-of-technology-vellore-29714/reviews', path_to_csv='data/_vit_reviews.csv')
-get_reviews(url='https://www.shiksha.com/university/bits-pilani-birla-institute-of-technology-and-science-467/reviews', path_to_csv='data/_bits_reviews.csv')
+get_reviews(url = "https://www.shiksha.com/university/iit-delhi-indian-institute-of-technology-53938/reviews-3", path_to_csv="data/shiksha1.csv")
+get_reviews(url='https://www.shiksha.com/college/iit-kharagpur-indian-institute-of-technology-2999/reviews',path_to_csv='data/shiksha2.csv')
+#get_reviews(url='https://www.shiksha.com/university/nit-trichy-national-institute-of-technology-tiruchirappalli-2996/reviews', path_to_csv='data/_nit_trichy.csv')
+#get_reviews(url='https://www.shiksha.com/university/vellore-institute-of-technology-vellore-29714/reviews', path_to_csv='data/_vit_reviews.csv')
+#get_reviews(url='https://www.shiksha.com/university/bits-pilani-birla-institute-of-technology-and-science-467/reviews', path_to_csv='data/_bits_reviews.csv')
 
 
 # Debugging

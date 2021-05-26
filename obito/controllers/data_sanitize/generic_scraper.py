@@ -1,11 +1,13 @@
 from bs4 import BeautifulSoup as bs
-import requests,re
+import requests
+import re
 import pandas as pd
 from bs4 import NavigableString,Comment
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from college.models import College
 
 # Generic Scraper Class
 
@@ -13,9 +15,16 @@ class Scraper:
 
     def __init__(self,url = None):
         self.url = url
+        self.colleges = College.objects.all()
+
+    def invoke(self):
+        for college in self.colleges:
+            urls = college.scraping_urls
+            for url in urls:
+                self.identify_and_trigger(url, college)
 
 # getmyuni Scraper
-    def getmyuni(self,url, path_to_csv = None):
+    def getmyuni(self,url: str, college: College):
         driver = webdriver.Chrome("/usr/local/bin/chromedriver")
         driver.get(url)
         try:
@@ -34,8 +43,7 @@ class Scraper:
         reviews_complete = []
         for page_no in range(1, offset + 1):
             url_per_page = f'{url}?page={page_no}'
-            url_content = requests.get(url, headers={
-                'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
+            url_content = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
             soup = bs(url_content, 'html.parser')
             main_divs = soup.find_all('div', class_='review-card')
             all_reviews = []
@@ -50,12 +58,11 @@ class Scraper:
 
 
             reviews_df = pd.DataFrame({'review': reviews_complete})
-            reviews_df.to_csv(path_to_csv)
+        return reviews_df
 
 # College Search Scraper
-    def collegesearch(self, url, path_to_csv=None):
-        url_request = requests.get(url, headers={
-            'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
+    def collegesearch(self,url: str, college: College):
+        url_request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
         soup = bs(url_request, 'html.parser')
         review_divs = soup.find_all('div', class_='row indi-review')
         reviews_all = []
@@ -71,10 +78,10 @@ class Scraper:
 
         # Create the dataset
         review_df = pd.DataFrame({'reviews': reviews_all})
-        review_df.to_csv(path_to_csv, index=False)
+        return review_df
 
 # Shiksha Scraper
-    def shiksha(self,url, path_to_csv=None):
+    def shiksha(self,url: str, college: College):
         # Initialization
         driver = webdriver.Chrome("/usr/local/bin/chromedriver")
         driver.get(url)
@@ -96,11 +103,11 @@ class Scraper:
         for review in reviews_element:
             reviews_list.append(review.text)
         print(len(reviews_list))
-        review = pd.DataFrame(reviews_list)
-        review.to_csv(path_to_csv)
+        review = list(reviews_list)
+        return review
 
 # Career360 Scraper
-    def career360(self,url, path_to_csv = None):
+    def career360(self,url: str, college: College):
         url_request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
         # Get reviews
         soup = bs(url_request, 'html.parser')
@@ -133,36 +140,49 @@ class Scraper:
                         filter(re.compile(regex_pattern).search, list(map(lambda y: str(y), revs)))))))
                     reviews_per_user.append(revs_filtered)
         review_df = pd.DataFrame({'review': reviews_per_user})
-        review_df.to_csv(path_to_csv, index=False)
+        return review_df
 
 # Google Reviews Scraper
-    def google(self,url=None,path_to_csv=None):
-        pass
+    def google(self,url: str,college: College):
+        return []
 
-# Google Reviews Scraper
-    def collegedunia(self, url=None, path_to_csv=None):
-        pass
+# collegedunia Reviews Scraper
+    def collegedunia(self,url: str, college: College):
+        # Automating the fetching of offset(no. of review pages)
+        offset_request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
+        soup = bs(offset_request, 'html.parser')
+
+        college_name_raw = soup.select('h1', class_="college_name")[0].text
+        college_name = college_name_raw.replace(' - Reviews', '')
+
+        reviews = soup.find_all('p', class_='jsx-2209713675 m-0 review-content d-inline')
+        review = pd.DataFrame(reviews)
+        return review
 
 # Identifying the website
-    def Identify(self,url=None, path_to_csv = None):
+    def identify_and_trigger(self,url: str , college: College):
 
         if(url.find("collegesearch") != -1):
-            self.collegesearch(url=url, path_to_csv=path_to_csv)
+            reviews = self.collegesearch(url, college)
         elif(url.find("getmyuni") != -1):
-            self.getmyuni(url=url, path_to_csv=path_to_csv)
+            reviews = self.getmyuni(url, college)
         elif (url.find("shiksha") != -1):
-            self.shiksha(url=url, path_to_csv=path_to_csv)
+            reviews = self.shiksha(url, college)
         elif (url.find("careers360") != -1):
-            self.career360(url=url, path_to_csv=path_to_csv)
+            reviews = self.career360(url, college)
         elif (url.find("google") != -1):
-            self.google(url=url, path_to_csv=path_to_csv)
+            reviews = self.google(url, college)
         elif (url.find("collegedunia") != -1):
-            self.collegedunia(url=url, path_to_csv=path_to_csv)
+            reviews = self.collegedunia(url, college)
         else:
-            print("Not from Recognized Website")
+            reviews = "Not a recognized website"
+        print(url,reviews)
 
-x = Scraper()
-x.Identify(url = "https://www.careers360.com/university/dit-university-dehradun/reviews", path_to_csv = 'data/_dit_reviews.csv')
-x.Identify(url = 'https://www.collegesearch.in/university/delhi-technological-university-dtu-delhi/reviews',path_to_csv='data/_dtu_new.csv')
-x.Identify(url = "https://www.shiksha.com/university/iit-delhi-indian-institute-of-technology-53938/reviews-3", path_to_csv="data/_iit_delhi.csv")
-x.Identify(url="https://www.getmyuni.com/college/indraprastha-institute-of-information-technology-iiit-new-delhi/reviews", path_to_csv="data/_indraprastha_reviews.csv")
+
+
+#x.identify_and_trigger(url = "https://www.careers360.com/university/dit-university-dehradun/reviews", path_to_csv = 'data/_dit_reviews.csv')
+#x.identify_and_trigger(url = 'https://www.collegesearch.in/university/delhi-technological-university-dtu-delhi/reviews',path_to_csv='data/_dtu_new.csv')
+#x.identify_and_trigger(url = "https://www.shiksha.com/university/iit-delhi-indian-institute-of-technology-53938/reviews-3", path_to_csv="data/_iit_delhi.csv")
+#x.identify_and_trigger(url="https://www.getmyuni.com/college/indraprastha-institute-of-information-technology-iiit-new-delhi/reviews", path_to_csv="data/_indraprastha_reviews.csv")
+#x.identify_and_trigger(url = "https://collegedunia.com/university/25602-indian-institute-of-management-iimb-bangalore/reviews", path_to_csv= "data/_iim_b.csv")
+#x.identify_and_trigger(url="https://collegedunia.com/university/25494-indian-institute-of-management-iima-ahmedabad/reviews", path_to_csv = "data/iim_a.csv")

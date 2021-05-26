@@ -35,8 +35,8 @@ def get_reviews(url=None,path_to_csv= None):
     review_df.to_csv(path_to_csv,index=False)
 
 # Scraping Reviews
-get_reviews(url = 'https://www.collegesearch.in/university/delhi-technological-university-dtu-delhi/reviews',path_to_csv='data/_dtu_new.csv')
-get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-madras-chennai/reviews', path_to_csv='data/_iit_madras.csv')
-get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-kanpur/reviews', path_to_csv='data/_iit_kanpur.csv')
-get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-roorkee/reviews', path_to_csv='data/_iit_roorkie.csv')
-get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-guwahati/reviews',path_to_csv='data/_iit_guwahati.csv')
+get_reviews(url = 'https://www.collegesearch.in/university/delhi-technological-university-dtu-delhi/reviews',path_to_csv='data/collegesearch1.csv')
+get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-madras-chennai/reviews', path_to_csv='data/collegesearch2.csv')
+#get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-kanpur/reviews', path_to_csv='data/_iit_kanpur.csv')
+#get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-roorkee/reviews', path_to_csv='data/_iit_roorkie.csv')
+#get_reviews(url='https://www.collegesearch.in/colleges/indian-institute-of-technology-iit-guwahati/reviews',path_to_csv='data/_iit_guwahati.csv')

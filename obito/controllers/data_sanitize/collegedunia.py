@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup as bs
 
 # final_ratings_stream = pd.DataFrame()
 
-def create_datasets(url="https://collegedunia.com/review/get-college-reviews",get_offset_url="https://collegedunia.com/university/25948-indian-institute-of-technology-iit-kanpur/reviews",college_id="25948", path_to_reviews_csv = 'data/collegedunia.csv',path_to_other_csv = 'data/collegeduniaothers.csv'):
+def create_datasets(get_offset_url=None,college_id=None, path_to_csv = None):
     # Automating the fetching of offset(no. of review pages)
     offset_request = requests.get(get_offset_url, headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
     soup = bs(offset_request, 'html.parser')
@@ -14,13 +14,18 @@ def create_datasets(url="https://collegedunia.com/review/get-college-reviews",ge
     soup2 = bs(reviews, 'html.parser')
 
     offset = soup2.select('li a')[-2].text
-    print(offset)
 
     college_name_raw = soup.select('h1', class_="college_name")[0].text
     college_name = college_name_raw.replace(' - Reviews','')
 
+    reviews = soup.find_all('p', class_='jsx-2209713675 m-0 review-content d-inline')
+    review = pd.DataFrame(reviews)
+    review.to_csv(path_to_csv)
 
-    '''
+create_datasets(get_offset_url="https://collegedunia.com/university/25948-indian-institute-of-technology-iit-kanpur/reviews",path_to_csv = "data/collegedunia.csv")
+create_datasets(get_offset_url="https://collegedunia.com/university/25602-indian-institute-of-management-iimb-bangalore/reviews", path_to_csv = "data/iimbangalore.csv")
+
+'''
     Extracting data for various colleges
     25948 : IIT Kanpur
     25992 : IIT Roorkee
@@ -103,9 +108,6 @@ def create_datasets(url="https://collegedunia.com/review/get-college-reviews",ge
 # Test run for IIT-Kanpur
 # print("REVIEWS :\n",reviews,"\nRATINGS :\n",ratings,"\nSTREAM OF STUDY :\n",stream)
 # OPTIONAL : print("REVIEWS SHAPE :\n",len(reviews),"\nRATINGS SHAPE :\n",len(ratings),"\nSTREAM OF STUDY SHAPE :\n",len(stream))'''
-
-others_iitk = create_datasets(get_offset_url="https://collegedunia.com/university/25948-indian-institute-of-technology-iit-kanpur/reviews",college_id="25948")
-
 # Create CSV files for different colleges.
 '''
 # 1. IIT Kanpur
