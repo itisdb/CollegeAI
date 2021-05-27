@@ -2,18 +2,19 @@ from bs4 import BeautifulSoup as bs
 import requests
 import re
 import pandas as pd
-from bs4 import NavigableString,Comment
+from bs4 import NavigableString, Comment
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from college.models import College
+from reviews.models import Review
 
 # Generic Scraper Class
 
 class Scraper:
 
-    def __init__(self,url = None):
+    def __init__(self, url = None):
         self.url = url
         self.colleges = College.objects.all()
 
@@ -24,7 +25,7 @@ class Scraper:
                 self.identify_and_trigger(url, college)
 
 # getmyuni Scraper
-    def getmyuni(self,url: str, college: College):
+    def getmyuni(self, url: str, college: College):
         driver = webdriver.Chrome("/usr/local/bin/chromedriver")
         driver.get(url)
         try:
@@ -56,9 +57,8 @@ class Scraper:
                 all_reviews.append("".join(full_review))
             reviews_complete.extend(all_reviews)
 
-
-            reviews_df = pd.DataFrame({'review': reviews_complete})
-        return reviews_df
+            for review in reviews_complete:
+                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.GET_MY_UNI.value)
 
 # College Search Scraper
     def collegesearch(self,url: str, college: College):
@@ -77,8 +77,8 @@ class Scraper:
             reviews_all.append(' '.join(list(filter(lambda x: x != '', review_raw))))
 
         # Create the dataset
-        review_df = pd.DataFrame({'reviews': reviews_all})
-        return review_df
+        for review in reviews_all:
+            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_SEARCH.value)
 
 # Shiksha Scraper
     def shiksha(self,url: str, college: College):
@@ -102,9 +102,9 @@ class Scraper:
         reviews_element = driver.find_elements_by_class_name('desc-sp')
         for review in reviews_element:
             reviews_list.append(review.text)
-        print(len(reviews_list))
-        review = list(reviews_list)
-        return review
+        for review in reviews_list:
+            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.SHIKSHA.value)
+
 
 # Career360 Scraper
     def career360(self,url: str, college: College):
@@ -139,8 +139,8 @@ class Scraper:
                     revs_filtered = " ".join(list(map(lambda text: re.findall(regex_pattern, text)[0], list(
                         filter(re.compile(regex_pattern).search, list(map(lambda y: str(y), revs)))))))
                     reviews_per_user.append(revs_filtered)
-        review_df = pd.DataFrame({'review': reviews_per_user})
-        return review_df
+        for review in reviews_per_user:
+            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.CAREER360.value)
 
 # Google Reviews Scraper
     def google(self,url: str,college: College):
@@ -156,27 +156,28 @@ class Scraper:
         college_name = college_name_raw.replace(' - Reviews', '')
 
         reviews = soup.find_all('p', class_='jsx-2209713675 m-0 review-content d-inline')
-        review = pd.DataFrame(reviews)
-        return review
+
+        for review in reviews:
+            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_DUNIA.value)
 
 # Identifying the website
     def identify_and_trigger(self,url: str , college: College):
 
         if(url.find("collegesearch") != -1):
-            reviews = self.collegesearch(url, college)
+            self.collegesearch(url, college)
         elif(url.find("getmyuni") != -1):
-            reviews = self.getmyuni(url, college)
+            self.getmyuni(url, college)
         elif (url.find("shiksha") != -1):
-            reviews = self.shiksha(url, college)
+            self.shiksha(url, college)
         elif (url.find("careers360") != -1):
-            reviews = self.career360(url, college)
+            self.career360(url, college)
         elif (url.find("google") != -1):
-            reviews = self.google(url, college)
+            self.google(url, college)
         elif (url.find("collegedunia") != -1):
-            reviews = self.collegedunia(url, college)
+            self.collegedunia(url, college)
         else:
-            reviews = "Not a recognized website"
-        print(url,reviews)
+            print(url,": Not a Recognized website")
+
 
 
 

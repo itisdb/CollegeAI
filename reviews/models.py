@@ -16,6 +16,7 @@ class Review(BaseModel):
         COLLEGE_SEARCH = 4
         GET_MY_UNI = 5
         SELF = 6
+        CAREER360 = 7
         OTHER = 0
 
     college = models.ForeignKey(College, on_delete=models.CASCADE)
