@@ -44,7 +44,7 @@ class College(BaseModel):
     logo = models.ImageField(null=True, upload_to='college/logo/')
     ownership = models.IntegerField(null=True, choices=OwnershipChoices.choices)
     approval = models.CharField(null=True, max_length=100)
-    slug = models.SlugField(null=True, blank=True, max_length=50)
+    slug = models.SlugField(null=True, blank=True, max_length=100)
     is_top = models.BooleanField(null=True, default=False)
     degree = models.JSONField(null=True)
     stream_degree = models.JSONField(null=True)
