@@ -51,7 +51,6 @@ class RegisterView(View):
             'username': username,
             'first_name': first_name,
         }
-        import ipdb; ipdb.set_trace()
         generic_mailer(**context)
         return redirect('profile:dashboard')
 
