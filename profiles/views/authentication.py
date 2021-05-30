@@ -51,10 +51,7 @@ class RegisterView(View):
             'username': username,
             'first_name': first_name,
         }
-        try:
-            generic_mailer(**context)
-        except:
-            pass
+        generic_mailer(**context)
         return redirect('profile:dashboard')
 
     def get(self, request):

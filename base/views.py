@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from django.views.generic.base import View
 from django.db.models import Q
 
@@ -8,7 +8,7 @@ from profiles.models import Psychometry, Profile
 
 
 def custom_not_found_error(request, *args, **argv):
-    response = render(request, 'pages/error/404.html')
+    response = render(request, 'v2/pages/error/404.html')
     response.status_code = 404
     return response
 
@@ -92,3 +92,4 @@ class CompareView(View):
         return render(request, 'v2/pages/public/compare.html', {
             'colleges': compare_College
         })
+
