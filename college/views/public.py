@@ -32,6 +32,10 @@ class IndividualCollegeView(DetailView):
                 profile=self.request.user.profile,
                 college=self.object
             ).exists()
+            context['is_bookmarked'] = CollegeBookmark.objects.filter(
+                profile=self.request.user.profile,
+                college=self.object
+            ).exists()
 
         degrees = []
         degree_tuple = []
@@ -90,15 +94,19 @@ class CollegesView(ListView):
 class AddBookmarkView(View):
 
     def get(self, request, slug: str):
+        college = College.objects.get(slug=slug)
+        profile = request.user.profile
         try:
-            college = College.objects.get(slug=slug)
-            profile = request.user.profile
             CollegeBookmark.objects.create(
                 college=college,
                 profile=profile
             )
             return redirect('profile:dashboard')
         except BaseException:
+            CollegeBookmark.objects.get(
+                college=college,
+                profile=profile
+            ).delete()
             return redirect(request.META['HTTP_REFERER'])
 
 
