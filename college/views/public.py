@@ -6,7 +6,8 @@ from django.db.models import Q
 
 from base.constants import SUCCESS_ALERT_KEY
 
-from college.models import College, CollegeBookmark
+from college.models import College, CollegeBookmark, AppliedCollege
+from leads.controllers.direct_lead_handler import ApplyCollegeHandler
 
 from reviews.models import Review
 
@@ -25,6 +26,12 @@ class IndividualCollegeView(DetailView):
 
         context = super().get_context_data(**kwargs)
         context['reviews'] = Review.objects.filter(college=self.object)[:20]
+
+        if getattr(self.request, 'user'):
+            context['is_applied'] = AppliedCollege.objects.filter(
+                profile=self.request.user.profile,
+                college=self.object
+            ).exists()
 
         degrees = []
         degree_tuple = []
@@ -93,3 +100,10 @@ class AddBookmarkView(View):
             return redirect('profile:dashboard')
         except BaseException:
             return redirect(request.META['HTTP_REFERER'])
+
+
+class ApplyCollegeView(View):
+
+    def get(self, request, college_uuid: str):
+        is_done, college = ApplyCollegeHandler().store(request.user.profile, college_uuid)
+        return redirect('college:individual', {'slug': college.slug})
