@@ -4,7 +4,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-from college.models import CollegeBookmark
+from college.models import CollegeBookmark, AppliedCollege
 from profiles.models import OTPVerification, Profile
 from profiles.forms import ProfileForm,EditProfileForm,ResetPassword,EnterEmailForm
 from profiles.forms import ChangePasswordForm
@@ -90,7 +90,11 @@ class Dashboard(View):
     def get(self, request, *args, **kwargs):
         log_to_tracker(request, 'dashboard')
         bookmarks = CollegeBookmark.objects.filter(profile=request.user.profile)
-        return render(request, 'v2/raw/dashboard.html', {'bookmarks': bookmarks})
+        applieds = AppliedCollege.objects.filter(profile=request.user.profile)
+        return render(request, 'v2/raw/dashboard.html', {
+            'bookmarks': bookmarks,
+            'applied_colleges': applieds
+        })
 
 
 class EditUserProfileView(View):

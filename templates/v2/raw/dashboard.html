@@ -292,14 +292,11 @@
     <section id="dashboard-content">
       <div class="container">
         <nav class="bookmark-nav">
-            {% if bookmarks %}
-              <h6 class="sub-header-03 bookmark-header">Set Bookmarks to Show</h6>
-            {% else %}
-              <h6 class="sub-header-03 bookmark-header">You have no Bookmarks</h6>
-            {% endif %}
+          <h6 class="sub-header-03 bookmark-header">Important to Profile</h6>
           <ul class="bookmark-links">
               {% if bookmarks %}
-                <li data-content="colleges"><a class="button-01" href="#BookmarkedColleges">Colleges</a></li>
+                <li data-content="colleges"><a class="button-01" href="#BookmarkedColleges">Bookmarks</a></li>
+{#                <li data-content="colleges"><a class="button-01" href="#AppliedColleges">Applied</a></li>#}
               {% endif %}
           </ul>
         </nav>
@@ -307,12 +304,11 @@
           {% if bookmarks %}
               {% for bookmark in bookmarks %}
                   <div class="card_college">
-
                     <div class="card_college-img"><img src="{{ bookmark.college.image.url }}" alt="College Image"/></div>
-
                     <div class="card_college-details"><a class="sub-header-02" href="{% url 'college:individual' bookmark.college.slug  %}">{{ bookmark.college.abbreviated_name }}</a>
                       <div class="card_college-details_secondary"><span class="label-01">{{ bookmark.college.city }}</span><span class="label-01">{{ bookmark.college.state }}</span>
-{#                      </div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>#}
+                      </div>
+{#                        <a class="link-primary_lined" href="#downloadIITBombay" download="download">Brochure</a>#}
                     </div>
                   </div>
               {% endfor %}

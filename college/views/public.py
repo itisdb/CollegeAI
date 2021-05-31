@@ -114,4 +114,4 @@ class ApplyCollegeView(View):
 
     def get(self, request, college_uuid: str):
         is_done, college = ApplyCollegeHandler().store(request.user.profile, college_uuid)
-        return redirect('college:individual', {'slug': college.slug})
+        return redirect('college:individual', college.slug)
