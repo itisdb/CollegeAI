@@ -63,6 +63,9 @@ class College(BaseModel):
             self.slug = slugify(self.full_name)
         super(College, self).save(*args, **kwargs)
 
+    class Meta:
+        ordering = ('created_at',)
+
 
 class CollegeImages(BaseModel):
 
