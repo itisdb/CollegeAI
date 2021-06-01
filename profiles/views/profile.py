@@ -65,18 +65,14 @@ class EnterEmail(View):
                 username,
                 otp_object.otp
                 ),
-                print(link)
                 context = {
-                'template_name' : 'forgot-password-mail.html',
-                'recipients' : email,
+                'template_name' : 'forgot_password',
+                'recipients' : [email,],
                 'username':username,
-                'link':link,
+                'link':link[0],
                 'full_name':user.first_name,
                 }
-                try:
-                    generic_mailer(context)
-                except:
-                    pass
+                generic_mailer(**context)
                 messages.info(request, 'Mail has been sent to you succesfully!!')
             else:
                 messages.info(request, 'No profile exists with such email!!')
