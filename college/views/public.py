@@ -27,7 +27,7 @@ class IndividualCollegeView(DetailView):
         context = super().get_context_data(**kwargs)
         context['reviews'] = Review.objects.filter(college=self.object)[:20]
 
-        if getattr(self.request, 'user'):
+        if getattr(self.request.user, 'profile', None):
             context['is_applied'] = AppliedCollege.objects.filter(
                 profile=self.request.user.profile,
                 college=self.object
