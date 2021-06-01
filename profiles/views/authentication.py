@@ -46,8 +46,8 @@ class RegisterView(View):
             return render(request, 'v2/pages/public/home.html', {'error': 'Username/Password is incorrect.'})
         login(request, user)
         context = {
-            'template_name': 'welcome_mail.html',
-            'recipients': username,
+            'template_name': 'welcome_mail',
+            'recipients': [username,],
             'username': username,
             'first_name': first_name,
         }
