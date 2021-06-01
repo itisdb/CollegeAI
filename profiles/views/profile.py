@@ -65,7 +65,6 @@ class EnterEmail(View):
                 username,
                 otp_object.otp
                 ),
-                print(link[0])
                 context = {
                 'template_name' : 'forgot_password',
                 'recipients' : [email,],

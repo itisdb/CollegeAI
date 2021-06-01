@@ -5,7 +5,6 @@ from templated_email import send_templated_mail
 def generic_mailer(**kwargs):
     if kwargs.get('link'):
         link = kwargs.get('link')
-        print(link)
     else:
         link = 'https://mycollegeai.com/'
     send_templated_mail(
