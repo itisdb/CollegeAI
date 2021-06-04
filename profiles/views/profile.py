@@ -86,7 +86,7 @@ class Dashboard(View):
     def get(self, request, *args, **kwargs):
         log_to_tracker(request, 'dashboard')
         bookmarks = CollegeBookmark.objects.all()
-        return render(request, 'v2/raw/dashboard.html', {'bookmarks': bookmarks})
+        return render(request, 'v2/pages/public/dashboard.html', {'bookmarks': bookmarks})
 
 
 class EditUserProfileView(View):
