@@ -229,6 +229,7 @@
               </div>
             </div>
             <ul class="nav-content-links__left-links">
+              <li class="link-items"><a class="label-02" href="https://mycollegeai.medium.com/">Articles</a></li>
               <li class="link-items"><a class="label-02" href="/college/list">Colleges</a></li>
               <li class="link-items"><a class="label-02" href="#">Consult</a></li>
               <li class="link-items"><a class="label-02" href="{% url 'compare' %}">Compare</a></li>
@@ -302,23 +303,28 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <div class="footer-links_misc">
-          <a class="label-01" href="{% url 'about' %}">About Us</a>
-        </div> <div class="footer-links_misc">
-          <a class="label-01" href="{% url 'contact' %}">Contact Us</a>
+        <div class="footer-links_misc" style="width: 40%;">
+          <h6 class="sub-header-03">Top Cities</h6>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-kolkata/">Best Engineering Colleges in Kolkata</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-bangalore/">Best Engineering Colleges in Bangalore</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-delhi/">Best Engineering Colleges in Delhi</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-mumbai/">Best Engineering Colleges in Mumbai</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-chennai/">Best Engineering Colleges in Chennai</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-jaipur/">Best Engineering Colleges in Jaipur</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-bhubaneswar/">Best Engineering Colleges in Bhubaneswar</a>
         </div>
-          <div class="footer-links_misc">
-            <a class="label-01" href="{% url 'career' %}">Career</a>
-          </div> <div class="footer-links_misc">
-          <a class="label-01" href="{% url 'advertising' %}">Advertising</a>
-      </div>
-        <div class="footer-links_misc">
-        <a class="label-01" href="{% url 'terms' %}">Terms &#38; Conditions</a>
-        </div><div class="footer-links_misc">
-          <a class="label-01" href="{% url 'privacy' %}">Privacy Policy</a>
+        <div class="footer-links_misc" style="width: 40%;">
+          <h6 class="sub-header-03">Top States</h6>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-west-bengal/">Best Engineering Colleges in West Bengal</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-karnataka/">Best Engineering Colleges in Karnataka</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-maharashtra/">Best Engineering Colleges in Maharashtra</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-tamil-nadu/">Best Engineering Colleges in Tamil Nadu</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-rajasthan/">Best Engineering Colleges in Rajasthan</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-odisha/">Best Engineering Colleges in Odisha</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-gujarat/">Best Engineering Colleges in Gujarat</a>
         </div>
-        <div class="footer-links_misc">
-          <a class="label-01" href="#">SiteMap</a>
+        <div class="footer-links_misc" style="width: 20%;">
+          <h6 class="sub-header-03">Company</h6><a class="label-01" href="{% url 'about' %}">About Us</a><a class="label-01" href="{% url 'contact' %}">Contact Us</a><a class="label-01" href="{% url 'career' %}">Career</a><a class="label-01" href="{% url 'advertising' %}">Advertising</a><a class="label-01" href="{% url 'terms' %}">Terms &amp; Conditions</a><a class="label-01" href="{% url 'privacy' %}">Privacy Policy</a>
         </div>
       </div>
       <div class="footer-brand"><img class="footer-brand_img" src="{% static 'images/logo1.png' %}" alt="MyCollegeAI Logo White">
@@ -373,7 +379,7 @@
                 </clippath>
               </defs>
             </svg></a>
-            <a class="social-icon" href="https://twitter.com/mycollegeai01" target="_blank">
+            <a class="social-icon" href="https://twitter.com/mycollegeai" target="_blank">
             <svg class="icon" id="twitter" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0)">
                 <path d="M24.1343 5.12983C23.8493 4.71912 23.2848 4.61695 22.8738 4.90207L20.0614 6.85348C19.806 7.03064 19.6594 7.32638 19.6728 7.63686C19.6809 7.82308 19.6849 7.9977 19.6849 8.17063C19.6849 13.9193 15.3106 19.8653 7.99038 19.8653C6.49811 19.8653 5.03206 19.5813 3.66188 19.0334L8.00197 17.8194C8.48369 17.6847 8.76495 17.185 8.63018 16.7032C8.49541 16.2216 7.99617 15.9403 7.51397 16.075L0.957645 17.9089C0.613955 18.0051 0.358783 18.294 0.305889 18.647C0.253116 18.9999 0.412402 19.3511 0.712859 19.5437C2.88949 20.9391 5.40606 21.6768 7.99038 21.6768C13.0693 21.6768 16.2503 19.2773 18.0247 17.2644C20.231 14.7613 21.4963 11.4468 21.4963 8.17076C21.4963 8.13489 21.4962 8.09902 21.496 8.06304L23.9065 6.39047C24.3174 6.10523 24.4194 5.54091 24.1343 5.12983Z"></path>
