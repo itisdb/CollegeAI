@@ -44,7 +44,7 @@ class College(BaseModel):
     logo = models.ImageField(null=True, upload_to='college/logo/')
     ownership = models.IntegerField(null=True, choices=OwnershipChoices.choices)
     approval = models.CharField(null=True, max_length=100)
-    slug = models.SlugField(null=True, blank=True, max_length=50)
+    slug = models.SlugField(null=True, blank=True, max_length=100)
     is_top = models.BooleanField(null=True, default=False)
     degree = models.JSONField(null=True)
     stream_degree = models.JSONField(null=True)
@@ -63,6 +63,9 @@ class College(BaseModel):
             self.slug = slugify(self.full_name)
         super(College, self).save(*args, **kwargs)
 
+    class Meta:
+        ordering = ('created_at',)
+
 
 class CollegeImages(BaseModel):
 
@@ -80,6 +83,18 @@ class CollegeBookmark(BaseModel):
 
     def __str__(self):
         return f'{self.profile.user.username} bookmarked {self.college.abbreviated_name}'
+
+    class Meta:
+        unique_together = ('college', 'profile', )
+
+
+class AppliedCollege(BaseModel):
+
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.profile.user.username} applied for {self.college.abbreviated_name}'
 
     class Meta:
         unique_together = ('college', 'profile', )

@@ -1,3 +1,4 @@
+from college.models import AppliedCollege, College
 from leads.models import DirectLead
 
 
@@ -16,3 +17,22 @@ class DirectLeadHandler:
             return True
         except (AttributeError, ValueError):
             return False
+
+
+class ApplyCollegeHandler:
+
+    @staticmethod
+    def store(profile, college_uuid):
+        college = College.objects.get(uuid=college_uuid)
+        try:
+            AppliedCollege.objects.create(
+                profile=profile,
+                college=college
+            )
+            return True, college
+        except BaseException:
+            AppliedCollege.objects.get(
+                profile=profile,
+                college=college
+            ).delete()
+            return False, college

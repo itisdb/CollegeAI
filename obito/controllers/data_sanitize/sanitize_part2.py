@@ -2,8 +2,15 @@ from bs4 import BeautifulSoup as bs
 import requests,re
 import pandas as pd
 
-def extract_reviews(review_url = "https://www.careers360.com/university/dit-university-dehradun/reviews", path_to_reviews_csv = 'data_files/reviews_careers/reviews_dit.csv'):
-    url_request = requests.get(review_url, headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
+'''
+DIT University
+Parul University
+Sharda University
+Arya College of Engineering
+'''
+
+def get_reviews(url = None , path_to_csv = None):
+    url_request = requests.get(url, headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
     # Get reviews
     soup = bs(url_request, 'html.parser')
     # Get offset
@@ -33,19 +40,13 @@ def extract_reviews(review_url = "https://www.careers360.com/university/dit-univ
                 revs_filtered = " ".join(list(map(lambda text : re.findall(regex_pattern,text)[0], list(filter(re.compile(regex_pattern).search, list(map(lambda y : str(y), revs)))))))
                 reviews_per_user.append(revs_filtered)
     review_df = pd.DataFrame({'review' : reviews_per_user})
-    review_df.to_csv(path_to_reviews_csv,index=False)
-    
+    review_df.to_csv(path_to_csv,index=False)
 
-# Extracting reviews for colleges : focussing on private ones
-'''# 1. DIT Dehradun
-extract_reviews()
-# 2. Parul University
-extract_reviews(review_url='https://www.careers360.com/university/parul-university-vadodara/reviews', path_to_reviews_csv='data_files/reviews_careers/parul_reviews.csv')
-# 3. Sharda University
-extract_reviews(review_url='https://www.careers360.com/university/sharda-university-greater-noida/reviews', path_to_reviews_csv='data_files/reviews_careers/reviews_sharda.csv')
-# 4. Arya College of Engineering and Research Centre, Jaipur
-extract_reviews(review_url='https://www.careers360.com/colleges/arya-college-of-engineering-and-research-centre-jaipur/reviews',path_to_reviews_csv='data_files/reviews_careers/reviews_arya.csv')
-'''
+get_reviews(url = "https://www.careers360.com/university/dit-university-dehradun/reviews", path_to_csv = 'data/career360_1.csv')
+get_reviews(url = 'https://www.careers360.com/university/parul-university-vadodara/reviews', path_to_csv = 'data/career360_2.csv')
+#get_reviews(url = 'https://www.careers360.com/university/sharda-university-greater-noida/reviews', path_to_csv = 'data/_sharda.csv')
+#get_reviews(url = 'https://www.careers360.com/colleges/arya-college-of-engineering-and-research-centre-jaipur/reviews', path_to_csv = 'data/_arya_college.csv')
+
 
 
 
