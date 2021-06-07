@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'celery',
     'crispy_forms',
     'templated_email',
+    'django_extensions',
 
     'base',
     'college',

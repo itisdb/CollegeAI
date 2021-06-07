@@ -15,6 +15,9 @@ class Profile(BaseModel):
     def __str__(self):
         return self.user.get_full_name()
 
+    class Meta:
+        ordering = ('-created_at',)
+
 
 class Psychometry(BaseModel):
     profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
