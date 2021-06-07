@@ -20,7 +20,7 @@ def custom_internal_error(request, *args, **argv):
 
 
 def home(request):
-    colleges = College.objects.filter(is_top=True)[:9]
+    colleges = College.objects.filter(is_top=True)[:6]
     return render(request, 'v2/pages/public/home.html', {
         'colleges': colleges
     })

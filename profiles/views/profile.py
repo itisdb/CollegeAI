@@ -87,7 +87,7 @@ class Dashboard(View):
         log_to_tracker(request, 'dashboard')
         bookmarks = CollegeBookmark.objects.filter(profile=request.user.profile)
         applieds = AppliedCollege.objects.filter(profile=request.user.profile)
-        return render(request, 'v2/raw/dashboard.html', {
+        return render(request, 'v2/pages/public/dashboard.html', {
             'bookmarks': bookmarks,
             'applied_colleges': applieds
         })
