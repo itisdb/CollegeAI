@@ -48,6 +48,8 @@ class College(BaseModel):
     is_top = models.BooleanField(null=True, default=False)
     degree = models.JSONField(null=True)
     stream_degree = models.JSONField(null=True)
+    admission_procedure = models.JSONField(null=True)
+    affiliated = models.CharField(null=True, max_length=255)
     entrance_exams = models.CharField(null=True, max_length=200)
     website = models.CharField(max_length=400, null=True, blank=True)
     phone = models.CharField(max_length=200, null=True, blank=True)
