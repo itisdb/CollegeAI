@@ -21,90 +21,99 @@ class Scraper:
     def invoke(self):
         for college in self.colleges:
             urls = college.scraping_urls
-            for url in urls:
-                self.identify_and_trigger(url, college)
+            if urls is not None:
+                for url in urls:
+                    self.identify_and_trigger(url, college)
 
 # getmyuni Scraper
     def getmyuni(self, url: str, college: College):
         driver = webdriver.Chrome("/usr/local/bin/chromedriver")
-        driver.get(url)
         try:
-            wait = WebDriverWait(driver, 10)
-            last = wait.until(EC.element_to_be_clickable(
-                (By.CSS_SELECTOR, "li.pagination_btn_other.pagination_btn_last > a.btn.pagination_btn_all")))
-            driver.execute_script("arguments[0].scrollIntoView();", last)
-            driver.execute_script("arguments[0].click();", last)
-            offset = int(driver.current_url[-1])
+            driver.get(url)
+            try:
+                wait = WebDriverWait(driver, 10)
+                last = wait.until(EC.element_to_be_clickable(
+                    (By.CSS_SELECTOR, "li.pagination_btn_other.pagination_btn_last > a.btn.pagination_btn_all")))
+                driver.execute_script("arguments[0].scrollIntoView();", last)
+                driver.execute_script("arguments[0].click();", last)
+                offset = int(driver.current_url[-1])
+            except:
+                buttons = driver.find_elements_by_class_name("pagination_btn_all")
+                offset = int(buttons[-2].text)
+            # print(offset)
+
+            # Scrape all reviews
+            reviews_complete = []
+            for page_no in range(1, offset + 1):
+                url_per_page = f'{url}?page={page_no}'
+                url_content = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
+                soup = bs(url_content, 'html.parser')
+                main_divs = soup.find_all('div', class_='review-card')
+                all_reviews = []
+                for div in main_divs:
+                    div_child = div.find_all('div', class_='category-wrapper')
+                    full_review = []
+                    for review_div in div_child:
+                        review_text_div = review_div.find('div', class_='review-text-wrapper')
+                        full_review.append(review_text_div.text)
+                    all_reviews.append("".join(full_review))
+                reviews_complete.extend(all_reviews)
+
+                for review in reviews_complete:
+                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.GET_MY_UNI.value)
         except:
-            buttons = driver.find_elements_by_class_name("pagination_btn_all")
-            offset = int(buttons[-2].text)
-        # print(offset)
-
-        # Scrape all reviews
-        reviews_complete = []
-        for page_no in range(1, offset + 1):
-            url_per_page = f'{url}?page={page_no}'
-            url_content = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
-            soup = bs(url_content, 'html.parser')
-            main_divs = soup.find_all('div', class_='review-card')
-            all_reviews = []
-            for div in main_divs:
-                div_child = div.find_all('div', class_='category-wrapper')
-                full_review = []
-                for review_div in div_child:
-                    review_text_div = review_div.find('div', class_='review-text-wrapper')
-                    full_review.append(review_text_div.text)
-                all_reviews.append("".join(full_review))
-            reviews_complete.extend(all_reviews)
-
-            for review in reviews_complete:
-                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.GET_MY_UNI.value)
+            pass
 
 # College Search Scraper
     def collegesearch(self,url: str, college: College):
-        url_request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
-        soup = bs(url_request, 'html.parser')
-        review_divs = soup.find_all('div', class_='row indi-review')
-        reviews_all = []
-        for review_block in review_divs:
-            review_raw = []
-            review_desc = review_block.descendants
-            for d in review_desc:
-                if d.name == 'div' and d.get('class', [''])[0] == 'media-body':
-                    for child in d.children:
-                        if isinstance(child, NavigableString) and not isinstance(child, Comment):
-                            review_raw.append(child.strip())
-            reviews_all.append(' '.join(list(filter(lambda x: x != '', review_raw))))
+        try:
+            url_request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
+            soup = bs(url_request, 'html.parser')
+            review_divs = soup.find_all('div', class_='row indi-review')
+            reviews_all = []
+            for review_block in review_divs:
+                review_raw = []
+                review_desc = review_block.descendants
+                for d in review_desc:
+                    if d.name == 'div' and d.get('class', [''])[0] == 'media-body':
+                        for child in d.children:
+                            if isinstance(child, NavigableString) and not isinstance(child, Comment):
+                                review_raw.append(child.strip())
+                reviews_all.append(' '.join(list(filter(lambda x: x != '', review_raw))))
 
-        # Create the dataset
-        for review in reviews_all:
-            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_SEARCH.value)
+            # Create the dataset
+            for review in reviews_all:
+                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_SEARCH.value)
+        except:
+            pass
 
 # Shiksha Scraper
     def shiksha(self,url: str, college: College):
         # Initialization
         driver = webdriver.Chrome("/usr/local/bin/chromedriver")
-        driver.get(url)
-        wait = WebDriverWait(driver, 5)
+        try:
+            driver.get(url)
+            wait = WebDriverWait(driver, 5)
 
-        # Scraping
-        loader_classname = 'inf-pgntn'
-        while True:
-            try:
-                loadmore = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".button.button--secondary")))
-                driver.execute_script("arguments[0].scrollIntoView();", loadmore)
-                driver.execute_script("arguments[0].click();", loadmore)
-                wait.until(EC.staleness_of(loadmore))
-            except Exception:
-                break
+            # Scraping
+            loader_classname = 'inf-pgntn'
+            while True:
+                try:
+                    loadmore = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".button.button--secondary")))
+                    driver.execute_script("arguments[0].scrollIntoView();", loadmore)
+                    driver.execute_script("arguments[0].click();", loadmore)
+                    wait.until(EC.staleness_of(loadmore))
+                except Exception:
+                    break
 
-        reviews_list = []
-        reviews_element = driver.find_elements_by_class_name('desc-sp')
-        for review in reviews_element:
-            reviews_list.append(review.text)
-        for review in reviews_list:
-            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.SHIKSHA.value)
-
+            reviews_list = []
+            reviews_element = driver.find_elements_by_class_name('desc-sp')
+            for review in reviews_element:
+                reviews_list.append(review.text)
+            for review in reviews_list:
+                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.SHIKSHA.value)
+        except:
+            pass
 
 # Career360 Scraper
     def career360(self,url: str, college: College):
@@ -130,35 +139,41 @@ class Scraper:
                     filter(re.compile(regex_pattern).search, list(map(lambda y: str(y), revs)))))))
                 reviews_per_user.append(revs_filtered)
         else:
-            for offset_no in range(1, int(offset) + 1):
-                for sub_card in cards:
-                    child1 = sub_card.find('div', class_='cardBlkInn')
-                    child2 = child1.find('div', class_='ratingOuter')
-                    revs = child2.find_all('div')
-                    regex_pattern = r'<div>(.*?)</div>'
-                    revs_filtered = " ".join(list(map(lambda text: re.findall(regex_pattern, text)[0], list(
-                        filter(re.compile(regex_pattern).search, list(map(lambda y: str(y), revs)))))))
-                    reviews_per_user.append(revs_filtered)
+            try:
+                for offset_no in range(1, int(offset) + 1):
+                    for sub_card in cards:
+                        child1 = sub_card.find('div', class_='cardBlkInn')
+                        child2 = child1.find('div', class_='ratingOuter')
+                        revs = child2.find_all('div')
+                        regex_pattern = r'<div>(.*?)</div>'
+                        revs_filtered = " ".join(list(map(lambda text: re.findall(regex_pattern, text)[0], list(
+                            filter(re.compile(regex_pattern).search, list(map(lambda y: str(y), revs)))))))
+                        reviews_per_user.append(revs_filtered)
+            except:
+                pass
         for review in reviews_per_user:
             Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.CAREER360.value)
 
 # Google Reviews Scraper
     def google(self,url: str,college: College):
-        return []
+        pass
 
 # collegedunia Reviews Scraper
     def collegedunia(self,url: str, college: College):
         # Automating the fetching of offset(no. of review pages)
-        offset_request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
-        soup = bs(offset_request, 'html.parser')
+        try:
+            offset_request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'}).text
+            soup = bs(offset_request, 'html.parser')
 
-        college_name_raw = soup.select('h1', class_="college_name")[0].text
-        college_name = college_name_raw.replace(' - Reviews', '')
+            college_name_raw = soup.select('h1', class_="college_name")[0].text
+            college_name = college_name_raw.replace(' - Reviews', '')
 
-        reviews = soup.find_all('p', class_='jsx-2209713675 m-0 review-content d-inline')
+            reviews = soup.find_all('p', class_='jsx-2209713675 m-0 review-content d-inline')
 
-        for review in reviews:
-            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_DUNIA.value)
+            for review in reviews:
+                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_DUNIA.value)
+        except:
+            pass
 
 # Identifying the website
     def identify_and_trigger(self,url: str , college: College):
