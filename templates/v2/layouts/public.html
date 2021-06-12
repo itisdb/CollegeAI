@@ -76,6 +76,39 @@
           <h6 class="sub-header-03">Company</h6><a class="label-01" href="{% url 'about' %}">About Us</a><a class="label-01" href="{% url 'contact' %}">Contact Us</a><a class="label-01" href="{% url 'career' %}">Career</a><a class="label-01" href="{% url 'advertising' %}">Advertising</a><a class="label-01" href="{% url 'terms' %}">Terms &amp; Conditions</a><a class="label-01" href="{% url 'privacy' %}">Privacy Policy</a>
         </div>
       </div>
+      <div class="footer-links-mob">
+        <div class = "dropdown">
+          <h5 class ="dropbtn" onclick="topcityFunction()">Top Cities</h5>
+          <div id="top_city" class="dropdown-content">
+            <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-kolkata/">Best Engineering Colleges in Kolkata</a>
+            <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-bangalore/">Best Engineering Colleges in Bangalore</a>
+            <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-delhi/">Best Engineering Colleges in Delhi</a>
+            <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-mumbai/">Best Engineering Colleges in Mumbai</a>
+            <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-chennai/">Best Engineering Colleges in Chennai</a>
+            <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-jaipur/">Best Engineering Colleges in Jaipur</a>
+            <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-bhubaneswar/">Best Engineering Colleges in Bhubaneswar</a>  
+        </div>
+        </div>
+        <div class = "dropdown">
+          <h5 class ="dropbtn" onclick="topstateFunction()">Top States </h5>
+          <div id="top_state" class="dropdown-content">
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-west-bengal/">Best Engineering Colleges in West Bengal</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-karnataka/">Best Engineering Colleges in Karnataka</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-maharashtra/">Best Engineering Colleges in Maharashtra</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-tamil-nadu/">Best Engineering Colleges in Tamil Nadu</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-rajasthan/">Best Engineering Colleges in Rajasthan</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-odisha/">Best Engineering Colleges in Odisha</a>
+          <a class="label-01" href="https://www.mycollegeai.com/college/best-engineering-colleges-in-gujarat/">Best Engineering Colleges in Gujarat</a>
+        </div>
+        </div>
+        <div class = "dropdown">
+          <h5 class ="dropbtn" onclick="companyFunction()">Company </h5>
+          <div id="company" class="dropdown-content">
+            <a class="label-01" href="{% url 'about' %}">About Us</a><a class="label-01" href="{% url 'contact' %}">Contact Us</a><a class="label-01" href="{% url 'career' %}">Career</a><a class="label-01" href="{% url 'advertising' %}">Advertising</a><a class="label-01" href="{% url 'terms' %}">Terms &amp; Conditions</a><a class="label-01" href="{% url 'privacy' %}">Privacy Policy</a>
+          </div>
+        </div>
+
+      </div>
       <div class="footer-brand"><img class="footer-brand_img" src="{% static 'images/logo1.png' %}" alt="MyCollegeAI Logo White">
         <div class="footer-brand_social-icons">
           <a class="social-icon" href="https://www.youtube.com/channel/UC8od0bvxeRBYA61pb_st_Mg" target="_blank">
@@ -159,5 +192,6 @@
     </div>
   </footer>
   <script async src="{% static 'js/all.js' %}"></script>
+  <script async src="{% static 'js/foote.js' %}"></script>
   {% block add_js %}{% endblock %}
 </body>
