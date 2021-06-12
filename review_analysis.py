@@ -20,43 +20,15 @@ sid = SentimentIntensityAnalyzer()
 
 
 from reviews.models import Review
+from obito.constants import academics, placements, infrastructure
 
-# Making list of words for tagging
-
-academics = ['professors','professor','library','libraries','labs','lab','curriculum', 'education', 'teachers',
-             'educated','interact','teacher','practical','higher','studies','study','learn', 'subjects','society',
-             'information','researchers','lecture','tutorial','doctor','project','mentors','academics','assignment',
-             'assessments','course','instructor','motivate','scholars','scholarships','quizzes','discussions',
-             'practicals', 'knowledge', 'learning', 'faculty', 'societies', 'technical', 'subject', 'faculties',
-            'informed', 'doctors', 'phd', 'research','laboratories','lectures','tutorials','lecturer','seminars',
-            'classes','study','books','prestigious','projects','class','lecture','mentor', 'math','physics','chemistry',
-            'supervision','academic','development','assessment','assignments','courses','intelligent','instructors',
-            'learned','interactive','motivating','scholar','scholarship','quiz','discussion','syllabus']
-
-
-placements = ['jobs',"ctc",'placement','companies','internships','google','microsoft','cisco','facebook','banks','career',
-              'interviews','consulting','amazon','tcs','wipro','apple','netflix','paytm','dell','goldman','bain',
-              'ey','mnc','infosys','hcl','mahindra','adobe','samsung','morgan','stanley','deutsche','bcg','twitter',
-              'sony','ibm','itc','qualcomm','hsbc','tata','walmart','flipkart','intel','training','prep',
-              'mckinsey','kearney','accenture','deloitte','kpmg','software','developer','package','packages',
-              'salary','salries','opportunities','recruit','hire','placed','offer','international','CV','resume',
-             'job','placements','company','internship','bank','careers','interview','opportunity','recruiting']
-
-
-infrastructure = ['cafeteria','building','sports','hostel','wifi','internet','mess','classrooms','halls','playground',
-                 'field','labs','library','canteen','cafe','shops','stores','environment','resources','facilities',
-                 'campus','accommodation','room','clubs','theatre','societies','society','bedroom','bathroom',
-                 'trees','green','ventilated','spacious','furniture','electricity','assembly','sanitation','equipped',
-                 'auditorium','games','gym','swimming','skating','courts','tennis','basketball','cricket',
-                 'volleyball','multimedia','equipment','connectivity','printer','projector','sport','classroom',
-                 'connectivity','cities','city','hall','field','lab','laboratories','rooms','club','facility','game']
 
 # Making the class for review sentiment analysis
 
 class Analysis:
 
     def __init__(self):
-        self.r = Review.objects.all()
+        self.reviews = Review.objects.all()
 
     def invoke(self):
         df = pd.DataFrame()
@@ -65,7 +37,7 @@ class Analysis:
         p_positive, p_negative,p_neutral,p_score = [],[],[],[]
         i_positive, i_negative,i_neutral,i_score = [],[],[],[]
 
-        for s in self.r:
+        for s in self.reviews:
 #            self.lowercase(s)
 #            self.sanitization(s)
             reviews = self.splitting(s)
@@ -210,54 +182,11 @@ class Analysis:
                     break
         return i_list
 
-
 x = Analysis()
 x.invoke()
 
-
-'''        
-
-    def tagging(self,reviews):
-        a = []
-        p = []
-        i = []
-
-        for l in reviews:
-            for word in academics:
-                if (l.find(word) != -1):
-                    a.append(l)
-                    break
-
-        for l in reviews:
-            for word in placements:
-                if (l.find(word) != -1):
-                    p.append(l)
-                    break
-
-        for l in reviews:
-            for word in infrastructure:
-                if (l.find(word) != -1):
-                    i.append(l)
-                    break
-        a = pd.DataFrame(a)
-        p = pd.DataFrame(p)
-        i = pd.DataFrame(i)
-
-        a['label'] = 'academic'
-        p['label'] = 'placements'
-        i['label'] = 'infrastructure'
-
-        df = pd.concat([a, p, i])
-
-        return df
-
-    def analysis(self,df):
-        df.rename(columns={0: 'reviews'}, inplace=True)
-        df['scores'] = df['reviews'].apply(lambda reviews: sid.polarity_scores(reviews))
-        df['pos'] = df['scores'].apply(lambda score_dict: score_dict['pos'])
-        df['neg'] = df['scores'].apply(lambda score_dict: score_dict['neg'])
-        df['neu'] = df['scores'].apply(lambda score_dict: score_dict['neu'])
-        df['compound'] = df['scores'].apply(lambda score_dict: score_dict['compound'])
-        return df
+'''  
+x = Analysis()
+x.invoke()
 
 '''
