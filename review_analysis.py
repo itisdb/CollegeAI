@@ -31,11 +31,6 @@ class Analysis:
         self.reviews = Review.objects.all()
 
     def invoke(self):
-        df = pd.DataFrame()
-        review = []
-        a_positive, a_negative,a_neutral,a_score = [],[],[],[]
-        p_positive, p_negative,p_neutral,p_score = [],[],[],[]
-        i_positive, i_negative,i_neutral,i_score = [],[],[],[]
 
         for s in self.reviews:
 #            self.lowercase(s)
@@ -47,46 +42,29 @@ class Analysis:
             i_list = self.infrastructure(reviews)
 
             if(len(reviews)>0):
-                review.append(s.comment)
+                # review.append(s.comment)
 
                 if (len(a_list)>0):
-                    pos,neg,neu,compound = self.a_analysis(a_list)
+                    a_pos,a_neg,a_neu,a_compound = self.a_analysis(a_list)
                 else:
-                    pos, neg, neu, compound = 0,0,0,0
-
-                a_positive.append(pos)
-                a_negative.append(neg)
-                a_neutral.append(neu)
-                a_score.append(compound)
+                    a_pos, a_neg, a_neu, a_compound = 0,0,0,0
 
                 if (len(p_list) > 0):
-                    pos, neg, neu, compound = self.p_analysis(p_list)
+                    p_pos, p_neg, p_neu, p_compound = self.p_analysis(p_list)
                 else:
-                    pos, neg, neu, compound = 0, 0, 0, 0
-
-                p_positive.append(pos)
-                p_negative.append(neg)
-                p_neutral.append(neu)
-                p_score.append(compound)
+                    p_pos, p_neg, p_neu, p_compound = 0, 0, 0, 0
 
                 if (len(i_list) > 0):
-                    pos, neg, neu, compound = self.i_analysis(i_list)
+                    i_pos, i_neg, i_neu, i_compound = self.i_analysis(i_list)
                 else:
-                    pos, neg, neu, compound = 0, 0, 0, 0
+                    i_pos, i_neg, i_neu, i_compound = 0, 0, 0, 0
 
-                i_positive.append(pos)
-                i_negative.append(neg)
-                i_neutral.append(neu)
-                i_score.append(compound)
+                quadrant = [{"metric": "PLACEMENT", "negative": p_neg, "positive": p_pos, "neutral": p_neu},
+                            {"metric": "ACADEMICS", "negative": a_neg, "positive": a_pos, "neutral": a_neu},
+                            {"metric": "INFRASTRUCTURE", "negative": i_neg, "positive": i_pos, "neutral": i_neu}]
 
-        dict = {"Review":review, " Academic Positive": a_positive, " Academic Negative":a_negative,
-                "Academic Neutral":a_neutral, "Academic Score":a_score , " Placements Positive": p_positive,
-                " Placements Negative":p_negative,"Placements Neutral":p_neutral, "Placements Score":p_score,
-                " Infrastructure Positive": i_positive, " Infrastructure Negative":i_negative,
-                "Infrastructure Neutral":i_neutral, "Infrastructure Score":i_score}
-
-        df = pd.DataFrame(dict)
-        df.to_csv("scores.csv")
+                s.quadrants = quadrant
+                #s.save()
 
 
     def lowercase(self,s):
@@ -184,9 +162,3 @@ class Analysis:
 
 x = Analysis()
 x.invoke()
-
-'''  
-x = Analysis()
-x.invoke()
-
-'''
