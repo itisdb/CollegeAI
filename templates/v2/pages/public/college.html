@@ -83,7 +83,13 @@
                 <p class="paragraph-01">{{ college.established_year }}</p>
               </div>
               <div class="quick-facts_content-item"><span class="label-01">Affiliated</span>
-                <p class="paragraph-01">{{ college.affiliated }}</p>
+                <p class="paragraph-01">
+                    {% if college.affiliated %}
+                        {{ college.affiliated }}
+                    {% else %}
+                        --
+                    {% endif %}
+                </p>
               </div>
               <div class="quick-facts_content-item"><span class="label-01">Accepted Exams</span>
                 <p class="paragraph-01">{{ college.entrance_exams }}</p>
