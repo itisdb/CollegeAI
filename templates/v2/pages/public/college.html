@@ -158,10 +158,11 @@
                 </div>
                 <button class="icon-link main-content-card-button">
                   <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
-                    <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                    <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.gi2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
                   </svg><span class="link-primary_lined">Read Less</span>
                 </button>
               </div>
+            {% if college.admission_procedure %}
               <div class="main-content-card">
                 <h4 class="sub-header-01 main-content-card-header">Admission Procedure</h4>
                 <div class="main-content-card-content">
@@ -173,6 +174,7 @@
                   </svg><span class="link-primary_lined">Read More</span>
                 </button>
               </div>
+            {% endif %}
               <div class="main-content-cta">
                 <h5 class="sub-header-02">Interested in this College?</h5>
                   <a href="{% url 'college:bookmark' college.slug %}">
