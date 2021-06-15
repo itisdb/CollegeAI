@@ -1,6 +1,7 @@
 {% extends 'v2/layouts/public.html' %}
 {% load static %}
 {% block title %} {{ college.meta_title }} {% endblock %}
+{% block description %} {{ college.meta }} {% endblock %}
 {% block meta_title %} {{ college.meta_title }} {% endblock %}
 {% block meta_description %} {{ college.meta }} {% endblock %}
 {% block meta_keywords %}
@@ -15,7 +16,7 @@
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
       <li class="link-01"> <a href="/college/list">Colleges</a></li>
-      <li class="link-01">{{ college.abbreviated_name }}</li>
+      <li class="link-01"><a href="college:{{ college.slug }}">{{ college.abbreviated_name }}</a> </li>
     </ul>
     <div class="header-primary-info">
       <div class="logo"><img src="{{ college.logo.url }}" alt="College Logo"></div>
