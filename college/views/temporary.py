@@ -25,7 +25,7 @@ class topCollegesView(View):
     def get(self, request, college):
         college = college.replace('-',' ')
         colleges = College.objects.filter(
-            Q(meta_keywords__icontains = college)
+            Q(meta_keywords__1__iexact = college)
         ).order_by('created_at')
         context = {
             'colleges': colleges,
