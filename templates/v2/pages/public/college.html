@@ -167,7 +167,9 @@
               <div class="main-content-card">
                 <h4 class="sub-header-01 main-content-card-header">Admission Procedure</h4>
                 <div class="main-content-card-content">
-                  <p>{{ college.admission_procedure }}</p>
+                  {% for admission_procedure in admission_procedures %}
+                    <p>{{ admission_procedure }}</p><br>
+                  {% endfor %}
                 </div>
                 <button class="icon-link main-content-card-button">
                   <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

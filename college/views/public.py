@@ -51,6 +51,11 @@ class IndividualCollegeView(DetailView):
             degrees.append(degree_tuple)
 
         context['degrees'] = degrees
+        context['admission_procedures'] = (
+            self.object.admission_procedure.split('-')
+            if self.object.admission_procedure
+            else None
+        )
         return context
 
     def post(self, request, *args, **kwargs):
