@@ -16,7 +16,7 @@
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
       <li class="link-01"> <a href="/college/list">Colleges</a></li>
-      <li class="link-01"><a href="college:{{ college.slug }}">{{ college.abbreviated_name }}</a> </li>
+      <li class="link-01"><a href="{% url 'college:individual' college.slug%}">{{ college.abbreviated_name }}</a> </li>
     </ul>
     <div class="header-primary-info">
       <div class="logo"><img src="{{ college.logo.url }}" alt="College Logo"></div>
