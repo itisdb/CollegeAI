@@ -11,7 +11,7 @@
 {% block hero_title %}
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
-      <li class="link-01"><a href="/college/list-of-all-{{college}}-Universities-in-India">List of {{ college}} Universities in India</a> </li>
+      <li class="link-01"><a href="/college/list-of-all-{{college|lower}}-universities-in-India">List of {{ college|upper}} Universities in India</a> </li>
     </ul>
     <h3 class="header-03">Check Out the Top Colleges</h3>
     <div class="search-bar_small">
