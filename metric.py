@@ -63,40 +63,15 @@ class Metric:
         return metric
 
     def points(self,metric):
-        if (metric[0]['compound'] < 0.2):
-            p_points = 1
-        elif (metric[0]['compound'] >= 0.2 and metric[0]['compound'] < 0.4):
-            p_points = 2
-        elif (metric[0]['compound'] >= 0.4 and metric[0]['compound'] < 0.6):
-            p_points = 3
-        elif (metric[0]['compound'] >= 0.6 and metric[0]['compound'] < 0.8):
-            p_points = 4
-        else:
-            p_points = 5
-
-        if (metric[1]['compound'] < 0.2):
-            a_points = 1
-        elif (metric[1]['compound'] >= 0.2 and metric[1]['compound'] < 0.4):
-            a_points = 2
-        elif (metric[1]['compound'] >= 0.4 and metric[1]['compound'] < 0.6):
-            a_points = 3
-        elif (metric[1]['compound'] >= 0.6 and metric[1]['compound'] < 0.8):
-            a_points = 4
-        else:
-            a_points = 5
-
-        if (metric[2]['compound'] < 0.2):
-            i_points = 1
-        elif (metric[2]['compound'] >= 0.2 and metric[2]['compound'] < 0.4):
-            i_points = 2
-        elif (metric[2]['compound'] >= 0.4 and metric[2]['compound'] < 0.6):
-            i_points = 3
-        elif (metric[2]['compound'] >= 0.6 and metric[2]['compound'] < 0.8):
-            i_points = 4
-        else:
-            i_points = 5
+        p_points = round((metric[0]['compound'])*5,1)
+        a_points = round((metric[1]['compound']) * 5,1)
+        i_points = round((metric[2]['compound']) * 5,1)
 
         return p_points, a_points, i_points
+
+college = College.objects.all().first()
+z = Metric(college)
+z.invoke()
 
 '''
 college = College.objects.all().first()
