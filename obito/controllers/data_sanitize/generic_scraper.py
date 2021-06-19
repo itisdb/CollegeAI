@@ -10,6 +10,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from college.models import College
 from reviews.models import Review
 
+all_reviews = Review.objects.all()
+
 # Generic Scraper Class
 
 class Scraper:
@@ -18,12 +20,11 @@ class Scraper:
         self.url = url
         self.colleges = College.objects.all()
 
-    def invoke(self):
-        for college in self.colleges:
-            urls = college.scraping_urls
-            if urls is not None:
-                for url in urls:
-                    self.identify_and_trigger(url, college)
+    def invoke(self, college):
+        urls = college.scraping_urls
+        if urls is not None:
+            for url in urls:
+                self.identify_and_trigger(url, college)
 
 # getmyuni Scraper
     def getmyuni(self, url: str, college: College):
@@ -60,7 +61,9 @@ class Scraper:
                 reviews_complete.extend(all_reviews)
 
                 for review in reviews_complete:
-                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.GET_MY_UNI.value)
+                    filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review, str) else review).exists()
+                    if (not filter):
+                        Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.GET_MY_UNI.value)
         except:
             pass
 
@@ -83,7 +86,9 @@ class Scraper:
 
             # Create the dataset
             for review in reviews_all:
-                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_SEARCH.value)
+                filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review,str) else review).exists()
+                if (not filter):
+                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_SEARCH.value)
         except:
             pass
 
@@ -111,7 +116,9 @@ class Scraper:
             for review in reviews_element:
                 reviews_list.append(review.text)
             for review in reviews_list:
-                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.SHIKSHA.value)
+                filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review,str) else review).exists()
+                if (not filter):
+                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.SHIKSHA.value)
         except:
             pass
 
@@ -152,7 +159,9 @@ class Scraper:
             except:
                 pass
         for review in reviews_per_user:
-            Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.CAREER360.value)
+            filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review,str) else review).exists()
+            if (not filter):
+                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.CAREER360.value)
 
 # Google Reviews Scraper
     def google(self,url: str,college: College):
@@ -171,7 +180,9 @@ class Scraper:
             reviews = soup.find_all('p', class_='jsx-2209713675 m-0 review-content d-inline')
 
             for review in reviews:
-                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_DUNIA.value)
+                filter = all_reviews.filter(comment = (review.contents[0] if not isinstance(review,str) else review)).exists()
+                if (not filter):
+                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_DUNIA.value)
         except:
             pass
 
