@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'profiles',
     'reviews',
     'tracker',
+    'exams',
 ]
 
 MIDDLEWARE = [
