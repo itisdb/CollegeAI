@@ -1,38 +1,32 @@
 {% extends 'v2/layouts/public.html' %}
 {% load static %}
-{% block title %}List of all {{ college| title}} Colleges in India - Placements, Admission, Fees, Ranking{% endblock %}
-{% block description %}  Check out list of all {{ college|title}} Colleges in India by Fees, Ranking, Admission and Placement.{% endblock %}
-{% block meta_title %}List of {{ college| title}} Colleges in India - Placements, Admission, Fees, Ranking{% endblock %}
-{% block meta_description %} Check out list of all {{ college|title }} Colleges in India by Fees, Ranking, Admission and Placement. {% endblock %}
-{% block meta_keywords %} college, ai, mycollegeai, india, students, academics, placement, {{ college }} {% endblock %}
 {% block page_name %}
-    <li class="breadcrumb-item active">Colleges</li>
+    <li class="breadcrumb-item active">Exams</li>
 {% endblock %}
 {% block hero_title %}
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
-      <li class="link-01"><a href="/college/list-of-all-{{college|lower}}-colleges-in-India">List of {{ college|upper}} Colleges in India</a> </li>
+      <li class="link-01"><a href="/exam/list"> Exams</a></li>
     </ul>
-    <h3 class="header-03">Check Out the Top Colleges</h3>
+    <h3 class="header-03">Check Out the Top Exams</h3>
     <div class="search-bar_small">
       <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0)">
           <path d="M23.7901 22.3016L17.9577 16.5907C19.5222 14.8295 20.4694 12.5316 20.4694 10.0201C20.4694 4.49157 15.877 0 10.2362 0C4.59007 0 0.00292969 4.49678 0.00292969 10.0201C0.00292969 15.5433 4.59539 20.0401 10.2362 20.0401C12.8012 20.0401 15.1479 19.1126 16.9466 17.5807L22.779 23.2916C22.9173 23.4271 23.1036 23.5 23.2845 23.5C23.4655 23.5 23.6517 23.4323 23.7901 23.2916C24.0668 23.0206 24.0668 22.5725 23.7901 22.3016ZM1.43442 10.0201C1.43442 5.26796 5.38297 1.40687 10.2309 1.40687C15.0841 1.40687 19.0273 5.27317 19.0273 10.0201C19.0273 14.767 15.0841 18.6385 10.2309 18.6385C5.38297 18.6385 1.43442 14.7722 1.43442 10.0201Z"></path>
         </g>
       </svg>
-      <h6 class="label-02">Search Colleges</h6>
+      <h6 class="label-02">Search Exams</h6>
     </div>
 {% endblock %}
-
 {% block content %}
 <section id="cards-section">
 <div class="container">
   <div class="cards-group">
-    {% for college in colleges %}
+    {% for exam in exams %}
     <div class="card_college">
-      <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"></div>
-      <div class="card_college-details"><a class="sub-header-02" href="/college/{{ college.slug}}">{{ college.abbreviated_name }}</a>
-        <div class="card_college-details_secondary"><span class="label-01">{{ college.city}}</span><span class="label-01">{{ college.get_ownership_display }}</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Apply Now</a>
+      <!-- <div class="card_college-img"><img src="{{ exam.image.url }}" alt="College Logo"></div> -->
+      <div class="card_college-details"><a class="sub-header-02" href="/exam/{{exam.slug}}">{{ exam.abbreviated_name }}</a>
+        <div class="card_college-details_secondary"><span class="label-01">{{ exam.conducting_body }}</span><span class="label-01">{{ exam.exam_level }}</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Apply Now</a>
       </div>
     </div>
     {% endfor %}
@@ -42,7 +36,7 @@
         <br>
         <div class="btn-group btn-toolbar" style="margin: 5px">
             {% if page_obj.has_previous %}
-              <a href="{% url 'college:list' %}?page={{ page_obj.previous_page_number }}">
+              <a href="{% url 'exam:list' %}?page={{ page_obj.previous_page_number }}">
                   <button aria-label="" type="button" class="btn button-outline">
                     <div class="p-t-5 p-b-5">
                       <div class="fs-11 font-montserrat text-uppercase">Previous</div>
@@ -51,7 +45,7 @@
               </a>
             {% endif %}
             {% if page_obj.has_next %}
-              <a href="{% url 'college:list' %}?page={{ page_obj.next_page_number }}">
+              <a href="{% url 'exam:list' %}?page={{ page_obj.next_page_number }}">
                   <button aria-label="" type="button" class="btn button-outline">
                     <div class="p-t-5 p-b-5">
                       <div class="fs-11 font-montserrat text-uppercase">Next</div>

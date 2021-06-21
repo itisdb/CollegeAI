@@ -28,6 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', base_views.home, name='home'),
     path('college/', include(('college.urls', 'college'), namespace='college')),
+    path('exam/', include(('exam.urls', 'exam'), namespace='exam')),
     path('profile/', include(('profiles.urls', 'profile'), namespace='profile')),
     path('login/', LoginView.as_view(), name='login'),
     path('accounts/', include('allauth.urls')),
