@@ -6,9 +6,6 @@ from django.db.models import Q
 from exam.models import Exam
 
 
-
-
-
 class IndividualExamView(DetailView):
     model = Exam
     context_object_name = 'exam'
