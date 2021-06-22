@@ -1,0 +1,98 @@
+{% extends 'v2/layouts/public.html' %}
+{% load static %}
+{% block title %} {{ exam.meta_title }} {% endblock %}
+{% block description %} {{ exam.meta }} {% endblock %}
+{% block meta_title %} {{ exam.meta_title }} {% endblock %}
+{% block meta_description %} {{ exam.meta }} {% endblock %}
+{% block page_name %}
+    <li class="breadcrumb-item active">Exams</li>
+    <li class="breadcrumb-item active">{{ exam.full_name }}</li>
+{% endblock %}
+
+{% block hero_title %}
+  <div class="container">
+    <ul class="breadcrumb">
+      <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
+      <li class="link-01"> <a href="/exam/list">Exams</a></li>
+      <li class="link-01"><a href="{% url 'exam:individual' exam.slug%}">{{ exam.abbreviated_name }}</a> </li>
+    </ul>
+    <div class="header-primary-info">
+      <!-- <div class="logo"><img src="{{ college.logo.url }}" alt="College Logo"></div> -->
+      <h3 class="header-03" style="margin: 0%;">{{ exam.full_name }}</h3><span class="label-01" style="color: white;">
+        <svg class="icon" style="color: white;" width="25" height="24" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path d="M12.0781 0C6.77499 0 2.45801 4.23233 2.45801 9.4315C2.45801 10.0234 2.51335 10.6203 2.62908 11.2024C2.63411 11.2369 2.65423 11.3405 2.69449 11.5181C2.8404 12.1544 3.05675 12.7809 3.33851 13.3777C4.37499 15.7701 6.65423 19.4451 11.6555 23.3814C11.7813 23.4801 11.9322 23.5294 12.0832 23.5294C12.2341 23.5294 12.3851 23.4801 12.5108 23.3814C17.5071 19.4451 19.7913 15.7701 20.8278 13.3777C21.1096 12.7809 21.3259 12.1593 21.4718 11.5181C21.5121 11.3405 21.5322 11.2369 21.5373 11.2024C21.6479 10.6203 21.7083 10.0234 21.7083 9.4315C21.6983 4.23233 17.3813 0 12.0781 0ZM20.1888 10.9705C20.1888 10.9804 20.1838 10.9903 20.1838 11.0001C20.1788 11.0248 20.1637 11.0988 20.1385 11.2122C20.1385 11.2172 20.1385 11.2172 20.1385 11.2221C20.0127 11.7746 19.8266 12.3122 19.58 12.8302C19.575 12.8351 19.575 12.845 19.57 12.8499C18.6291 15.0351 16.5662 18.3697 12.0781 22.0052C7.59008 18.3697 5.52719 15.0351 4.58631 12.8499C4.58128 12.845 4.58128 12.8351 4.57625 12.8302C4.33474 12.3172 4.14857 11.7746 4.01776 11.2221C4.01776 11.2172 4.01776 11.2172 4.01776 11.2122C3.98757 11.0988 3.9775 11.0248 3.97247 11.0001C3.97247 10.9903 3.96744 10.9804 3.96744 10.9656C3.86681 10.4575 3.8165 9.94451 3.8165 9.42656C3.8165 4.96239 7.52467 1.32692 12.0781 1.32692C16.6316 1.32692 20.3398 4.96239 20.3398 9.42656C20.3398 9.94944 20.2895 10.4674 20.1888 10.9705Z"></path>
+            <path d="M12.0779 3.54675C8.71186 3.54675 5.96973 6.23512 5.96973 9.53516C5.96973 12.8352 8.71186 15.5236 12.0779 15.5236C15.4439 15.5236 18.1861 12.8352 18.1861 9.53516C18.1861 6.23512 15.4439 3.54675 12.0779 3.54675ZM12.0779 14.1917C9.45652 14.1917 7.32822 12.1002 7.32822 9.53516C7.32822 6.97011 9.46155 4.87861 12.0779 4.87861C14.6943 4.87861 16.8276 6.97011 16.8276 9.53516C16.8276 12.1002 14.6993 14.1917 12.0779 14.1917Z"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path d="M0.0830078 0H24.083V23.5294H0.0830078V0Z"></path>
+            </clipPath>
+          </defs>
+        </svg>{{exam.full_name}}</span>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+<section id = "individual-page-content">
+    <div class="container">
+      <div class="main-content">
+        <div class="main-content-card quick-facts">
+          <h4 class="sub-header-01 quick-facts_header">Quick Facts</h4>
+          <div class="quick-facts_content">
+            <div class="quick-facts_content-item"><span class="label-01">Exam Level</span>
+              <p class="paragraph-01">{{ exam.exam_level }}</p>
+            </div>
+            <div class="quick-facts_content-item"><span class="label-01">Conducting Body</span>
+              <p class="paragraph-01">{{ exam.conducting_body }}</p>
+            </div>
+            <div class="quick-facts_content-item"><span class="label-01">Official Website</span>
+              <p class="paragraph-01">{{ exam.website }}</p>
+            </div>
+            <div class="quick-facts_content-item"><span class="label-01">Tentative Date</span>
+              <p class="paragraph-01">{{ exam.tentative_date}}
+              </p>
+            </div>
+            <div class="quick-facts_content-item"><span class="label-01">Basic Eligibility</span>
+              <p class="paragraph-01">{{ exam.basic_eligibility }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="main-content-card">
+            <h5 class="sub-header-02">About: </h5>
+            <div class="main-content-card-content">
+                <p class="paragraph-01"> {{ exam.about}}</p>
+            </div>
+                <button class="icon-link main-content-card-button">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                </svg><span class="link-primary_lined">Read More</span>
+              </button>
+          </div>
+          <div class="main-content-card">
+            <h5 class="sub-header-02">Eligibility: </h5>
+            <div class="main-content-card-content">
+                <p class="paragraph-01"> {{ exam.eligibility}}</p>
+            </div>
+                <button class="icon-link main-content-card-button">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                </svg><span class="link-primary_lined">Read More</span>
+              </button>
+          </div>
+          <div class="main-content-card">
+            <h5 class="sub-header-02">About: </h5>
+            <div class="main-content-card-content">
+                <p class="paragraph-01"> {{ exam.about}}</p>
+            </div>
+                <button class="icon-link main-content-card-button">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                </svg><span class="link-primary_lined">Read More</span>
+              </button>
+          </div>
+        </div>
+        </div>
+        </section>
+        {% endblock %}

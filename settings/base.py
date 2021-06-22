@@ -52,12 +52,12 @@ INSTALLED_APPS = [
 
     'base',
     'college',
+    'exam',
     'leads',
     'obito',
     'profiles',
     'reviews',
     'tracker',
-    'exams',
 ]
 
 MIDDLEWARE = [
