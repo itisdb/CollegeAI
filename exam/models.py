@@ -5,6 +5,14 @@ from django.utils.translation import TranslatorCommentWarning, gettext_lazy as _
 from base.models import BaseModel
 # Create your models here.
 
+class ExamGenres(BaseModel):
+
+    name = models.CharField(max_length=100, unique=True)
+    icon = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
 class Exam(BaseModel):
     full_name = models.CharField(null=True, max_length=255)
     abbreviated_name = models.CharField(null=True, max_length=50)
@@ -22,6 +30,8 @@ class Exam(BaseModel):
     application_form = models.TextField(null=True)
     slug = models.SlugField(null=True, blank=True, max_length=100)
     is_top = models.BooleanField(null=True, default=False)
+    tags = models.ManyToManyField(ExamGenres)
+
 
     def __str__(self):
         return '{}'.format(self.abbreviated_name)
