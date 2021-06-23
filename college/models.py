@@ -14,6 +14,13 @@ class CollegeFacilities(BaseModel):
     def __str__(self):
         return self.name
 
+# class CollegeGenres(BaseModel):
+
+#     name = models.CharField(max_length=100, unique=True)
+
+#     def __str__(self):
+#         return self.name
+
 
 class College(BaseModel):
     """Model for college."""
@@ -56,6 +63,7 @@ class College(BaseModel):
     address = models.CharField(max_length=300, null=True, blank=True)
     scraping_urls = models.JSONField(null=True, blank=True)
     facilities = models.ManyToManyField(CollegeFacilities)
+    # tags = models.ManyToManyField(CollegeGenres)
 
     def __str__(self):
         return '{}, {}'.format(self.abbreviated_name, self.city)

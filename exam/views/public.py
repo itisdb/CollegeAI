@@ -10,6 +10,22 @@ class IndividualExamView(DetailView):
     model = Exam
     context_object_name = 'exam'
     template_name = 'v2/pages/public/exam.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['eligibilities'] = (
+            self.object.eligibility.split('-')
+            if self.object.eligibility
+            else None
+        )
+        context['exam_patterns'] = (
+            self.object.exam_pattern.split('-')
+            if self.object.exam_pattern
+            else None
+        )
+        return context
+
+
         
 
 class ExamsView(ListView):

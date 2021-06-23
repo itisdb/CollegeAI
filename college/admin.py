@@ -9,7 +9,7 @@ class CollegeImageInline(admin.StackedInline):
 
 class CollegeAdmin(admin.ModelAdmin):
     inlines = [CollegeImageInline]
-    filter_horizontal = ('facilities', )
+    filter_horizontal = ('facilities',)
     model = College
 
 

@@ -8,7 +8,6 @@ from base.models import BaseModel
 class ExamGenres(BaseModel):
 
     name = models.CharField(max_length=100, unique=True)
-    icon = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name
@@ -24,10 +23,11 @@ class Exam(BaseModel):
     tentative_date = models.CharField(null=True, max_length=100)
     basic_eligibility = models.CharField(null=True, max_length=100)
     about = models.TextField(null=True)
-    important_detais = models.JSONField(null=True)
+    important_dates = models.JSONField(null=True)
     cutoff = models.JSONField(null = True)
+    syllabus = models.JSONField(null = True)
     eligibility = models.TextField(null=True)
-    application_form = models.TextField(null=True)
+    exam_pattern = models.TextField(null=True)
     slug = models.SlugField(null=True, blank=True, max_length=100)
     is_top = models.BooleanField(null=True, default=False)
     tags = models.ManyToManyField(ExamGenres)
