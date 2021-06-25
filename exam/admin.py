@@ -8,6 +8,6 @@ class ExamAdmin(admin.ModelAdmin):
     model = Exam
 
 
-admin.site.register(Exam)
+admin.site.register(Exam, ExamAdmin)
 admin.site.register(ExamGenres)
 

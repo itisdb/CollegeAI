@@ -140,22 +140,34 @@
               <div class="main-content-card">
                 <h4 class="sub-header-01 main-content-card-header">Streams Offered</h4>
                 <div class="main-content-card-content">
-                  {% for x,y in college.stream_degree.items %}
                   <table>
                     <thead>
                       <tr>
-                        <th>{{ x }}</th>
+                        <th>Degree</th>
+                        <th>Courses</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {% for y1 in y %}
+                  {% for x,y in college.stream_degree.items %}
                       <tr>
-                        <td>{{ y1 }}</td>
+                        <td>{{ x }}</td>
+                        <td>{{ y }}</td>
+                        <!-- {% if y %}
+                        <td>
+                          {% for y1 in y %}
+                          {{ y1 }} ,
+                          {% endfor %}
+                        </td>
+                        {% else %}
+                        <td>
+                          --
+                        </td>
+                        {% endif %} -->
                       </tr>
-                      {% endfor %}
+                  {% endfor %}
+
                     </tbody>
                   </table>
-                  {% endfor %}
                 </div>
                 <button class="icon-link main-content-card-button">
                   <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
