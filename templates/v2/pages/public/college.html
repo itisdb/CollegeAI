@@ -151,7 +151,8 @@
                   {% for x,y in college.stream_degree.items %}
                       <tr>
                         <td>{{ x }}</td>
-                        {% if y %}
+                        <td>{{ y }}</td>
+                        <!-- {% if y %}
                         <td>
                           {% for y1 in y %}
                           {{ y1 }} ,
@@ -161,7 +162,7 @@
                         <td>
                           --
                         </td>
-                        {% endif %}
+                        {% endif %} -->
                       </tr>
                   {% endfor %}
 
