@@ -536,7 +536,7 @@ table {
   
 th, td {
     text-align: left;
-    height: 100px;
+    /* height: 100px; */
     padding: 16px;
   }
 

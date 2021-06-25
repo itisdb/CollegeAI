@@ -1,28 +1,28 @@
 {% extends 'v2/layouts/public.html' %}
 {% load static %}
-{% block title %} {{ exam.meta_title }} {% endblock %}
-{% block description %} {{ exam.meta }} {% endblock %}
-{% block meta_title %} {{ exam.meta_title }} {% endblock %}
-{% block meta_description %} {{ exam.meta }} {% endblock %}
+{% block title %} {{ course.meta_title }} {% endblock %}
+{% block description %} {{ course.meta }} {% endblock %}
+{% block meta_title %} {{ course.meta_title }} {% endblock %}
+{% block meta_description %} {{ course.meta }} {% endblock %}
 {% block page_name %}
-    <li class="breadcrumb-item active">Exams</li>
-    <li class="breadcrumb-item active">{{ exam.full_name }}</li>
+    <li class="breadcrumb-item active">Courses</li>
+    <li class="breadcrumb-item active">{{ course.full_name }}</li>
 {% endblock %}
 
 {% block hero_title %}
   <div class="container">
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
-      <li class="link-01"> <a href="/exam/list">Exams</a></li>
-      <li class="link-01"><a href="{% url 'exam:individual' exam.slug%}">{{ exam.abbreviated_name }}</a> </li>
+      <li class="link-01"> <a href="/course/list">Courses</a></li>
+      <li class="link-01"><a href="{% url 'course:individual' course.slug%}">{{ course.abbreviated_name }}</a> </li>
     </ul>
     <div class="header-primary-info">
       <!-- <div class="logo"><img src="{{ college.logo.url }}" alt="College Logo"></div> -->
-      <h3 class="header-03" style="margin: 0%;">{{ exam.full_name }}</h3>
+      <h3 class="header-03" style="margin: 0%;">{{ course.full_name }}</h3>
+      <h3 class="header-03" style="margin: 0%;">{{ course.abbreviated_name }}</h3>
     </div>
   </div>
 {% endblock %}
-
 {% block content %}
 <section id = "individual-page-content">
     <div class="container">
@@ -30,41 +30,31 @@
         <div class="main-content-card quick-facts">
           <h4 class="sub-header-01 quick-facts_header">Quick Facts</h4>
           <div class="quick-facts_content">
-            <div class="quick-facts_content-item"><span class="label-01">Exam Level</span>
-              <p class="paragraph-01">{{ exam.exam_level }}</p>
+            <div class="quick-facts_content-item"><span class="label-01">Course Level</span>
+              <p class="paragraph-01">{{ course.level }}</p>
             </div>
-            <div class="quick-facts_content-item"><span class="label-01">Conducting Body</span>
-              <p class="paragraph-01">{{ exam.conducting_body }}</p>
+            <div class="quick-facts_content-item"><span class="label-01">Stream</span>
+              <p class="paragraph-01">{{ course.stream }}</p>
             </div>
-            <div class="quick-facts_content-item"><span class="label-01">Official Website</span>
-              <p class="paragraph-01">{{ exam.website }}</p>
+            <div class="quick-facts_content-item"><span class="label-01">Duration</span>
+              <p class="paragraph-01">{{ course.duration }}</p>
             </div>
-            <div class="quick-facts_content-item"><span class="label-01">Tentative Date</span>
-              <p class="paragraph-01">{{ exam.tentative_date}}
+            <div class="quick-facts_content-item"><span class="label-01">Examination Type</span>
+              <p class="paragraph-01">{{ course.examination_type}}
               </p>
             </div>
             <div class="quick-facts_content-item"><span class="label-01">Basic Eligibility</span>
-              <p class="paragraph-01">{{ exam.basic_eligibility }}</p>
+              <p class="paragraph-01">{{ course.eligibility }}</p>
             </div>
+            <div class="quick-facts_content-item"><span class="label-01">Average College Fees</span>
+                <p class="paragraph-01">{{ course.avg_course_fees }}</p>
+              </div>
           </div>
         </div>
         <div class="main-content-card">
             <h5 class="sub-header-01 main-content-card-header">About :</h5>
             <div class="main-content-card-content">
-                <p class="paragraph-01"> {{ exam.about}}</p>
-            </div>
-                <button class="icon-link main-content-card-button">
-                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
-                </svg><span class="link-primary_lined">Read More</span>
-              </button>
-          </div>
-          <div class="main-content-card">
-            <h5 class="sub-header-01 main-content-card-header">Eligibility :</h5>
-            <div class="main-content-card-content">
-              {% for eligibility in eligibilities %}
-                <p class="paragraph-01"> {{ eligibility}}</p>
-                {% endfor %}
+                <p class="paragraph-01"> {{ course.about}}</p>
             </div>
                 <button class="icon-link main-content-card-button">
                 <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -73,84 +63,17 @@
               </button>
           </div>
 
-          <div class="main-content-card">
-            <h4 class="sub-header-01 main-content-card-header">Important Dates :</h4>
-            <div class="main-content-card-content">
-              <table class="more-than-two-column">
-                <thead>
-                  <tr>
-                    <th>Serial No.</th>
-                    <th>Events</th>
-                    <th>Important Dates</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for dates in exam.important_dates %}
-                  <tr>
-                    <td data-label="Serial No. :">{{dates.serial }}</td>
-                    <td data-label="Event :">{{dates.issue }}</td>
-                    <td data-label="Important Date :">{{dates.date }}</td>
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
-            <button class="icon-link main-content-card-button">
-              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
-              </svg><span class="link-primary_lined">Read More</span>
-            </button>
-          </div>
-
-
-          <div class="main-content-card">
-            <h4 class="sub-header-01 main-content-card-header">Cut-Off :</h4>
-            <div class="main-content-card-content">
-              <table class="more-than-two-column">
-                <thead>
-                  <tr>
-                    <th>{{ exam.cutoff.head.one }}</th>
-                    <th>{{ exam.cutoff.head.two }}</th>
-                    <th>{{ exam.cutoff.head.three }}</th>
-                    <th>{{ exam.cutoff.head.four }}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for cut in exam.cutoff.body %}
-                  <tr>
-                    <td data-label="Category :">{{cut.one }}</td>
-                    <td data-label= "{{ exam.cutoff.head.two }} :">{{cut.two }}</td>
-                    <td data-label="{{ exam.cutoff.head.three}} :">{{cut.three }}</td>
-                    <td data-label="{{ exam.cutoff.head.four }} :">{{cut.four }}</td>
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
-            <button class="icon-link main-content-card-button">
-              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
-              </svg><span class="link-primary_lined">Read More</span>
-            </button>
-          </div>
-
-          
           <div class="main-content-card">
             <h4 class="sub-header-01 main-content-card-header">Syllabus :</h4>
             <div class="main-content-card-content">
-              <table class="more-than-two-column">
-                <thead>
-                  <tr>
-                    <th>Subject</th>
-                    <th>Topics</th>
-                  </tr>
-                </thead>
+              <table>
                 <tbody>
-                  {% for syll in exam.syllabus %}
-                  <tr>
-                    <td data-label="Subject :">{{syll.subject }}</td>
-                    <td data-label="Topics :">{{syll.topics }}</td>
-                  </tr>
+                  {% for syllabus_tuple in syllabus %}
+                      <tr>
+                          {% for syllabus in syllabus_tuple %}
+                           <td>{{ syllabus }}</td>
+                          {% endfor %}
+                      </tr>
                   {% endfor %}
                 </tbody>
               </table>
@@ -162,13 +85,55 @@
             </button>
           </div>
 
- 
+
           <div class="main-content-card">
-            <h5 class="sub-header-01 main-content-card-header">Exam Pattern :</h5>
+            <h4 class="sub-header-01 main-content-card-header">Career :</h4>
             <div class="main-content-card-content">
-              {% for exam_pattern in exam_patterns %}
-                <p class="paragraph-01"> {{ exam_pattern }}</p>
-              {% endfor %}
+              <table>
+                <tbody>
+                  {% for career_tuple in career %}
+                      <tr>
+                          {% for career in career_tuple %}
+                           <td>{{ career }}</td>
+                          {% endfor %}
+                      </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <button class="icon-link main-content-card-button">
+              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+              </svg><span class="link-primary_lined">Read More</span>
+            </button>
+          </div>
+
+          <div class="main-content-card">
+            <h4 class="sub-header-01 main-content-card-header">Top Institutes :</h4>
+            <div class="main-content-card-content">
+              <table>
+                <tbody>
+                  {% for top_institutes_tuple in top_institutes %}
+                      <tr>
+                          {% for top_institutes in top_institutes_tuple %}
+                           <td>{{ top_institutes }}</td>
+                          {% endfor %}
+                      </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <button class="icon-link main-content-card-button">
+              <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+              </svg><span class="link-primary_lined">Read More</span>
+            </button>
+          </div>
+
+          <!-- <div class="main-content-card">
+            <h5 class="sub-header-02">Syllabus: </h5>
+            <div class="main-content-card-content">
+                <p class="paragraph-01"> {{ course.syllabus}}</p>
             </div>
                 <button class="icon-link main-content-card-button">
                 <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -176,10 +141,29 @@
                 </svg><span class="link-primary_lined">Read More</span>
               </button>
           </div>
-
-
-
-        </div>
-        </div>
-        </section>
-        {% endblock %}
+          <div class="main-content-card">
+            <h5 class="sub-header-02">Top Institutes: </h5>
+            <div class="main-content-card-content">
+                <p class="paragraph-01"> {{ course.top_institutes}}</p>
+            </div>
+                <button class="icon-link main-content-card-button">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                </svg><span class="link-primary_lined">Read More</span>
+              </button>
+          </div>
+          <div class="main-content-card">
+            <h5 class="sub-header-02">Career: </h5>
+            <div class="main-content-card-content">
+                <p class="paragraph-01"> {{ course.career}}</p>
+            </div>
+                <button class="icon-link main-content-card-button">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5651 14.38L12.5651 19.36C12.4051 19.52 12.2051 19.6 12.0051 19.6C11.8051 19.6 11.6051 19.52 11.4451 19.36L6.44507 14.38C6.12507 14.06 6.12507 13.56 6.44507 13.24C6.76507 12.92 7.26508 12.92 7.58508 13.24L11.2251 16.86V5.20002C11.2251 4.76002 11.5851 4.40002 12.0251 4.40002C12.4651 4.40002 12.8251 4.76002 12.8251 5.20002V16.88L16.4651 13.26C16.7851 12.94 17.2851 12.94 17.6051 13.26C17.8851 13.56 17.8851 14.06 17.5651 14.38Z"></path>
+                </svg><span class="link-primary_lined">Read More</span>
+              </button>
+          </div> -->
+      </div>
+    </div>
+    </section>
+    {% endblock %}

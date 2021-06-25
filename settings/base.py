@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     'base',
     'college',
+    'course',
     'exam',
     'leads',
     'obito',

@@ -29,6 +29,7 @@ urlpatterns = [
     path('', base_views.home, name='home'),
     path('college/', include(('college.urls', 'college'), namespace='college')),
     path('exam/', include(('exam.urls', 'exam'), namespace='exam')),
+    path('course/', include(('course.urls', 'course'), namespace='course')),
     path('profile/', include(('profiles.urls', 'profile'), namespace='profile')),
     path('login/', LoginView.as_view(), name='login'),
     path('accounts/', include('allauth.urls')),
