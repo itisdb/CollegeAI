@@ -296,7 +296,7 @@ label, .label-02 {
     list-style: decimal;
 }
 #individual-page-content .container .main-content > div .main-content-card-content table, #individual-page-content .container .main-content > div .main-content-card-content th, #individual-page-content .container .main-content > div .main-content-card-content td {
-    margin-bottom: calc(1vmax + 8px);
+    /* margin-bottom: calc(1vmax + 8px); */
     border: 1px solid grey;
     text-align: left;
 }
@@ -320,17 +320,17 @@ label, .label-02 {
     color: grey;
 }
 @media screen and (max-width: 800px) {
-    #individual-page-content .container .main-content > div .main-content-card-content table {
+    /* #individual-page-content .container .main-content > div .main-content-card-content table {
         border: 0;
-   }
+   } */
     #individual-page-content .container .main-content > div .main-content-card-content thead {
         clip: rect(0, 0, 0, 0);
         position: absolute;
    }
     #individual-page-content .container .main-content > div .main-content-card-content tr {
-        display: block;
+        /* display: block; */
         border: 1px solid grey;
-        border-bottom: 3px solid grey;
+        /* border-bottom: 3px solid grey; */
         margin-bottom: 16px;
         border-radius: 3px;
         padding: 0 2.5%;
@@ -339,7 +339,7 @@ label, .label-02 {
         display: block;
         border: 0;
         border-bottom: 1px solid grey;
-        padding: 2px 0;
+        /* padding: 2px 0; */
         text-align: left;
    }
     #individual-page-content .container .main-content > div .main-content-card-content td:last-child {

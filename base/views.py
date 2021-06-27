@@ -3,6 +3,9 @@ from django.views.generic.base import View
 from django.db.models import Q
 
 from college.models import College
+from exam.models import Exam
+from course.models import Course
+
 
 from profiles.models import Psychometry, Profile
 
@@ -21,8 +24,12 @@ def custom_internal_error(request, *args, **argv):
 
 def home(request):
     colleges = College.objects.filter(is_top=True)[:6]
+    exams = Exam.objects.filter(is_top=True)[:6]
+    courses = Course.objects.filter(is_top=True)[:6]
     return render(request, 'v2/pages/public/home.html', {
-        'colleges': colleges
+        'colleges': colleges,
+        'exams': exams,
+        'courses': courses
     })
 
 
