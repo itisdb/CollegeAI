@@ -17,6 +17,7 @@ class Exam(BaseModel):
     abbreviated_name = models.CharField(null=True, max_length=50)
     meta_title = models.CharField(null=True, blank=True, max_length=500)
     meta = models.TextField(null=True, blank=True)
+    meta_keywords = models.JSONField(null=True, blank=True, default=[])
     exam_level = models.CharField(null=True, max_length=150)
     conducting_body = models.CharField(null=True, max_length=255)
     website = models.CharField(null=True, max_length=255)
