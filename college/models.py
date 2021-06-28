@@ -42,7 +42,7 @@ class College(BaseModel):
     abbreviated_name = models.CharField(null=True, max_length=50)
     meta_title = models.CharField(null=True, blank=True, max_length=500)
     meta = models.TextField(null=True, blank=True)
-    meta_keywords = models.JSONField(null=True, blank=True, default=[])
+    meta_keywords = models.JSONField(null=True, blank=True, default={})
     about_us = models.JSONField(null=True, blank=True)
     established_year = models.CharField(max_length=4, null=True, blank=True)
     city = models.CharField(null=True, max_length=50)
