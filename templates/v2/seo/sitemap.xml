@@ -9,1182 +9,1597 @@
 
 <url>
   <loc>https://www.mycollegeai.com/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/profile/forgot-password/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/terms</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/list/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/list/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/course/list/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/psychometric</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/jee-advance/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/jee-mains/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/bitsat/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-madras/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-bombay/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-kanpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-kharagpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-roorkee/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-guwahati/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-west-bengal/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-karnataka/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-maharashtra/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-tamil-nadu/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-rajasthan/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-odisha/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-gujarat/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/list-of-all-iit-colleges-in-India/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/list-of-all-nit-colleges-in-India/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/list-of-all-vit-colleges-in-India/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/list-of-all-srm-colleges-in-India/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/list-of-all-amity-colleges-in-India/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-bihar/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-pune/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/about</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/contact</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/career</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/advertising</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/privacy</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.mycollegeai.com/exam/wbjee/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/viteee/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/srmjeee/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/iemjee/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/kalinga-Institute-of-industrial-technology-entrance-examination-kiitee/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/manipal-entrance-test-met/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/exam/consortium-of-medical-engineering-and-dental-colleges-of-karnataka-undergraduate-entrance-test/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://www.mycollegeai.com/college/nit-arunachal-pradesh/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/b-v-raju-institute-of-technology-bvrit-hyderabad/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-hyderabad/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/rait-navi-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/nit-tiruchirappalli/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/pccoe-maharashtra/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dpu-maharashtra/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-indore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-bhu/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-dhanbad/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/gjust-hisar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/anna-university-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/lnmiit-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dharmsinh-desai-university-ddu-gujrat/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/list/?page=2</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/course/b-tech-in-computer-science-and-engineering/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/course/b-tech-in-aerospace-engineering/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/course/b-tech-in-ceramic-engineering/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/course/b-tech-in-metallurgical-engineering/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/course/b-tech-in-mechanical-engineering/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/course/b-tech-in-civil-engineering/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iem-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jadavpur-university-ju-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iiest-shibpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/heritage-institute-of-technology-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/uem-kolkata-university/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/narula-institute-of-technology-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/amity-university-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/techno-india-university-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sister-nivedita-university-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/adamas-university-west-bengal/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/the-neotia-university-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jis-college-of-engineering-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bengal-institute-of-technology-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/techno-india-salt-lake-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/rcc-institute-of-information-technology-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/budge-budge-institute-of-technology-bbit-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/camellia-institute-of-technology-cit-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dream-institute-of-technology-dit-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/techno-international-new-town-tint-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/meghnad-saha-institute-of-technology-msit-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/b-p-poddar-institute-of-technology-bppimt-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/svist-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/aliah-university-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/indian-maritime-university-imu-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dr-sudhir-chandra-sur-degree-engineering-college/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/gcect-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jis-university-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/neotia-institute-of-technology-management-science/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/netaji-subhash-engineering-college-nsec-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/guru-nanak-institute-of-technology-gnit-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/elitte-institute-of-engineering-management/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/pailan-college-of-management-technology-pcmt/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/elitte-college-of-engineering-ece-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/future-institute-of-technology-fit-kolkata/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bnm-institute-of-technology-bnmit-bengaluru/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bms-institute-of-technology-management-bengaluru/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/alliance-university-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/rv-college-of-engineering-rvce-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/ramaiah-university-of-applied-sciences-msruas/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/international-institute-of-information-technology-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bms-college-of-engineering-bmsce-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/new-horizon-college-of-engineering-nhce-bangalo/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.mycollegeai.com/college/school-of-engineering-and-technology-jain-universi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <loc>https://www.mycollegeai.com/college/faculty-of-engineering-and-technology-jain-university/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dayananda-sagar-college-of-engineering-dsce/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/nitte-meenakshi-institute-of-technology-nmit/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/pes-university-pesu-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/cmr-institute-of-technology-cmrit-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/christ-university-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/indian-institute-of-science-iisc-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jain-university-ju-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/cmr-university-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dr-ambedkar-institute-of-technology-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/ramaiah-institute-of-technology-msrit-bangalore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/amity-global-business-school-agbs-banglore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jamia-millia-islamia-university-new-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dtu-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/indraprastha-institute-of-information-technology/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/igdtuw-new-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.mycollegeai.com/college/guru-gobind-singh-indraprastha-university-ggsip/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mycollegeai.com/college/netaji-subhas-university-of-technology-nsut-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mycollegeai.com/college/nit-delhi-national-institute-of-technology/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mycollegeai.com/college/indraprastha-institute-of-technology-management/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <loc>https://www.mycollegeai.com/college/indraprastha-institute-of-technology-management-iiitm-delhi/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/mait-maharaja-agrasen-institute-of-technology/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/ch-brahm-prakash-government-engineering-college-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bharati-vidyapeeths-college-of-engineering-delhi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.mycollegeai.com/college/srm-institute-of-science-technology-sonepat/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <loc>https://www.mycollegeai.com/college/gb-pant-government-engineering-college-delhi/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/ambedkar-institute-of-advanced-communication-technologies-research-delhi/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/ict-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/k-j-somaiya-college-of-engineering-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/narsee-monjee-institute-of-management-nmims-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bvbspit-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/veermata-jijabai-technological-institute-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/national-institute-of-industrial-engineering-nitie/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/mukesh-patel-School-of-technology-management-engineering-mpstme/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/spit-mumbai-sardar-patel-institute-of-technology/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/tcet-mumbai-thakur-college-of-engineering-technology/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/tata-institute-of-social-sciences-TISS-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/amity-university-mumbai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sri-sai-ram-institute-of-technology-ssit-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iiitdm-kancheepuram/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/srm-university-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sist-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/simats-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bsacist-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/hindustan-institute-of-technology-and-science-hits-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/rajalakshmi-engineering-college-rec-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/amity-global-business-school-agbs-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/veltech-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/vellore-institute-of-technology-vit-chennai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/mnit-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/uem-jaipur-university/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jaipur-national-university/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/nims-university-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sri-balaji-college-of-engineering-technology-sbcet-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jecrc-university-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/vivekananda-global-university-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/arya-college-of-engineering-it-aceit-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/poornima-university-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/global-institute-of-technology-git-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/amity-university-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/banasthali-vidyapith-jaipur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/silicon-Institute-of-technology-sit-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/siksha-o-anusandhan-soa-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/kiit-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/trident-academy-of-technology-tat-Bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/gandhi-engineering-college-gec-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/gandhi-institute-for-technology-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/raajdhani-engineering-college-rec-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/modern-institute-of-technology-management-mitm/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bhubaneswar-engineering-college-bec-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/institute-of-professional-education-research-iper/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/central-institute-of-plastics-engineering-tech/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/c-v-raman-global-university-cvrgu-bhubaneswar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-west%20bengal/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/haldia-institute-of-technology-haldia/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/kalyani-government-engineering-college-kgec-nadia/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/asansol-engineering-college-ace-asansol/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dr-b-c-roy-engineering-college-bcrec-durgapur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jalpaiguri-government-engineering-college-jgec/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/nit-durgapur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/makaut-university/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/the-national-institute-of-engineering-nie-mysore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/manipal-institute-of-technology-mit-manipal/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/visvesvaraya-technological-university-vtu-belgaum/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/pes-college-of-engineering-pesce-mandya/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/kle-technological-university-kletu-dharwad/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/national-institute-of-technology-surathkal/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/nmam-institute-of-technology-nmamit-udupi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jss-science-and-technology-university-mysore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.mycollegeai.com/college/siddaganga-institute-of-technologysit-tumkur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <loc>https://www.mycollegeai.com/college/siddaganga-institute-of-technology-sit-tumkur/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/vnit-nagpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/mksss-cummins-college-of-engineering-pune/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/walchand-college-of-engineering-wce-sangli/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/vishwakarma-institute-of-technology-vit-pune/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/college-of-engineering-coep-pune/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.mycollegeai.com/college/rtmnu-nagpur-university/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <loc>https://www.mycollegeai.com/college/rtmnu-university-nagpur/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/yeshwantrao-chavan-college-of-engineering-nagpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/gh-raisoni-college-of-engineering-ghrce-nagpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/mit-world-peace-university-mitwpu-pune/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/defence-institute-of-advanced-technology-diat-pune/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/shri-ramdeobaba-college-of-engineering-nagpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/army-institute-of-technology-ait-pune/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bharati-vidyapeeth-deemed-university-college-of-engineering-bvcoe-pune/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.mycollegeai.com/college/nationa-engineering-college-nec-tamil-nadu/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <loc>https://www.mycollegeai.com/college/best-engineering-colleges-in-tamil%20nadu/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-engineering-college-nec-kovilpatti-tamil-nadu/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/vit-vellore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/ase-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/svce-kanchipuram/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sastra-university-thanjavur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sri-sivasubramaniya-nadar-college-ssn-kancheepuram/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/psg-college-of-technology-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sjce-kancheepuram/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/rmk-engineering-college-rmkec-thiruvallur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sri-krishna-college-of-technology-skct-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sona-college-of-technology-sct-salem/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sri-ramakrishna-engineering-college-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/kare-Srivilliputhur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/kongu-engineering-college-kec-perundurai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/thiagarajar-college-of-engineering-tce-madurai/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sri-sairam-engineering-college-ssec-kancheepuram/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/indian-institute-of-food-processing-technology-iifpt-thanjavur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/karunya-institute-of-technology-and-sciences-kits-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/kumaraguru-college-of-technology-kct-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/sri-krishna-college-of-engineering-and-technology-skcet-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/government-college-of-technology-gct-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/mepco-schlenk-engineering-college-msec-sivakasi/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/coimbatore-institute-of-technology-cit-coimbatore/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/srm-institute-of-science-technology-ramapuram/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/srm-institute-of-science-technology-vadapalani/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/amrita-vishwa-vidyapeetham-coimbatore/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/bits-pilani/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/iit-jodhpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/nit-rourkela/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/centre-for-management-studies-odisha-Enginegering/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/Institute-of-management-and-information-technology/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/veer-surendra-sai-university-of-technology-burla/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/pdpu-gandhinagar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mycollegeai.com/college/iit-gandhinagar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://www.mycollegeai.com/college/svnit-surat/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/indian-institute-of-technology-iit-gandhinagar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/svnit-surat/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/nirma-university-nu-ahmedabad/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/maharaja-sayajirao-university-of-baroda-msu-baroda/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/dhirubhai-ambani-institute-of-information-and-communication-technology-daiict-gandhinagar/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/amity-global-business-school-agbs-ahmedabad/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/iit-ropar/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/iit-patna/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/iit-mandi/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/indian-institute-of-technology-iit-goa/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/indian-institute-of-technology-iit-jammu/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/indian-institute-of-technology-iit-palakkad/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/indian-institute-of-technology-iit-bhilai/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/indian-institute-of-technology-iit-tirupati/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nit-warangal/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nit-calicut/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-kurukshetra/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-silchar/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/mnnit-allahabad/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nit-manipur/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nit-jalandhar/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nit-meghalaya-shillong/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/manit-bhopal/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-puducherry/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-raipur/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nit-delhi-national-institute-of-technology/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-agartala/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-goa/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-patna/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nit-srinagar-national-institute-of-technology/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-mizoram/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-nagaland/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-sikkim/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-uttarakhand/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/national-institute-of-technology-nit-andhra-pradesh/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/vit-bhopal-university/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/vit-ap-university-amaravati/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/amaravati-srm-institute-of-science-technology/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/srm-institute-of-science-technology-sonepat/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/srm-institute-of-science-technology-sikkim/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/amity-university-patna/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/bakhtiyarpur-college-of-engineering-bce-patna/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/nalanda-college-of-engineeringnce-chandi/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/muzaffarpur-institute-of-technology-mit-muzaffarpur/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/netaji-subhas-institute-of-technology-nsit-patna/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/gaya-college-of-engineering-gce-gaya/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/bit-patna/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/bhagalpur-college-of-engineering-bce-bhagalpur/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/aryabhatta-knowledge-university-aku-patna/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/government-engineering-college-gec-gopalganj/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/sandip-university-su-madhubani/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/sityog-institute-of-technology-sit-aurangabad/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/millia-institute-of-technology-mit-purnea/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/supaul-college-of-engineering-sce-supaul/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/saharsa-college-of-engineering-sce-saharsa/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/katihar-ngineering-college-kec-katihar/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/purnea-college-of-engineering-pce-purnea/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/loknayak-jai-prakash-institute-of-technology-lnjpit-chapra/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/central-institute-of-plastics-engineering-and-technology-cipet-hajipur/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/motihari-college-of-engineering-mce-motihari/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/darbhanga-college-of-engineering-dce-darbhanga/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/womens-institute-of-technology-darbhanga/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/patna-sahib-technical-campus-vaishali/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/gprec-kurnool/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/gvpce-visakhapatnam/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://www.mycollegeai.com/college/vasavi-college-of-engineering-vce-hyderabad/</loc>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/jntua-anantapur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/svec-tirupati/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/mmmut-gorakhpur/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://www.mycollegeai.com/college/nit-warangal/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/anurag-group-of-institutions-agi-hyderabad/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/cusat-cochin/</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/list/?page=1</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://www.mycollegeai.com/college/list/?page=3</loc>
-  <lastmod>2021-06-13T04:52:03+00:00</lastmod>
+  <lastmod>2021-06-28T05:54:52+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
