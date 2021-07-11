@@ -59,7 +59,7 @@
           <div class="cards-group">
             {% for college in college_tags %}
             <div class="card_college" id = "college_tag">
-              <div class="card_college-details" style="padding: 14px 0px; width: fit-content; margin: 0 auto;"><a class="sub-header-03" style="color: black;" href="/college/{{college.name|| lower }}-colleges-in-India">{{college.name}}</a>
+              <div class="card_college-details" style="padding: 14px 0px; width: fit-content; margin: 0 auto;"><a class="sub-header-03" style="color: black;" href="/college/{{college.name| lower }}-colleges-in-India">{{college.name}}</a>
               </div>
             </div>
             {% endfor %}
