@@ -46,6 +46,30 @@
         </div>
       </div>
     </section>
+
+    <section id="featured-colleges">
+      <div class="container">
+        <div class="featured-section-header">
+          <div class="featured-section-header-content">
+            <h4 class="sub-header-01">Different Types of Colleges</h4>
+            <p>Checkout the different types of colleges available for you.</p>
+          </div>
+        </div>
+        <div class="featured-section-cards">
+          <div class="cards-group">
+            {% for college in college_tags %}
+            <div class="card_college" id = "college_tag">
+              <!-- <div class="card_college-img" style="height: 100px; width: 50%; margin: 0 auto;"><img src="{{ college.image.url }}" alt="College Logo" style="height: 100px;"/></div> -->
+              <div class="card_college-details" style="padding: 14px 0px; width: fit-content; margin: 0 auto;"><a class="sub-header-03" style="color: black;" href="/college/{{ college.url_tag }}-colleges-in-India">{{college.name}}</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section id="featured-colleges">
       <div class="container">
         <div class="featured-section-header">
@@ -131,7 +155,7 @@
             {% for course in courses %}
             <div class="card_college">
               <!-- <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"/></div> -->
-              <div class="card_college-details"><a class="sub-header-02" href="/coursee/{{ course.slug }}">{{course.abbreviated_name}}</a>
+              <div class="card_college-details"><a class="sub-header-02" href="/course/{{ course.slug }}">{{course.abbreviated_name}}</a>
                 <div class="card_college-details_secondary"><span class="label-01">{{ course.stream }}</span><span class="label-01">{{ course.level }}</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Apply Now</a>
               </div>
             </div>

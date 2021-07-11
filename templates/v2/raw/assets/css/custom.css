@@ -613,3 +613,22 @@ footer .footer-links-mob{
     }
     
 }
+
+#college_tag{
+    width: calc(16.66% - 24px);
+    text-align: center;
+}
+
+#college_tag a{
+    font-size: 1rem;
+}
+
+@media  screen and (max-width: 800px) {
+    #college_tag{
+        width: calc(33.33% - 24px);
+    }
+    #college_tag a{
+        font-size: 0.8rem;
+    }
+}
+

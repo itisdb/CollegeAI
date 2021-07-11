@@ -2,10 +2,11 @@ from collections import namedtuple
 from django.urls import path
 
 from college.views.public import AddBookmarkView, ApplyCollegeView, IndividualCollegeView, CollegesView
-from college.views.temporary import SEOCollegesView, topCollegesView
+from college.views.temporary import SEOCollegesView, topCollegesView, tagCollegesView
 
 urlpatterns = [
     path('best-engineering-colleges-in-<location>/', SEOCollegesView.as_view(), name='seo-list'),
+    path('<tag>-colleges-in-India/', tagCollegesView.as_view(), name='tag-list'),
     path('list-of-all-<college>-colleges-in-India/', topCollegesView.as_view(), name='top-list'),
     path('list/', CollegesView.as_view(), name='list'),
     path('apply/<college_uuid>/', ApplyCollegeView.as_view(), name='apply'),

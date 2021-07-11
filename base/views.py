@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.views.generic.base import View
 from django.db.models import Q
 
-from college.models import College
+from college.models import College,CollegeGenres
 from exam.models import Exam
 from course.models import Course
 
@@ -26,10 +26,12 @@ def home(request):
     colleges = College.objects.filter(is_top=True)[:6]
     exams = Exam.objects.filter(is_top=True)[:6]
     courses = Course.objects.filter(is_top=True)[:6]
+    college_tags = CollegeGenres.objects.all().order_by('created_at')
     return render(request, 'v2/pages/public/home.html', {
         'colleges': colleges,
         'exams': exams,
-        'courses': courses
+        'courses': courses,
+        'college_tags': college_tags
     })
 
 
