@@ -18,7 +18,7 @@ class CollegeGenres(BaseModel):
 
     name = models.CharField(max_length=100, unique=True, blank=True)
     # image = models.ImageField(null=True, upload_to='college_tags/image/', default= null)
-    url_tag = models.CharField(max_length= 100, blank=True, default='a') 
+    # url_tag = models.CharField(max_length= 100, blank=True, default='a') 
 
 
 
