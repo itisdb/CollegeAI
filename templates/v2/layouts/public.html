@@ -50,7 +50,7 @@
       {% include 'v2/components/forms/subscribe.html' %}
     </div>
   </div> -->
-  <footer style="margin-top: 5%;">
+{% block add_footer %}  <footer style="margin-top: 5%;">
     <div class="container">
       <div class="footer-links">
         <div class="footer-links_misc" style="width: 25%;">
@@ -214,6 +214,7 @@
       <div class="footer-copyright"><span>&copy; Copyright 2020 mycollegeai.com. All rights reserved. All trademarks are owned by their respective owners.</span></div>
     </div>
   </footer>
+{% endblock %}
   <script async src="{% static 'js/all.js' %}"></script>
   <script async src="{% static 'js/foote.js' %}"></script>
   {% block add_js %}{% endblock %}

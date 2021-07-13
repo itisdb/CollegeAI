@@ -37,11 +37,37 @@ class tagCollegesView(View):
             colleges = None
         context = {
             'colleges': colleges,
-            'tag': tag,
+            'tag': ar[0],
             'utag': u_tag,
         }
         return render(request, 'v2/pages/public/temporary/tagcolleges.html', context)
 
+
+class taglocCollegesView(View):
+    def get(self, request, tag, location):
+        u_tag = tag
+        tag = tag.replace('-',' ')
+
+        ulocation = location
+        location = location.replace('-', ' ')
+
+
+        ar = CollegeGenres.objects.filter(name__iexact = tag)
+        if ar:
+            colleges = ar[0].college_set.filter(Q(state__iexact=location) |
+            Q(city__iexact=location)).order_by('created_at')
+        else:
+            colleges = None
+        
+        print(colleges)    
+        context = {
+            'colleges': colleges,
+            'tag': ar[0],
+            'utag': u_tag,
+            'location': location,
+            'ulocation': ulocation,
+        }
+        return render(request, 'v2/pages/public/temporary/tagloccolleges.html', context)
 
 class topCollegesView(View):
     def get(self, request, college):

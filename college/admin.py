@@ -10,6 +10,7 @@ class CollegeImageInline(admin.StackedInline):
 class CollegeAdmin(admin.ModelAdmin):
     inlines = [CollegeImageInline]
     filter_horizontal = ('facilities','tags',)
+    list_filter = ('tags','is_top')
     model = College
 
 
