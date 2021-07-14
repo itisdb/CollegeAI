@@ -82,3 +82,17 @@ class topCollegesView(View):
             'ucollege': ucollege,
         }
         return render(request, 'v2/pages/public/temporary/topcolleges.html', context)
+
+
+class tagstreamCollegesView(View):
+    def get(self, request, tag):
+        utag = tag
+        tag = tag.replace('-',' ')
+        colleges = College.objects.filter(degree__contains = [tag])
+        print(colleges)
+        context = {
+            'utag' : utag,
+            'tag' : tag,
+            'colleges' : colleges,
+        }
+        return render(request, 'v2/pages/public/temporary/tagcolleges.html', context)
