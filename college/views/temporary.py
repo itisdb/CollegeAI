@@ -95,4 +95,4 @@ class tagstreamCollegesView(View):
             'tag' : tag,
             'colleges' : colleges,
         }
-        return render(request, 'v2/pages/public/temporary/tagcolleges.html', context)
+        return render(request, 'v2/pages/public/temporary/tagstreamcolleges.html', context)
