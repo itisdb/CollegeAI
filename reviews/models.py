@@ -26,7 +26,7 @@ class Review(BaseModel):
     batch = models.IntegerField(null=True, blank=True)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True, blank=True)
     is_displayed = models.BooleanField(default=True)
-    #quadrants = models.JSONField(null=True, blank=True)
+    quadrants = models.JSONField(null=True, blank=True)
 
     def __str__(self):
         return self.comment

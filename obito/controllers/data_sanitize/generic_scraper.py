@@ -18,6 +18,8 @@ all_reviews = Review.objects.all()
 
 class Scraper:
 
+    CHROME_DRIVER_PATH = 'obito/driver/chromedriver'
+
     def __init__(self, url = None):
         self.url = url
         self.colleges = College.objects.all()
@@ -44,7 +46,7 @@ class Scraper:
 
     # getmyuni Scraper
     def getmyuni(self, url: str, college: College):
-        driver = webdriver.Chrome("/usr/local/bin/chromedriver")
+        driver = webdriver.Chrome(self.CHROME_DRIVER_PATH)
         try:
             driver.get(url)
             try:
@@ -111,7 +113,7 @@ class Scraper:
     # Shiksha Scraper
     def shiksha(self,url: str, college: College):
         # Initialization
-        driver = webdriver.Chrome("/usr/local/bin/chromedriver")
+        driver = webdriver.Chrome(self.CHROME_DRIVER_PATH)
         try:
             driver.get(url)
             wait = WebDriverWait(driver, 5)

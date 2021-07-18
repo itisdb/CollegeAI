@@ -29,12 +29,15 @@ from obito.constants import academics, placements, infrastructure
 
 class Analysis:
 
-    def __init__(self):
-        self.reviews = Review.objects.all()
+    def __init__(self, college):
+        self.reviews = Review.objects.filter(college=college)
 
-    def invoke(self, college: College):
+    def invoke(self):
         quadrants = []
-        for s in self.reviews.filter(college=college):
+
+        for s in self.reviews:
+            quadrants = []
+
             self.lowercase(s)
             self.sanitization(s)
             reviews = self.splitting(s)
@@ -61,14 +64,17 @@ class Analysis:
                 else:
                     i_pos, i_neg, i_neu, i_compound = 0, 0, 0, 0
 
-                quadrant = [{"metric": "PLACEMENT", "negative": p_neg, "positive": p_pos, "neutral": p_neu,
-                             "compound": p_compound},
-                            {"metric": "ACADEMICS", "negative": a_neg, "positive": a_pos, "neutral": a_neu,
-                             "compound": a_compound},
-                            {"metric": "INFRASTRUCTURE", "negative": i_neg, "positive": i_pos, "neutral": i_neu,
-                             "compound": i_compound}]
+                quadrant = [
+                    {"statement": s, "metric": "PLACEMENT", "negative": p_neg, "positive": p_pos, "neutral": p_neu, "compound": p_compound},
+                    {"statement": s, "metric": "ACADEMICS", "negative": a_neg, "positive": a_pos, "neutral": a_neu, "compound": a_compound},
+                    {"statement": s, "metric": "INFRASTRUCTURE", "negative": i_neg, "positive": i_pos, "neutral": i_neu, "compound": i_compound}
+                ]
 
                 quadrants.append(quadrant)
+
+            s.quadrants = quadrants
+            s.save()
+
         return quadrants
 
     #               s.quadrants = quadrant

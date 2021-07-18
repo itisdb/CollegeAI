@@ -68,6 +68,8 @@ class College(BaseModel):
     scraping_urls = models.JSONField(null=True, blank=True)
     facilities = models.ManyToManyField(CollegeFacilities)
     tags = models.ManyToManyField(CollegeGenres)
+    metrics = models.JSONField(null=True, blank=True)
+    detailed_metrics = models.JSONField(null=True, blank=True)
 
     def __str__(self):
         return '{}, {}'.format(self.abbreviated_name, self.city)
