@@ -1,17 +1,17 @@
 {% extends 'v2/layouts/public.html' %}
 {% load static %}
-{% block title %}List of Top 10 Btech | Best Engineering Colleges in {{ location| title }} - Placements, Admission, Fees, Ranking{% endblock %}
-{% block description %}  Find and compare the top and best engineering (btech) colleges in {{ location| title }} by Fees, Ranking, Admission and Placement. {% endblock %}
-{% block meta_title %}List of Top 10 Btech | Best Engineering Colleges in {{ location| title }} -  Placements, Admission, Fees, Ranking{% endblock %}
-{% block meta_description %} Find and compare the top and best engineering (btech) colleges in {{ location| title }} by Fees, Ranking, Admission and Placement. {% endblock %}
-{% block meta_keywords %} college, ai, mycollegeai, india, students, academics, placement, {{ location }} {% endblock %}
+{% block title %}List of Top 10 {{ tag| upper}}  | Best {{ tag | upper }} Colleges in India - Placements, Admission, Fees, Ranking{% endblock %}
+{% block description %}  Find and compare the top and best {{ tag | upper }} colleges in India by Fees, Ranking, Admission and Placement. {% endblock %}
+{% block meta_title %}List of Top 10 {{ tag | upper }} | Best {{ tag | upper }} Colleges in India -  Placements, Admission, Fees, Ranking{% endblock %}
+{% block meta_description %} Find and compare the top and best {{ tag | upper }} colleges in India by Fees, Ranking, Admission and Placement. {% endblock %}
+{% block meta_keywords %} college, ai, mycollegeai, india, students, academics, placement, {{ tag }} {% endblock %}
 {% block page_name %}
     <li class="breadcrumb-item active">Colleges</li>
 {% endblock %}
 {% block hero_title %}
     <ul class="breadcrumb">
       <li class="link-01"><a href="{% url 'home' %}">Home</a></li>
-      <li class="link-01"><a href="/college/best-colleges-in-{{ ulocation|lower }}">Best Colleges in {{ location| title}}</a> </li>
+      <li class="link-01"><a href="/college/{{utag}}-colleges">{{ tag | upper }} Colleges in India</a> </li>
     </ul>
     <h3 class="header-03">Check Out the Top Colleges</h3>
     <div class="search-bar_small">
@@ -66,3 +66,4 @@
     
 
 {% endblock%}
+

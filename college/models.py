@@ -17,9 +17,9 @@ class CollegeFacilities(BaseModel):
 class CollegeGenres(BaseModel):
 
     name = models.CharField(max_length=100, unique=True, blank=True)
-    # image = models.ImageField(null=True, upload_to='college_tags/image/', default= null)
-    # url_tag = models.CharField(max_length= 100, blank=True, default='a') 
-
+    image = models.ImageField(null=True, blank=True , upload_to='college_tags/image/')
+    url_tag = models.CharField(max_length= 100, blank=True, null=True) 
+    popular_course = models.CharField(max_length=150, blank=True, null=True)
 
 
     def __str__(self):
