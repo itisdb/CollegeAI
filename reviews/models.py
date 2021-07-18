@@ -31,6 +31,9 @@ class Review(BaseModel):
     def __str__(self):
         return self.comment
 
+    class Meta:
+        unique_together = ('college', 'comment', 'source')
+
 
 class Rating(BaseModel):
 

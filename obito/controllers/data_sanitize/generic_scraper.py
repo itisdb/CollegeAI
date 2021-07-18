@@ -1,5 +1,6 @@
 from typing import Any
 
+import bs4
 from bs4 import BeautifulSoup as bs
 import requests
 import re
@@ -32,12 +33,21 @@ class Scraper:
 
     def store_review(self, college: College, review: Any, source: int):
         sanitized_review = review.contents[0] if not isinstance(review, str) else review
+        if isinstance(sanitized_review, bs4.element.NavigableString):
+            sanitized_review = str(sanitized_review.extract())
+
+        sanitized_review = sanitized_review.lower()
+        sanitized_review = sanitized_review.replace("\n", " ")
+        sanitized_review = sanitized_review.replace("\r", " ")
+        sanitized_review = sanitized_review.replace("\t", " ")
+
         existing_review = Review.objects.filter(
             college=college,
             source=source,
             comment=sanitized_review
         )
-        if existing_review.count() == 0:
+
+        if not existing_review.exists():
             new_review = Review.objects.create(
                 college=college,
                 comment=sanitized_review,
