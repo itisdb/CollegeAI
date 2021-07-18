@@ -1,6 +1,8 @@
 import re
 import os, sys
 
+from django.utils.safestring import mark_safe
+
 PWD = os.getenv('PWD')
 
 os.chdir(PWD)
@@ -65,9 +67,9 @@ class Analysis:
                     i_pos, i_neg, i_neu, i_compound = 0, 0, 0, 0
 
                 quadrant = [
-                    {"statement": s, "metric": "PLACEMENT", "negative": p_neg, "positive": p_pos, "neutral": p_neu, "compound": p_compound},
-                    {"statement": s, "metric": "ACADEMICS", "negative": a_neg, "positive": a_pos, "neutral": a_neu, "compound": a_compound},
-                    {"statement": s, "metric": "INFRASTRUCTURE", "negative": i_neg, "positive": i_pos, "neutral": i_neu, "compound": i_compound}
+                    {"statements": reviews, "metric": "PLACEMENT", "negative": p_neg, "positive": p_pos, "neutral": p_neu, "compound": p_compound},
+                    {"statements": reviews, "metric": "ACADEMICS", "negative": a_neg, "positive": a_pos, "neutral": a_neu, "compound": a_compound},
+                    {"statements": reviews, "metric": "INFRASTRUCTURE", "negative": i_neg, "positive": i_pos, "neutral": i_neu, "compound": i_compound}
                 ]
 
                 quadrants.append(quadrant)
