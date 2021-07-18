@@ -36,6 +36,7 @@ class Metric:
             'ACADEMICS': a_points * 2,
             'INFRASTRUCTURE': i_points * 2
         }
+        print(f'Saved metrics for: {self.college.full_name}')
         self.college.save()
 
     def scraping(self):
@@ -74,8 +75,8 @@ class Metric:
                        'neutral': i_neu / length, 'compound': i_com / length}]
             return metric
 
-    def points(self,metric):
-        p_points = round((metric[0]['compound'])*5, 1)
+    def points(self, metric):
+        p_points = round((metric[0]['compound']) * 5, 1)
         a_points = round((metric[1]['compound']) * 5, 1)
         i_points = round((metric[2]['compound']) * 5, 1)
 

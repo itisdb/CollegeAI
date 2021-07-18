@@ -31,15 +31,16 @@ class Scraper:
                 self.identify_and_trigger(url, college)
 
     def store_review(self, college: College, review: Any, source: int):
+        sanitized_review = review.contents[0] if not isinstance(review, str) else review
         existing_review = Review.objects.filter(
             college=college,
             source=source,
-            comment=review.contents[0] if not isinstance(review, str) else review
+            comment=sanitized_review
         )
-        if not existing_review.exists():
+        if existing_review.count() == 0:
             new_review = Review.objects.create(
                 college=college,
-                comment=review.contents[0] if not isinstance(review, str) else review,
+                comment=sanitized_review,
                 source=source
             )
             print(f'Storing new Review from [{new_review.get_source_display()}]')

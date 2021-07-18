@@ -75,12 +75,10 @@ class Analysis:
                 quadrants.append(quadrant)
 
             s.quadrants = quadrants
+            print(f'Saved Quadrants for: {s.college.full_name}')
             s.save()
 
         return quadrants
-
-    #               s.quadrants = quadrant
-    #              s.save()
 
     def lowercase(self, s):
         s.comment = s.comment.lower()
