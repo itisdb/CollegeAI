@@ -1,3 +1,5 @@
+from typing import Any
+
 from bs4 import BeautifulSoup as bs
 import requests
 import re
@@ -26,7 +28,21 @@ class Scraper:
             for url in urls:
                 self.identify_and_trigger(url, college)
 
-# getmyuni Scraper
+    def store_review(self, college: College, review: Any, source: int):
+        existing_review = Review.objects.filter(
+            college=college,
+            source=source,
+            comment=review.contents[0] if not isinstance(review, str) else review
+        )
+        if not existing_review.exists():
+            new_review = Review.objects.create(
+                college=college,
+                comment=review.contents[0] if not isinstance(review, str) else review,
+                source=source
+            )
+            print(f'Storing new Review from [{new_review.get_source_display()}]')
+
+    # getmyuni Scraper
     def getmyuni(self, url: str, college: College):
         driver = webdriver.Chrome("/usr/local/bin/chromedriver")
         try:
@@ -62,8 +78,8 @@ class Scraper:
 
                 for review in reviews_complete:
                     filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review, str) else review).exists()
-                    if (not filter):
-                        Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.GET_MY_UNI.value)
+                    if not filter:
+                        self.store_review(college, review, Review.ReviewSources.GET_MY_UNI.value)
         except:
             pass
 
@@ -88,11 +104,11 @@ class Scraper:
             for review in reviews_all:
                 filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review,str) else review).exists()
                 if (not filter):
-                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_SEARCH.value)
+                    self.store_review(college, review, Review.ReviewSources.COLLEGE_SEARCH.value)
         except:
             pass
 
-# Shiksha Scraper
+    # Shiksha Scraper
     def shiksha(self,url: str, college: College):
         # Initialization
         driver = webdriver.Chrome("/usr/local/bin/chromedriver")
@@ -118,7 +134,7 @@ class Scraper:
             for review in reviews_list:
                 filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review,str) else review).exists()
                 if (not filter):
-                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.SHIKSHA.value)
+                    self.store_review(college, review, Review.ReviewSources.SHIKSHA.value)
         except:
             pass
 
@@ -161,7 +177,7 @@ class Scraper:
         for review in reviews_per_user:
             filter = all_reviews.filter(comment = review.contents[0] if not isinstance(review,str) else review).exists()
             if (not filter):
-                Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.CAREER360.value)
+                self.store_review(college, review, Review.ReviewSources.CAREER360.value)
 
 # Google Reviews Scraper
     def google(self,url: str,college: College):
@@ -182,27 +198,27 @@ class Scraper:
             for review in reviews:
                 filter = all_reviews.filter(comment = (review.contents[0] if not isinstance(review,str) else review)).exists()
                 if (not filter):
-                    Review.objects.create(college=college, comment = review.contents[0] if not isinstance(review,str) else review,source=Review.ReviewSources.COLLEGE_DUNIA.value)
+                    self.store_review(college, review, Review.ReviewSources.COLLEGE_DUNIA.value)
         except:
             pass
 
-# Identifying the website
+    # Identifying the website
     def identify_and_trigger(self,url: str , college: College):
 
-        if(url.find("collegesearch") != -1):
+        if url.find("collegesearch") != -1:
             self.collegesearch(url, college)
-        elif(url.find("getmyuni") != -1):
+        elif url.find("getmyuni") != -1:
             self.getmyuni(url, college)
-        elif (url.find("shiksha") != -1):
+        elif url.find("shiksha") != -1:
             self.shiksha(url, college)
-        elif (url.find("careers360") != -1):
+        elif url.find("careers360") != -1:
             self.career360(url, college)
-        elif (url.find("google") != -1):
+        elif url.find("google") != -1:
             self.google(url, college)
-        elif (url.find("collegedunia") != -1):
+        elif url.find("collegedunia") != -1:
             self.collegedunia(url, college)
         else:
-            print(url,": Not a Recognized website")
+            print(f"{url} : Not a Recognized website")
 
 
 
