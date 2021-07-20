@@ -11,6 +11,7 @@ class CollegeAdmin(admin.ModelAdmin):
     inlines = [CollegeImageInline]
     filter_horizontal = ('facilities','tags',)
     list_filter = ('tags','is_top')
+    search_fields = ['full_name','abbreviated_name','city','state']
     model = College
 
 
