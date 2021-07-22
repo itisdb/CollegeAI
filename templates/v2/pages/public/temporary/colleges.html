@@ -27,7 +27,7 @@
 <section id="cards-section">
 <div class="container">
   <div class="cards-group">
-    {% for college in colleges %}
+    {% for college in page_obj %}
     <div class="card_college">
       <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"></div>
       <div class="card_college-details"><a class="sub-header-02" href="/college/{{ college.slug}}">{{ college.abbreviated_name }}</a>
@@ -36,12 +36,11 @@
     </div>
     {% endfor %}
   </div>
-  {% if is_paginated %}
         <div class="card-body" style="margin: auto;">
         <br>
         <div class="btn-group btn-toolbar" style="margin: 5px">
             {% if page_obj.has_previous %}
-              <a href="{% url 'college:list' %}?page={{ page_obj.previous_page_number }}">
+              <a href="/college/best-colleges-in-{{ulocation|lower}}/?page={{ page_obj.previous_page_number }}">
                   <button aria-label="" type="button" class="btn button-outline">
                     <div class="p-t-5 p-b-5">
                       <div class="fs-11 font-montserrat text-uppercase">Previous</div>
@@ -50,7 +49,7 @@
               </a>
             {% endif %}
             {% if page_obj.has_next %}
-              <a href="{% url 'college:list' %}?page={{ page_obj.next_page_number }}">
+              <a href="/college/best-colleges-in-{{ulocation|lower}}/?page={{ page_obj.next_page_number }}">
                   <button aria-label="" type="button" class="btn button-outline">
                     <div class="p-t-5 p-b-5">
                       <div class="fs-11 font-montserrat text-uppercase">Next</div>
@@ -60,7 +59,6 @@
             {% endif %}
         </div>
       </div>
-    {% endif %}
 </div>
 </section>
     
