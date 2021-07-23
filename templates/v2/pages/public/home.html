@@ -59,7 +59,6 @@
           <div class="cards-group">
             {% for college in college_tags %}
             <div class="card_college" id = "college_tag">
-            <!-- <div class="card_college-img" style="width: -moz-fit-content; width: fit-content; margin: 0 auto;"><img src="{{ college.image.url }}" alt="College Logo" style="height: 90%;"/></div> -->
               <div class="card_college-details" style="padding: 5px 0px; width: -moz-fit-content; width: fit-content; margin: 0 auto;"><a class="sub-header-03" style="color: #52535c;" href="/college/{{college.url_tag| lower }}-colleges-in-India">{{college.name}}</a>
               </div>
             </div>
@@ -90,7 +89,6 @@
           <div class="cards-group">
             {% for exam in exams %}
             <div class="card_college">
-              <!-- <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"/></div> -->
               <div class="card_college-details"><a class="sub-header-02" href="/exam/{{ exam.slug }}">{{exam.abbreviated_name}}</a>
                 <div class="card_college-details_secondary"><span class="label-01">{{ exam.conducting_body }}</span><span class="label-01">{{ exam.exam_level }}</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Apply Now</a>
               </div>
@@ -122,7 +120,9 @@
           <div class="cards-group">
             {% for college in colleges %}
             <div class="card_college">
-              <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"/></div>
+              {% if college.image %}
+                <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"/></div>
+              {% endif %}
               <div class="card_college-details"><a class="sub-header-02" href="/college/{{ college.slug }}">{{college.abbreviated_name}}</a>
                 <div class="card_college-details_secondary"><span class="label-01">{{college.city}}</span><span class="label-01">{{ college.get_ownership_display }}</span></div><a class="link-primary_lined" href="#download" download="download">Apply Now</a>
               </div>
@@ -154,7 +154,6 @@
           <div class="cards-group">
             {% for course in courses %}
             <div class="card_college">
-              <!-- <div class="card_college-img"><img src="{{ college.image.url }}" alt="College Logo"/></div> -->
               <div class="card_college-details"><a class="sub-header-02" href="/course/{{ course.slug }}">{{course.abbreviated_name}}</a>
                 <div class="card_college-details_secondary"><span class="label-01">{{ course.stream }}</span><span class="label-01">{{ course.level }}</span></div><a class="link-primary_lined" href="#downloadIITBombay" download="download">Apply Now</a>
               </div>
