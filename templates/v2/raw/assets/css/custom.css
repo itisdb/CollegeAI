@@ -615,18 +615,28 @@ footer .footer-links-mob{
 }
 
 #college_tag{
-    width: calc(16.67% - 24px);
+    width: calc(16.66% - 24px);
     text-align: center;
 }
 
+#college_tag .card_college-img {
+    height: 50px;
+}
+
+#college_tag h6, .sub-header-03{
+    font-weight: 400;
+    font-size: 0.6rem;
+    line-height: 1.5rem;
+}
 
 @media  screen and (max-width: 800px) {
     #college_tag{
         width: calc(33.33% - 24px);
     }
 
-    #college_tag a{
-        font-size: 0.8rem;
+    #college_tag h6, .sub-header-03{
+        line-height: 0.8rem;
+        font-size: 0.5rem;
     }
 }
 

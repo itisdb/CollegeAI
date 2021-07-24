@@ -1,8 +1,8 @@
 {% extends 'v2/layouts/public.html' %}
 {% load static %}
-{% block title %}List of Top 10 {{ tag.popular_course| upper}}  | Best {{ tag.name | title }} Colleges in India - Placements, Admission, Fees, Ranking{% endblock %}
+{% block title %}List of Top 10 {{ tag.popular_course}}  | Best {{ tag.name | title }} Colleges in India - Placements, Admission, Fees, Ranking{% endblock %}
 {% block description %}  Find and compare the top and best {{ tag.name | title }} ({{ tag.popular_course | lower}}) colleges in India by Fees, Ranking, Admission and Placement. {% endblock %}
-{% block meta_title %}List of Top 10 {{ tag.popular_course | upper }} | Best {{ tag.name | title }} Colleges in India -  Placements, Admission, Fees, Ranking{% endblock %}
+{% block meta_title %}List of Top 10 {{ tag.popular_course}} | Best {{ tag.name | title }} Colleges in India -  Placements, Admission, Fees, Ranking{% endblock %}
 {% block meta_description %} Find and compare the top and best {{ tag.name | title }} colleges in India by Fees, Ranking, Admission and Placement. {% endblock %}
 {% block meta_keywords %} college, ai, mycollegeai, india, students, academics, placement, {{ tag.name }}, {{ tag.popular_course }} {% endblock %}
 {% block page_name %}

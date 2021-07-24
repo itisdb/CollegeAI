@@ -59,9 +59,11 @@
           <div class="cards-group">
             {% for college in college_tags %}
             <div class="card_college" id = "college_tag">
-            <!-- <div class="card_college-img" style="width: -moz-fit-content; width: fit-content; margin: 0 auto;"><img src="{{ college.image.url }}" alt="College Logo" style="height: 90%;"/></div> -->
+            {% if college.image %}
+              <div class="card_college-img" style="width: -moz-fit-content; width: fit-content; margin: 0 auto;"><img src="{{ college.image.url }}" alt="College Logo" style="height: 100%;"/></div>
               <div class="card_college-details" style="padding: 5px 0px; width: -moz-fit-content; width: fit-content; margin: 0 auto;"><a class="sub-header-03" style="color: #52535c;" href="/college/{{college.url_tag| lower }}-colleges-in-India">{{college.name}}</a>
               </div>
+            {% endif %}
             </div>
             {% endfor %}
           </div>
